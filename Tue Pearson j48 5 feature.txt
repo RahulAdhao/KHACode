@@ -1,0 +1,159 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     Tuesday-WorkingKHA47feature-weka.filters.unsupervised.attribute.Remove-R10-11,19,31,36-weka.filters.unsupervised.attribute.Remove-R17,32-weka.filters.unsupervised.attribute.Remove-R4,17,29-30,33-weka.filters.unsupervised.attribute.Remove-R3,5,16,27,30-weka.filters.unsupervised.attribute.Remove-R3,15,20,22,24-weka.filters.unsupervised.attribute.Remove-R4,8-9,13,24-weka.filters.unsupervised.attribute.Remove-R8-9,13,17-18-weka.filters.unsupervised.attribute.Remove-R2-3,5-7-weka.filters.unsupervised.attribute.Remove-R2,5-6,9-10
+Instances:    445909
+Attributes:   6
+               Protocol
+               Min Packet Length
+               Packet Length Std
+               Avg Bwd Segment Size
+               act_data_pkt_fwd
+               Label
+Test mode:    split 50.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+ Min Packet Length <= 0
+|    Packet Length Std <= 193.974264
+|   |    act_data_pkt_fwd <= 5
+|   |   |    Packet Length Std <= 13.856406
+|   |   |   |    Packet Length Std <= 7.666667: BENIGN (110856.0/2936.0)
+|   |   |   |    Packet Length Std > 7.666667
+|   |   |   |   |    Packet Length Std <= 8.082904
+|   |   |   |   |   |    Packet Length Std <= 8.004166
+|   |   |   |   |   |   |    Packet Length Std <= 7.668116: ATTACK (38.0)
+|   |   |   |   |   |   |    Packet Length Std > 7.668116: BENIGN (32.0)
+|   |   |   |   |   |    Packet Length Std > 8.004166: ATTACK (4058.0/149.0)
+|   |   |   |   |    Packet Length Std > 8.082904
+|   |   |   |   |   |    Avg Bwd Segment Size <= 11.071429
+|   |   |   |   |   |   |    act_data_pkt_fwd <= 0
+|   |   |   |   |   |   |   |    Avg Bwd Segment Size <= 2.583333
+|   |   |   |   |   |   |   |   |    Packet Length Std <= 13.209466: ATTACK (9.0)
+|   |   |   |   |   |   |   |   |    Packet Length Std > 13.209466
+|   |   |   |   |   |   |   |   |   |    Packet Length Std <= 13.565029: BENIGN (17.0)
+|   |   |   |   |   |   |   |   |   |    Packet Length Std > 13.565029: ATTACK (5.0)
+|   |   |   |   |   |   |   |    Avg Bwd Segment Size > 2.583333: BENIGN (34.0)
+|   |   |   |   |   |   |    act_data_pkt_fwd > 0: BENIGN (476.0/5.0)
+|   |   |   |   |   |    Avg Bwd Segment Size > 11.071429
+|   |   |   |   |   |   |    act_data_pkt_fwd <= 1: BENIGN (35.0)
+|   |   |   |   |   |   |    act_data_pkt_fwd > 1: ATTACK (15.0)
+|   |   |    Packet Length Std > 13.856406: BENIGN (34722.0)
+|   |    act_data_pkt_fwd > 5
+|   |   |    Packet Length Std <= 184.152305
+|   |   |   |    Packet Length Std <= 14.563997
+|   |   |   |   |    Avg Bwd Segment Size <= 6.2: BENIGN (329.0)
+|   |   |   |   |    Avg Bwd Segment Size > 6.2
+|   |   |   |   |   |    act_data_pkt_fwd <= 6: ATTACK (3958.0)
+|   |   |   |   |   |    act_data_pkt_fwd > 6: BENIGN (24.0)
+|   |   |   |    Packet Length Std > 14.563997
+|   |   |   |   |    act_data_pkt_fwd <= 15: BENIGN (3190.0)
+|   |   |   |   |    act_data_pkt_fwd > 15
+|   |   |   |   |   |    Avg Bwd Segment Size <= 85.923077
+|   |   |   |   |   |   |    Avg Bwd Segment Size <= 74.363636
+|   |   |   |   |   |   |   |    Packet Length Std <= 166.243043
+|   |   |   |   |   |   |   |   |    Packet Length Std <= 158.624557: BENIGN (32.0)
+|   |   |   |   |   |   |   |   |    Packet Length Std > 158.624557: ATTACK (5.0/1.0)
+|   |   |   |   |   |   |   |    Packet Length Std > 166.243043: BENIGN (98.0)
+|   |   |   |   |   |   |    Avg Bwd Segment Size > 74.363636
+|   |   |   |   |   |   |   |    act_data_pkt_fwd <= 16
+|   |   |   |   |   |   |   |   |    Packet Length Std <= 175.703645: BENIGN (6.0)
+|   |   |   |   |   |   |   |   |    Packet Length Std > 175.703645: ATTACK (5.0/1.0)
+|   |   |   |   |   |   |   |    act_data_pkt_fwd > 16: ATTACK (31.0/1.0)
+|   |   |   |   |   |    Avg Bwd Segment Size > 85.923077: BENIGN (343.0)
+|   |   |    Packet Length Std > 184.152305
+|   |   |   |    act_data_pkt_fwd <= 15: BENIGN (277.0)
+|   |   |   |    act_data_pkt_fwd > 15
+|   |   |   |   |    Avg Bwd Segment Size <= 86.181818: ATTACK (2432.0/5.0)
+|   |   |   |   |    Avg Bwd Segment Size > 86.181818
+|   |   |   |   |   |    Packet Length Std <= 190.698166
+|   |   |   |   |   |   |    Avg Bwd Segment Size <= 88.909091
+|   |   |   |   |   |   |   |    Avg Bwd Segment Size <= 87.555556: BENIGN (5.0)
+|   |   |   |   |   |   |   |    Avg Bwd Segment Size > 87.555556: ATTACK (43.0)
+|   |   |   |   |   |   |    Avg Bwd Segment Size > 88.909091: BENIGN (6.0)
+|   |   |   |   |   |    Packet Length Std > 190.698166
+|   |   |   |   |   |   |    Packet Length Std <= 193.744026
+|   |   |   |   |   |   |   |    Packet Length Std <= 191.019478: ATTACK (136.0)
+|   |   |   |   |   |   |   |    Packet Length Std > 191.019478
+|   |   |   |   |   |   |   |   |    Packet Length Std <= 191.951664: ATTACK (5.0)
+|   |   |   |   |   |   |   |   |    Packet Length Std > 191.951664: BENIGN (4.0)
+|   |   |   |   |   |   |    Packet Length Std > 193.744026: ATTACK (259.0)
+|    Packet Length Std > 193.974264
+|   |    Packet Length Std <= 292.942396
+|   |   |    act_data_pkt_fwd <= 5: BENIGN (4362.0)
+|   |   |    act_data_pkt_fwd > 5
+|   |   |   |    act_data_pkt_fwd <= 19
+|   |   |   |   |    act_data_pkt_fwd <= 17
+|   |   |   |   |   |    act_data_pkt_fwd <= 10
+|   |   |   |   |   |   |    Avg Bwd Segment Size <= 120.714286: BENIGN (274.0)
+|   |   |   |   |   |   |    Avg Bwd Segment Size > 120.714286
+|   |   |   |   |   |   |   |    act_data_pkt_fwd <= 9
+|   |   |   |   |   |   |   |   |    act_data_pkt_fwd <= 6
+|   |   |   |   |   |   |   |   |   |    Avg Bwd Segment Size <= 202.166667
+|   |   |   |   |   |   |   |   |   |   |    Packet Length Std <= 264.554252: BENIGN (38.0)
+|   |   |   |   |   |   |   |   |   |   |    Packet Length Std > 264.554252
+|   |   |   |   |   |   |   |   |   |   |   |    Avg Bwd Segment Size <= 181.5
+|   |   |   |   |   |   |   |   |   |   |   |   |    Packet Length Std <= 265.05368: ATTACK (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |    Packet Length Std > 265.05368: BENIGN (11.0)
+|   |   |   |   |   |   |   |   |   |   |   |    Avg Bwd Segment Size > 181.5: ATTACK (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |    Avg Bwd Segment Size > 202.166667: BENIGN (40.0)
+|   |   |   |   |   |   |   |   |    act_data_pkt_fwd > 6: BENIGN (158.0/4.0)
+|   |   |   |   |   |   |   |    act_data_pkt_fwd > 9
+|   |   |   |   |   |   |   |   |    Avg Bwd Segment Size <= 122.571429: ATTACK (5.0)
+|   |   |   |   |   |   |   |   |    Avg Bwd Segment Size > 122.571429: BENIGN (16.0/1.0)
+|   |   |   |   |   |    act_data_pkt_fwd > 10: BENIGN (1480.0/13.0)
+|   |   |   |   |    act_data_pkt_fwd > 17
+|   |   |   |   |   |    Avg Bwd Segment Size <= 154.2
+|   |   |   |   |   |   |    Avg Bwd Segment Size <= 144.5
+|   |   |   |   |   |   |   |    Packet Length Std <= 244.854038
+|   |   |   |   |   |   |   |   |    Packet Length Std <= 215.357679: BENIGN (4.0)
+|   |   |   |   |   |   |   |   |    Packet Length Std > 215.357679
+|   |   |   |   |   |   |   |   |   |    Avg Bwd Segment Size <= 110: BENIGN (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |    Avg Bwd Segment Size > 110: ATTACK (4.0)
+|   |   |   |   |   |   |   |    Packet Length Std > 244.854038: BENIGN (7.0)
+|   |   |   |   |   |   |    Avg Bwd Segment Size > 144.5
+|   |   |   |   |   |   |   |    Packet Length Std <= 262.757565: ATTACK (9.0)
+|   |   |   |   |   |   |   |    Packet Length Std > 262.757565: BENIGN (3.0/1.0)
+|   |   |   |   |   |    Avg Bwd Segment Size > 154.2: BENIGN (32.0)
+|   |   |   |    act_data_pkt_fwd > 19: BENIGN (1144.0)
+|   |    Packet Length Std > 292.942396: BENIGN (75378.0/2.0)
+ Min Packet Length > 0: BENIGN (201443.0)
+
+Number of Leaves  : 	53
+
+Size of the tree : 	105
+
+
+Time taken to build model: 6.23 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.15 seconds
+
+=== Summary ===
+
+Correctly Classified Instances      221376               99.2922 %
+Incorrectly Classified Instances      1578                0.7078 %
+Kappa statistic                          0.869 
+Mean absolute error                      0.0138
+Root mean squared error                  0.083 
+Relative absolute error                 22.8791 %
+Root relative squared error             47.9707 %
+Total Number of Instances           222954     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.216    0.993      1.000    0.996      0.875    0.972     0.998     BENIGN
+                 0.784    0.000    0.983      0.784    0.873      0.875    0.972     0.802     ATTACK
+Weighted Avg.    0.993    0.209    0.993      0.993    0.993      0.875    0.972     0.992     
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 215973     93 |      a = BENIGN
+   1485   5403 |      b = ATTACK
+

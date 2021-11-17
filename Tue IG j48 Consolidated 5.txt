@@ -1,0 +1,121 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48Consolidated -C 0.25 -M 2 -Q 1 -RM-C -RM-N 99.0 -RM-B -2 -RM-D 50.0
+Relation:     Tuesday-Working_IG_5_feature
+Instances:    445909
+Attributes:   6
+              Total Length of Fwd Packets
+               Fwd Packet Length Mean
+               Fwd Packet Length Std
+               Packet Length Std
+               Packet Length Variance
+               Label
+Test mode:    split 50.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48Consolidated pruned tree
+[RM] N_S=f(99% of coverage)=142 %Min=balanced Size=maxSize (without replacement)
+True coverage achieved: 0.9904645795323646
+----------------------------------------------------------------------------------------------------------------------------
+
+ Fwd Packet Length Mean <= 14.944444
+|    Fwd Packet Length Mean <= 6.887728
+|   |    Packet Length Std <= 0: BENIGN (6365.25/2936.0)
+|   |    Packet Length Std > 0
+|   |   |    Fwd Packet Length Mean <= 3.375691: BENIGN (71.82)
+|   |   |    Fwd Packet Length Mean > 3.375691
+|   |   |   |    Fwd Packet Length Std <= 9.980537
+|   |   |   |   |    Packet Length Std <= 8.783101: BENIGN (2.11)
+|   |   |   |   |    Packet Length Std > 8.783101: ATTACK (12.0)
+|   |   |   |    Fwd Packet Length Std > 9.980537: BENIGN (17.42)
+|    Fwd Packet Length Mean > 6.887728
+|   |    Packet Length Std <= 13.86266
+|   |   |    Fwd Packet Length Std <= 13.606721: ATTACK (7903.33/5.33)
+|   |   |    Fwd Packet Length Std > 13.606721
+|   |   |   |   Total Length of Fwd Packets <= 27
+|   |   |   |   |   Total Length of Fwd Packets <= 23: BENIGN (1.61)
+|   |   |   |   |   Total Length of Fwd Packets > 23: ATTACK (16.32/0.32)
+|   |   |   |   Total Length of Fwd Packets > 27: BENIGN (8.63/2.0)
+|   |    Packet Length Std > 13.86266
+|   |   |    Fwd Packet Length Mean <= 13.711111: BENIGN (248.66)
+|   |   |    Fwd Packet Length Mean > 13.711111
+|   |   |   |    Fwd Packet Length Std <= 20.78461: ATTACK (7.08/0.08)
+|   |   |   |    Fwd Packet Length Std > 20.78461: BENIGN (8.77)
+ Fwd Packet Length Mean > 14.944444
+|   Total Length of Fwd Packets <= 1974
+|   |   Total Length of Fwd Packets <= 1127: BENIGN (8951.84/4.0)
+|   |   Total Length of Fwd Packets > 1127
+|   |   |    Packet Length Std <= 321.285874
+|   |   |   |   Total Length of Fwd Packets <= 1130: ATTACK (12.26/0.26)
+|   |   |   |   Total Length of Fwd Packets > 1130
+|   |   |   |   |    Fwd Packet Length Std <= 174.762165
+|   |   |   |   |   |    Fwd Packet Length Mean <= 77.318182: BENIGN (23.04)
+|   |   |   |   |   |    Fwd Packet Length Mean > 77.318182
+|   |   |   |   |   |   |    Fwd Packet Length Std <= 127.705942: BENIGN (12.98)
+|   |   |   |   |   |   |    Fwd Packet Length Std > 127.705942
+|   |   |   |   |   |   |   |    Packet Length Std <= 181.166012: BENIGN (2.39)
+|   |   |   |   |   |   |   |    Packet Length Std > 181.166012
+|   |   |   |   |   |   |   |   |    Packet Length Std <= 248.031879: ATTACK (16.96/0.96)
+|   |   |   |   |   |   |   |   |    Packet Length Std > 248.031879
+|   |   |   |   |   |   |   |   |   |   Total Length of Fwd Packets <= 1515: ATTACK (2.08/0.08)
+|   |   |   |   |   |   |   |   |   |   Total Length of Fwd Packets > 1515: BENIGN (3.53)
+|   |   |   |   |    Fwd Packet Length Std > 174.762165: BENIGN (55.76/1.0)
+|   |   |    Packet Length Std > 321.285874: BENIGN (377.91)
+|   Total Length of Fwd Packets > 1974
+|   |    Packet Length Std <= 222.804271
+|   |   |   Total Length of Fwd Packets <= 2285: ATTACK (2902.41/2.41)
+|   |   |   Total Length of Fwd Packets > 2285
+|   |   |   |    Fwd Packet Length Mean <= 125.363636
+|   |   |   |   |    Fwd Packet Length Std <= 103.477304: BENIGN (10.01)
+|   |   |   |   |    Fwd Packet Length Std > 103.477304
+|   |   |   |   |   |    Fwd Packet Length Std <= 189.771873
+|   |   |   |   |   |   |   Total Length of Fwd Packets <= 3213: ATTACK (16.42/0.42)
+|   |   |   |   |   |   |   Total Length of Fwd Packets > 3213: BENIGN (0.51)
+|   |   |   |   |   |    Fwd Packet Length Std > 189.771873: BENIGN (2.26)
+|   |   |   |    Fwd Packet Length Mean > 125.363636: BENIGN (26.51)
+|   |    Packet Length Std > 222.804271
+|   |   |    Packet Length Std <= 312.104309
+|   |   |   |   Total Length of Fwd Packets <= 2057: ATTACK (6.46/1.46)
+|   |   |   |   Total Length of Fwd Packets > 2057
+|   |   |   |   |    Fwd Packet Length Mean <= 92.903846: BENIGN (36.42)
+|   |   |   |   |    Fwd Packet Length Mean > 92.903846
+|   |   |   |   |   |    Fwd Packet Length Std <= 150.79654: ATTACK (5.47/0.47)
+|   |   |   |   |   |    Fwd Packet Length Std > 150.79654: BENIGN (29.86/3.0)
+|   |   |    Packet Length Std > 312.104309: BENIGN (511.91)
+
+Number of Leaves  : 	33
+
+Size of the tree : 	65
+
+
+Time taken to build model: 68.7 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.26 seconds
+
+=== Summary ===
+
+Correctly Classified Instances      221194               99.2106 %
+Incorrectly Classified Instances      1760                0.7894 %
+Kappa statistic                          0.8562
+Mean absolute error                      0.1163
+Root mean squared error                  0.2333
+Relative absolute error                193.362  %
+Root relative squared error            134.8022 %
+Total Number of Instances           222954     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.999    0.214    0.993      0.999    0.996      0.860    0.972     0.998     BENIGN
+                 0.786    0.001    0.950      0.786    0.860      0.860    0.972     0.787     ATTACK
+Weighted Avg.    0.992    0.207    0.992      0.992    0.992      0.860    0.972     0.992     
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 215779    287 |      a = BENIGN
+   1473   5415 |      b = ATTACK
+

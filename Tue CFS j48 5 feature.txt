@@ -1,0 +1,143 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     Tuesday-WorkingKHA47feature-weka.filters.unsupervised.attribute.Remove-R1-6,10-25,27-41,43-47
+Instances:    445909
+Attributes:   6
+               Fwd Packet Length Mean
+               Fwd Packet Length Std
+               Bwd Packet Length Std
+               Packet Length Std
+               min_seg_size_forward
+               Label
+Test mode:    split 50.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+ min_seg_size_forward <= 28: BENIGN (227563.0/2.0)
+ min_seg_size_forward > 28
+|    Fwd Packet Length Mean <= 14.666667
+|   |    Fwd Packet Length Mean <= 6.974026
+|   |   |    Packet Length Std <= 12.124356
+|   |   |   |    Bwd Packet Length Std <= 13.114877: BENIGN (49446.0/2934.0)
+|   |   |   |    Bwd Packet Length Std > 13.114877
+|   |   |   |   |    Fwd Packet Length Mean <= 1.716292: BENIGN (13.0)
+|   |   |   |   |    Fwd Packet Length Mean > 1.716292: ATTACK (12.0)
+|   |   |    Packet Length Std > 12.124356: BENIGN (441.0)
+|   |    Fwd Packet Length Mean > 6.974026
+|   |   |    Fwd Packet Length Std <= 12.655697: ATTACK (7969.0/82.0)
+|   |   |    Fwd Packet Length Std > 12.655697
+|   |   |   |    Packet Length Std <= 13.86266
+|   |   |   |   |    Fwd Packet Length Std <= 14.186593: ATTACK (21.0)
+|   |   |   |   |    Fwd Packet Length Std > 14.186593
+|   |   |   |   |   |    Fwd Packet Length Std <= 16.546903: BENIGN (72.0)
+|   |   |   |   |   |    Fwd Packet Length Std > 16.546903
+|   |   |   |   |   |   |    Fwd Packet Length Mean <= 10.478261: BENIGN (7.0)
+|   |   |   |   |   |   |    Fwd Packet Length Mean > 10.478261: ATTACK (9.0/1.0)
+|   |   |   |    Packet Length Std > 13.86266
+|   |   |   |   |    Fwd Packet Length Mean <= 13.765625: BENIGN (2856.0)
+|   |   |   |   |    Fwd Packet Length Mean > 13.765625
+|   |   |   |   |   |    Bwd Packet Length Std <= 283.066373
+|   |   |   |   |   |   |    Bwd Packet Length Std <= 146.27217: ATTACK (5.0)
+|   |   |   |   |   |   |    Bwd Packet Length Std > 146.27217: BENIGN (2.0)
+|   |   |   |   |   |    Bwd Packet Length Std > 283.066373: BENIGN (101.0)
+|    Fwd Packet Length Mean > 14.666667
+|   |    Fwd Packet Length Mean <= 83.65
+|   |   |    Fwd Packet Length Mean <= 68.692308
+|   |   |   |    Fwd Packet Length Mean <= 15.008299
+|   |   |   |   |    Fwd Packet Length Std <= 20.723059
+|   |   |   |   |   |    Bwd Packet Length Std <= 7.071068: BENIGN (18.0)
+|   |   |   |   |   |    Bwd Packet Length Std > 7.071068: ATTACK (4.0)
+|   |   |   |   |    Fwd Packet Length Std > 20.723059: BENIGN (40.0)
+|   |   |   |    Fwd Packet Length Mean > 15.008299: BENIGN (131444.0/2.0)
+|   |   |    Fwd Packet Length Mean > 68.692308
+|   |   |   |    Bwd Packet Length Std <= 350.706837
+|   |   |   |   |    Bwd Packet Length Std <= 191.833261: BENIGN (2394.0)
+|   |   |   |   |    Bwd Packet Length Std > 191.833261
+|   |   |   |   |   |    Fwd Packet Length Std <= 134.856273
+|   |   |   |   |   |   |    Bwd Packet Length Std <= 302.849413
+|   |   |   |   |   |   |   |    Bwd Packet Length Std <= 254.868597: ATTACK (44.0)
+|   |   |   |   |   |   |   |    Bwd Packet Length Std > 254.868597
+|   |   |   |   |   |   |   |   |    Fwd Packet Length Std <= 130.399205: ATTACK (6.0/1.0)
+|   |   |   |   |   |   |   |   |    Fwd Packet Length Std > 130.399205: BENIGN (2.0)
+|   |   |   |   |   |   |    Bwd Packet Length Std > 302.849413: BENIGN (44.0)
+|   |   |   |   |   |    Fwd Packet Length Std > 134.856273: BENIGN (390.0/7.0)
+|   |   |   |    Bwd Packet Length Std > 350.706837: BENIGN (3589.0)
+|   |    Fwd Packet Length Mean > 83.65
+|   |   |    Fwd Packet Length Std <= 143.866837
+|   |   |   |    Fwd Packet Length Std <= 134.352724
+|   |   |   |   |    Fwd Packet Length Std <= 129.032545: BENIGN (1937.0)
+|   |   |   |   |    Fwd Packet Length Std > 129.032545
+|   |   |   |   |   |    Bwd Packet Length Std <= 169.826284: BENIGN (42.0)
+|   |   |   |   |   |    Bwd Packet Length Std > 169.826284
+|   |   |   |   |   |   |    Bwd Packet Length Std <= 255.424748: ATTACK (11.0)
+|   |   |   |   |   |   |    Bwd Packet Length Std > 255.424748: BENIGN (31.0)
+|   |   |   |    Fwd Packet Length Std > 134.352724
+|   |   |   |   |    Bwd Packet Length Std <= 327.948468
+|   |   |   |   |   |    Packet Length Std <= 184.19616
+|   |   |   |   |   |   |    Bwd Packet Length Std <= 144.95689: BENIGN (17.0)
+|   |   |   |   |   |   |    Bwd Packet Length Std > 144.95689: ATTACK (12.0)
+|   |   |   |   |   |    Packet Length Std > 184.19616: ATTACK (2853.0/1.0)
+|   |   |   |   |    Bwd Packet Length Std > 327.948468: BENIGN (42.0)
+|   |   |    Fwd Packet Length Std > 143.866837
+|   |   |   |    Fwd Packet Length Std <= 183.30614
+|   |   |   |   |    Bwd Packet Length Std <= 364.83239
+|   |   |   |   |   |    Packet Length Std <= 185.093146: BENIGN (145.0)
+|   |   |   |   |   |    Packet Length Std > 185.093146
+|   |   |   |   |   |   |    Bwd Packet Length Std <= 362.690226
+|   |   |   |   |   |   |   |    Bwd Packet Length Std <= 314.838371
+|   |   |   |   |   |   |   |   |    Fwd Packet Length Mean <= 129.375
+|   |   |   |   |   |   |   |   |   |    Bwd Packet Length Std <= 221.936296: ATTACK (4.0)
+|   |   |   |   |   |   |   |   |   |    Bwd Packet Length Std > 221.936296
+|   |   |   |   |   |   |   |   |   |   |    Packet Length Std <= 209.145024: BENIGN (11.0)
+|   |   |   |   |   |   |   |   |   |   |    Packet Length Std > 209.145024
+|   |   |   |   |   |   |   |   |   |   |   |    Bwd Packet Length Std <= 290.818222
+|   |   |   |   |   |   |   |   |   |   |   |   |    Fwd Packet Length Std <= 166.95668: ATTACK (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |    Fwd Packet Length Std > 166.95668: BENIGN (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |    Bwd Packet Length Std > 290.818222
+|   |   |   |   |   |   |   |   |   |   |   |   |    Fwd Packet Length Std <= 171.452314: BENIGN (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |    Fwd Packet Length Std > 171.452314: ATTACK (4.0/1.0)
+|   |   |   |   |   |   |   |   |    Fwd Packet Length Mean > 129.375: BENIGN (10.0)
+|   |   |   |   |   |   |   |    Bwd Packet Length Std > 314.838371: BENIGN (55.0)
+|   |   |   |   |   |   |    Bwd Packet Length Std > 362.690226: ATTACK (7.0)
+|   |   |   |   |    Bwd Packet Length Std > 364.83239: BENIGN (821.0)
+|   |   |   |    Fwd Packet Length Std > 183.30614: BENIGN (13398.0/7.0)
+
+Number of Leaves  : 	45
+
+Size of the tree : 	89
+
+
+Time taken to build model: 5.36 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.28 seconds
+
+=== Summary ===
+
+Correctly Classified Instances      221424               99.3138 %
+Incorrectly Classified Instances      1530                0.6862 %
+Kappa statistic                          0.8724
+Mean absolute error                      0.013 
+Root mean squared error                  0.0804
+Relative absolute error                 21.6031 %
+Root relative squared error             46.4897 %
+Total Number of Instances           222954     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.216    0.993      1.000    0.996      0.879    0.987     0.999     BENIGN
+                 0.784    0.000    0.992      0.784    0.876      0.879    0.987     0.828     ATTACK
+Weighted Avg.    0.993    0.209    0.993      0.993    0.993      0.879    0.987     0.994     
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 216024     42 |      a = BENIGN
+   1488   5400 |      b = ATTACK
+

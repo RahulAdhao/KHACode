@@ -1,0 +1,138 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     Tuesday-WorkingKHA47feature-weka.filters.unsupervised.attribute.Remove-R10-11,19,31,36-weka.filters.unsupervised.attribute.Remove-R17,32-weka.filters.unsupervised.attribute.Remove-R4,17,29-30,33-weka.filters.unsupervised.attribute.Remove-R3,5,16,27,30-weka.filters.unsupervised.attribute.Remove-R3,15,20,22,24-weka.filters.unsupervised.attribute.Remove-R4,8-9,13,24
+Instances:    445909
+Attributes:   21
+               Protocol
+               Flow Duration
+               Fwd Packet Length Mean
+               Bwd Packet Length Std
+               Flow IAT Mean
+               Flow IAT Std
+               Fwd IAT Max
+               Fwd IAT Min
+              Bwd IAT Total
+               Min Packet Length
+               Packet Length Std
+               Packet Length Variance
+              FIN Flag Count
+               URG Flag Count
+               Avg Bwd Segment Size
+               act_data_pkt_fwd
+              Active Mean
+               Active Std
+              Idle Mean
+               Idle Max
+               Label
+Test mode:    split 50.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+ act_data_pkt_fwd <= 5
+|    Fwd Packet Length Mean <= 8.75
+|   |    Fwd Packet Length Mean <= 6.974026
+|   |   |    Fwd Packet Length Mean <= 4.912773
+|   |   |   |   Bwd IAT Total <= 50: BENIGN (107768.0/2917.0)
+|   |   |   |   Bwd IAT Total > 50
+|   |   |   |   |    Flow Duration <= 2432
+|   |   |   |   |   |    Fwd IAT Min <= 349: BENIGN (522.0)
+|   |   |   |   |   |    Fwd IAT Min > 349: ATTACK (19.0)
+|   |   |   |   |    Flow Duration > 2432: BENIGN (3654.0/1.0)
+|   |   |    Fwd Packet Length Mean > 4.912773
+|   |   |   |    Idle Max <= 0
+|   |   |   |   |    Flow IAT Mean <= 176848: BENIGN (82.0)
+|   |   |   |   |    Flow IAT Mean > 176848: ATTACK (11.0)
+|   |   |   |    Idle Max > 0: BENIGN (169.0)
+|   |    Fwd Packet Length Mean > 6.974026
+|   |   |    act_data_pkt_fwd <= 0
+|   |   |   |    Flow Duration <= 1: BENIGN (243.0/100.0)
+|   |   |   |    Flow Duration > 1: ATTACK (3850.0/7.0)
+|   |   |    act_data_pkt_fwd > 0
+|   |   |   |    Packet Length Std <= 12.578818
+|   |   |   |   |   Bwd IAT Total <= 8268586
+|   |   |   |   |   |    Fwd Packet Length Mean <= 7.868421: BENIGN (8.0)
+|   |   |   |   |   |    Fwd Packet Length Mean > 7.868421: ATTACK (4.0)
+|   |   |   |   |   Bwd IAT Total > 8268586: BENIGN (57.0)
+|   |   |   |    Packet Length Std > 12.578818: BENIGN (376.0)
+|    Fwd Packet Length Mean > 8.75
+|   |    Fwd Packet Length Mean <= 14
+|   |   |    Packet Length Std <= 13.209466
+|   |   |   |    act_data_pkt_fwd <= 0: ATTACK (13.0)
+|   |   |   |    act_data_pkt_fwd > 0
+|   |   |   |   |    Packet Length Std <= 11.84483: BENIGN (12.0)
+|   |   |   |   |    Packet Length Std > 11.84483
+|   |   |   |   |   |    Fwd Packet Length Mean <= 10.478261: BENIGN (8.0/1.0)
+|   |   |   |   |   |    Fwd Packet Length Mean > 10.478261: ATTACK (3.0)
+|   |   |    Packet Length Std > 13.209466: BENIGN (6634.0/3.0)
+|   |    Fwd Packet Length Mean > 14: BENIGN (274148.0/2.0)
+ act_data_pkt_fwd > 5
+|    Packet Length Std <= 194.001473
+|   |    Flow IAT Std <= 1234582.418
+|   |   |   Bwd IAT Total <= 7258351: BENIGN (2328.0)
+|   |   |   Bwd IAT Total > 7258351
+|   |   |   |    act_data_pkt_fwd <= 18
+|   |   |   |   |    Flow IAT Mean <= 449425.0769: ATTACK (6823.0)
+|   |   |   |   |    Flow IAT Mean > 449425.0769
+|   |   |   |   |   |    Protocol <= 6: ATTACK (21.0)
+|   |   |   |   |   |    Protocol > 6: BENIGN (4.0)
+|   |   |   |    act_data_pkt_fwd > 18
+|   |   |   |   |    act_data_pkt_fwd <= 36: ATTACK (22.0)
+|   |   |   |   |    act_data_pkt_fwd > 36: BENIGN (6.0)
+|   |    Flow IAT Std > 1234582.418: BENIGN (3870.0)
+|    Packet Length Std > 194.001473
+|   |    Packet Length Std <= 321.156745
+|   |   |    Idle Max <= 0
+|   |   |   |    Flow IAT Std <= 259987.178: BENIGN (1295.0)
+|   |   |   |    Flow IAT Std > 259987.178
+|   |   |   |   |    Fwd Packet Length Mean <= 127.111111
+|   |   |   |   |   |    Bwd Packet Length Std <= 389.777812
+|   |   |   |   |   |   |    act_data_pkt_fwd <= 19
+|   |   |   |   |   |   |   |    Fwd Packet Length Mean <= 74.2
+|   |   |   |   |   |   |   |   |    Fwd Packet Length Mean <= 71.372881: BENIGN (2.0)
+|   |   |   |   |   |   |   |   |    Fwd Packet Length Mean > 71.372881: ATTACK (3.0)
+|   |   |   |   |   |   |   |    Fwd Packet Length Mean > 74.2: ATTACK (48.0)
+|   |   |   |   |   |   |    act_data_pkt_fwd > 19: BENIGN (3.0)
+|   |   |   |   |   |    Bwd Packet Length Std > 389.777812: BENIGN (7.0)
+|   |   |   |   |    Fwd Packet Length Mean > 127.111111: BENIGN (41.0/1.0)
+|   |   |    Idle Max > 0: BENIGN (2730.0)
+|   |    Packet Length Std > 321.156745: BENIGN (31125.0)
+
+Number of Leaves  : 	35
+
+Size of the tree : 	69
+
+
+Time taken to build model: 37.69 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.17 seconds
+
+=== Summary ===
+
+Correctly Classified Instances      221418               99.3111 %
+Incorrectly Classified Instances      1536                0.6889 %
+Kappa statistic                          0.8712
+Mean absolute error                      0.0132
+Root mean squared error                  0.0813
+Relative absolute error                 21.879  %
+Root relative squared error             46.9766 %
+Total Number of Instances           222954     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.222    0.993      1.000    0.996      0.878    0.973     0.998     BENIGN
+                 0.778    0.000    0.998      0.778    0.875      0.878    0.973     0.808     ATTACK
+Weighted Avg.    0.993    0.215    0.993      0.993    0.993      0.878    0.973     0.992     
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 216056     10 |      a = BENIGN
+   1526   5362 |      b = ATTACK
+

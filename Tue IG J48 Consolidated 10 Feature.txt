@@ -1,0 +1,116 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48Consolidated -C 0.25 -M 2 -Q 1 -RM-C -RM-N 99.0 -RM-B -2 -RM-D 50.0
+Relation:     Tuesday-Working_IG_10_feature
+Instances:    445909
+Attributes:   11
+              Total Length of Fwd Packets
+               Total Length of Bwd Packets
+               Fwd Packet Length Mean
+               Fwd Packet Length Std
+              Flow Bytes/s
+               Bwd Packets/s
+               Packet Length Std
+               Packet Length Variance
+               Avg Bwd Segment Size
+               Subflow Fwd Bytes
+               Label
+Test mode:    split 50.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48Consolidated pruned tree
+[RM] N_S=f(99% of coverage)=142 %Min=balanced Size=maxSize (without replacement)
+True coverage achieved: 0.9904645795323646
+----------------------------------------------------------------------------------------------------------------------------
+
+ Avg Bwd Segment Size <= 88.6
+|    Fwd Packet Length Std <= 7.284687
+|   |    Bwd Packets/s <= 7619.047619: BENIGN (3668.31/73.0)
+|   |    Bwd Packets/s > 7619.047619
+|   |   |    Total Length of Bwd Packets <= 0
+|   |   |   |    Bwd Packets/s <= 15748.0315: ATTACK (2554.18/474.18)
+|   |   |   |    Bwd Packets/s > 15748.0315
+|   |   |   |   |    Bwd Packets/s <= 30769.23077
+|   |   |   |   |   |    Bwd Packets/s <= 19480.51948
+|   |   |   |   |   |   |    Bwd Packets/s <= 17241.37931: ATTACK (231.87/100.87)
+|   |   |   |   |   |   |    Bwd Packets/s > 17241.37931: BENIGN (231.63/95.0)
+|   |   |   |   |   |    Bwd Packets/s > 19480.51948: ATTACK (775.95/279.95)
+|   |   |   |   |    Bwd Packets/s > 30769.23077: BENIGN (411.7/75.0)
+|   |   |    Total Length of Bwd Packets > 0: BENIGN (978.87)
+|    Fwd Packet Length Std > 7.284687
+|   |    Packet Length Std <= 13.545848
+|   |   |   Flow Bytes/s <= 27.610333
+|   |   |   |   Flow Bytes/s <= 17.106791: BENIGN (9.94)
+|   |   |   |   Flow Bytes/s > 17.106791: ATTACK (14.32/0.32)
+|   |   |   Flow Bytes/s > 27.610333
+|   |   |   |    Fwd Packet Length Std <= 12.349089: ATTACK (7871.51/7.51)
+|   |   |   |    Fwd Packet Length Std > 12.349089
+|   |   |   |   |    Fwd Packet Length Mean <= 7.868421: BENIGN (2.23)
+|   |   |   |   |    Fwd Packet Length Mean > 7.868421
+|   |   |   |   |   |   Total Length of Fwd Packets <= 23: BENIGN (1.42)
+|   |   |   |   |   |   Total Length of Fwd Packets > 23
+|   |   |   |   |   |   |    Fwd Packet Length Mean <= 14.857143: ATTACK (21.06/1.06)
+|   |   |   |   |   |   |    Fwd Packet Length Mean > 14.857143: BENIGN (1.01)
+|   |    Packet Length Std > 13.545848
+|   |   |    Total Length of Bwd Packets <= 2524
+|   |   |   |    Fwd Packet Length Std <= 17.243356
+|   |   |   |   |    Packet Length Std <= 14.613397
+|   |   |   |   |   |    Fwd Packet Length Mean <= 9.869707: BENIGN (4.37)
+|   |   |   |   |   |    Fwd Packet Length Mean > 9.869707: ATTACK (27.51/0.51)
+|   |   |   |   |    Packet Length Std > 14.613397: BENIGN (29.93)
+|   |   |   |    Fwd Packet Length Std > 17.243356: BENIGN (1273.63)
+|   |   |    Total Length of Bwd Packets > 2524: ATTACK (2914.15/2.15)
+ Avg Bwd Segment Size > 88.6
+|   Total Length of Fwd Packets <= 1127: BENIGN (5638.3)
+|   Total Length of Fwd Packets > 1127
+|   |    Packet Length Std <= 321.425051
+|   |   |   Total Length of Fwd Packets <= 1133: ATTACK (12.23/0.23)
+|   |   |   Total Length of Fwd Packets > 1133
+|   |   |   |    Avg Bwd Segment Size <= 153.933333
+|   |   |   |   |    Fwd Packet Length Mean <= 72.428571: BENIGN (20.45)
+|   |   |   |   |    Fwd Packet Length Mean > 72.428571
+|   |   |   |   |   |    Fwd Packet Length Std <= 178.952508
+|   |   |   |   |   |   |   Flow Bytes/s <= 311.827398
+|   |   |   |   |   |   |   |   Total Length of Fwd Packets <= 1311: ATTACK (2.75/0.75)
+|   |   |   |   |   |   |   |   Total Length of Fwd Packets > 1311: BENIGN (3.92)
+|   |   |   |   |   |   |   Flow Bytes/s > 311.827398: ATTACK (32.13/1.13)
+|   |   |   |   |   |    Fwd Packet Length Std > 178.952508: BENIGN (27.8/2.0)
+|   |   |   |    Avg Bwd Segment Size > 153.933333: BENIGN (86.94/1.0)
+|   |    Packet Length Std > 321.425051: BENIGN (821.94)
+
+Number of Leaves  : 	28
+
+Size of the tree : 	55
+
+
+Time taken to build model: 182.42 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.15 seconds
+
+=== Summary ===
+
+Correctly Classified Instances      211310               94.7774 %
+Incorrectly Classified Instances     11644                5.2226 %
+Kappa statistic                          0.5126
+Mean absolute error                      0.0594
+Root mean squared error                  0.1891
+Relative absolute error                 98.8061 %
+Root relative squared error            109.261  %
+Total Number of Instances           222954     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.947    0.030    0.999      0.947    0.972      0.581    0.992     1.000     BENIGN
+                 0.970    0.053    0.369      0.970    0.534      0.581    0.992     0.855     ATTACK
+Weighted Avg.    0.948    0.030    0.980      0.948    0.959      0.581    0.992     0.995     
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 204626  11440 |      a = BENIGN
+    204   6684 |      b = ATTACK
+

@@ -1,0 +1,77 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.CfsSubsetEval -P 1 -E 1
+Search:       weka.attributeSelection.GreedyStepwise -T -1.7976931348623157E308 -N -1 -num-slots 1
+Relation:     Tuesday-WorkingKHA-weka.filters.unsupervised.attribute.Remove-R1,8-9,12-14,20,22-23,28-32,34,41-42,46,48-49,52,54-55,58,60,66-68,73-74,78
+Instances:    445909
+Attributes:   48
+               Protocol
+               Flow Duration
+               Total Fwd Packets
+               Total Backward Packets
+              Total Length of Fwd Packets
+               Total Length of Bwd Packets
+               Fwd Packet Length Mean
+               Fwd Packet Length Std
+               Bwd Packet Length Std
+              Flow Bytes/s
+               Flow Packets/s
+               Flow IAT Mean
+               Flow IAT Std
+               Flow IAT Min
+               Fwd IAT Std
+               Fwd IAT Max
+               Fwd IAT Min
+              Bwd IAT Total
+               Bwd PSH Flags
+               Bwd URG Flags
+               Fwd Header Length
+               Bwd Header Length
+              Fwd Packets/s
+               Bwd Packets/s
+               Min Packet Length
+               Packet Length Std
+               Packet Length Variance
+              FIN Flag Count
+               RST Flag Count
+               URG Flag Count
+               CWE Flag Count
+               Down/Up Ratio
+               Avg Bwd Segment Size
+              Fwd Avg Bytes/Bulk
+               Fwd Avg Bulk Rate
+               Bwd Avg Packets/Bulk
+              Bwd Avg Bulk Rate
+              Subflow Fwd Packets
+               Subflow Fwd Bytes
+               Subflow Bwd Packets
+               act_data_pkt_fwd
+               min_seg_size_forward
+              Active Mean
+               Active Std
+              Idle Mean
+               Idle Std
+               Idle Max
+               Label
+Evaluation mode:    evaluate on all training data
+
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Greedy Stepwise (forwards).
+	Start set: no attributes
+	Merit of best subset found:    0.178
+
+Attribute Subset Evaluator (supervised, Class (nominal): 48  Label):
+	CFS Subset Evaluator
+	Including locally predictive attributes
+
+Selected attributes: 7,8,9,26,42 : 5
+                      Fwd Packet Length Mean
+                      Fwd Packet Length Std
+                      Bwd Packet Length Std
+                      Packet Length Std
+                      min_seg_size_forward
+

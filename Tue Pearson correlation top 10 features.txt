@@ -1,0 +1,102 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     Tuesday-WorkingKHA47feature-weka.filters.unsupervised.attribute.Remove-R1-3,5-18,22-30,32-33,38-39,41-47
+Instances:    445909
+Attributes:   11
+               Total Backward Packets
+               Bwd PSH Flags
+               Bwd URG Flags
+               Fwd Header Length
+               CWE Flag Count
+              Fwd Avg Bytes/Bulk
+               Fwd Avg Bulk Rate
+               Bwd Avg Packets/Bulk
+              Bwd Avg Bulk Rate
+               Subflow Bwd Packets
+               Label
+Test mode:    split 50.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+ Total Backward Packets <= 14: BENIGN (400467.0/6930.0)
+ Total Backward Packets > 14
+|    Fwd Header Length <= 296
+|   |    Fwd Header Length <= 292: BENIGN (952.0)
+|   |    Fwd Header Length > 292: ATTACK (3962.0/4.0)
+|    Fwd Header Length > 296
+|   |    Total Backward Packets <= 30: BENIGN (22466.0/19.0)
+|   |    Total Backward Packets > 30
+|   |   |    Total Backward Packets <= 33
+|   |   |   |    Fwd Header Length <= 744
+|   |   |   |   |    Fwd Header Length <= 612: BENIGN (433.0)
+|   |   |   |   |    Fwd Header Length > 612
+|   |   |   |   |   |    Fwd Header Length <= 644
+|   |   |   |   |   |   |    Fwd Header Length <= 616: ATTACK (292.0/1.0)
+|   |   |   |   |   |   |    Fwd Header Length > 616: BENIGN (133.0)
+|   |   |   |   |   |    Fwd Header Length > 644
+|   |   |   |   |   |   |    Fwd Header Length <= 680
+|   |   |   |   |   |   |   |    Fwd Header Length <= 676
+|   |   |   |   |   |   |   |   |    Fwd Header Length <= 648: ATTACK (182.0/4.0)
+|   |   |   |   |   |   |   |   |    Fwd Header Length > 648: BENIGN (87.0)
+|   |   |   |   |   |   |   |    Fwd Header Length > 676: ATTACK (1743.0/9.0)
+|   |   |   |   |   |   |    Fwd Header Length > 680
+|   |   |   |   |   |   |   |    Fwd Header Length <= 704: BENIGN (83.0)
+|   |   |   |   |   |   |   |    Fwd Header Length > 704
+|   |   |   |   |   |   |   |   |    Fwd Header Length <= 712: ATTACK (400.0/10.0)
+|   |   |   |   |   |   |   |   |    Fwd Header Length > 712
+|   |   |   |   |   |   |   |   |   |    Fwd Header Length <= 740: BENIGN (113.0/2.0)
+|   |   |   |   |   |   |   |   |   |    Fwd Header Length > 740: ATTACK (233.0/8.0)
+|   |   |   |    Fwd Header Length > 744
+|   |   |   |   |    Fwd Header Length <= 808
+|   |   |   |   |   |    Fwd Header Length <= 772: BENIGN (80.0)
+|   |   |   |   |   |    Fwd Header Length > 772
+|   |   |   |   |   |   |    Total Backward Packets <= 31: BENIGN (37.0/1.0)
+|   |   |   |   |   |   |    Total Backward Packets > 31
+|   |   |   |   |   |   |   |    Fwd Header Length <= 776: ATTACK (38.0/7.0)
+|   |   |   |   |   |   |   |    Fwd Header Length > 776
+|   |   |   |   |   |   |   |   |    Fwd Header Length <= 784: BENIGN (18.0)
+|   |   |   |   |   |   |   |   |    Fwd Header Length > 784
+|   |   |   |   |   |   |   |   |   |    Total Backward Packets <= 32: ATTACK (24.0/4.0)
+|   |   |   |   |   |   |   |   |   |    Total Backward Packets > 32: BENIGN (3.0)
+|   |   |   |   |    Fwd Header Length > 808: BENIGN (568.0/2.0)
+|   |   |    Total Backward Packets > 33: BENIGN (13595.0/54.0)
+
+Number of Leaves  : 	22
+
+Size of the tree : 	43
+
+
+Time taken to build model: 12.81 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.34 seconds
+
+=== Summary ===
+
+Correctly Classified Instances      219417               98.4136 %
+Incorrectly Classified Instances      3537                1.5864 %
+Kappa statistic                          0.6493
+Mean absolute error                      0.0311
+Root mean squared error                  0.1248
+Relative absolute error                 51.7361 %
+Root relative squared error             72.1512 %
+Total Number of Instances           222954     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.509    0.984      1.000    0.992      0.692    0.766     0.985     BENIGN
+                 0.491    0.000    0.992      0.491    0.656      0.692    0.766     0.506     ATTACK
+Weighted Avg.    0.984    0.494    0.984      0.984    0.982      0.692    0.766     0.971     
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 216038     28 |      a = BENIGN
+   3509   3379 |      b = ATTACK
+

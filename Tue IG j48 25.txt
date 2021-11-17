@@ -1,0 +1,127 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     Tuesday-Working_IG_35_feature-weka.filters.unsupervised.attribute.Remove-R14,32-35-weka.filters.unsupervised.attribute.Remove-R1,3,16,22,30
+Instances:    445909
+Attributes:   26
+               Flow Duration
+               Total Backward Packets
+              Total Length of Fwd Packets
+               Total Length of Bwd Packets
+               Fwd Packet Length Mean
+               Fwd Packet Length Std
+               Bwd Packet Length Std
+              Flow Bytes/s
+               Flow Packets/s
+               Flow IAT Mean
+               Flow IAT Std
+               Fwd IAT Std
+               Fwd IAT Max
+              Bwd IAT Total
+               Fwd Header Length
+               Bwd Header Length
+              Fwd Packets/s
+               Bwd Packets/s
+               Packet Length Std
+               Packet Length Variance
+               Avg Bwd Segment Size
+              Subflow Fwd Packets
+               Subflow Fwd Bytes
+               Subflow Bwd Packets
+               act_data_pkt_fwd
+               Label
+Test mode:    split 50.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+ Bwd Header Length <= 484
+|   Total Length of Fwd Packets <= 30
+|   |    Fwd Packet Length Std <= 6.429101
+|   |   |    Bwd Packets/s <= 888.888889: BENIGN (60809.0/25.0)
+|   |   |    Bwd Packets/s > 888.888889
+|   |   |   |   Bwd IAT Total <= 538: BENIGN (51170.0/2907.0)
+|   |   |   |   Bwd IAT Total > 538
+|   |   |   |   |    Fwd IAT Max <= 342: BENIGN (10.0)
+|   |   |   |   |    Fwd IAT Max > 342
+|   |   |   |   |   |    Total Backward Packets <= 3: ATTACK (17.0)
+|   |   |   |   |   |    Total Backward Packets > 3: BENIGN (2.0)
+|   |    Fwd Packet Length Std > 6.429101
+|   |   |    Fwd Header Length <= 60: BENIGN (131.0)
+|   |   |    Fwd Header Length > 60
+|   |   |   |   Total Length of Fwd Packets <= 24
+|   |   |   |   |    Flow Duration <= 1
+|   |   |   |   |   |    Flow Duration <= 0: BENIGN (13.0/2.0)
+|   |   |   |   |   |    Flow Duration > 0: ATTACK (161.0/63.0)
+|   |   |   |   |    Flow Duration > 1: ATTACK (3860.0/8.0)
+|   |   |   |   Total Length of Fwd Packets > 24
+|   |   |   |   |    Total Length of Bwd Packets <= 38: BENIGN (37.0)
+|   |   |   |   |    Total Length of Bwd Packets > 38: ATTACK (4.0)
+|   Total Length of Fwd Packets > 30
+|   |    Fwd Packet Length Mean <= 9.433526
+|   |   |    Bwd Header Length <= 196: BENIGN (967.0)
+|   |   |    Bwd Header Length > 196
+|   |   |   |    Total Length of Bwd Packets <= 38: BENIGN (77.0)
+|   |   |   |    Total Length of Bwd Packets > 38: ATTACK (12.0/1.0)
+|   |    Fwd Packet Length Mean > 9.433526
+|   |   |    Bwd Header Length <= 324: BENIGN (274054.0/1.0)
+|   |   |    Bwd Header Length > 324
+|   |   |   |   Bwd IAT Total <= 5643261
+|   |   |   |   |    Packet Length Std <= 321.350721
+|   |   |   |   |   |    Bwd Packet Length Std <= 264.139038: BENIGN (37.0)
+|   |   |   |   |   |    Bwd Packet Length Std > 264.139038
+|   |   |   |   |   |   |    Total Length of Bwd Packets <= 2067: ATTACK (14.0/1.0)
+|   |   |   |   |   |   |    Total Length of Bwd Packets > 2067: BENIGN (8.0)
+|   |   |   |   |    Packet Length Std > 321.350721: BENIGN (3502.0)
+|   |   |   |   Bwd IAT Total > 5643261: BENIGN (13604.0)
+ Bwd Header Length > 484
+|    Packet Length Std <= 194.035364
+|   |   Bwd IAT Total <= 19700000
+|   |   |   Bwd IAT Total <= 7070603: BENIGN (710.0)
+|   |   |   Bwd IAT Total > 7070603: ATTACK (6867.0/1.0)
+|   |   Bwd IAT Total > 19700000: BENIGN (736.0)
+|    Packet Length Std > 194.035364
+|   |    Avg Bwd Segment Size <= 153.324324
+|   |   |    Fwd IAT Max <= 4028311
+|   |   |   |   Flow Bytes/s <= 975.722797: ATTACK (38.0)
+|   |   |   |   Flow Bytes/s > 975.722797: BENIGN (171.0)
+|   |   |    Fwd IAT Max > 4028311: BENIGN (1231.0)
+|   |    Avg Bwd Segment Size > 153.324324: BENIGN (27667.0/1.0)
+
+Number of Leaves  : 	27
+
+Size of the tree : 	53
+
+
+Time taken to build model: 41.95 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.19 seconds
+
+=== Summary ===
+
+Correctly Classified Instances      221442               99.3218 %
+Incorrectly Classified Instances      1512                0.6782 %
+Kappa statistic                          0.8742
+Mean absolute error                      0.0128
+Root mean squared error                  0.08  
+Relative absolute error                 21.3262 %
+Root relative squared error             46.2368 %
+Total Number of Instances           222954     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.213    0.993      1.000    0.997      0.880    0.988     0.999     BENIGN
+                 0.787    0.000    0.992      0.787    0.878      0.880    0.988     0.832     ATTACK
+Weighted Avg.    0.993    0.206    0.993      0.993    0.993      0.880    0.988     0.994     
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 216021     45 |      a = BENIGN
+   1467   5421 |      b = ATTACK
+

@@ -1,0 +1,139 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     Tuesday-WorkingKHA47feature-weka.filters.unsupervised.attribute.Remove-R19-20,31,34-37-weka.filters.unsupervised.attribute.Remove-R26-29,37
+Instances:    445909
+Attributes:   36
+               Protocol
+               Flow Duration
+               Total Fwd Packets
+               Total Backward Packets
+              Total Length of Fwd Packets
+               Total Length of Bwd Packets
+               Fwd Packet Length Mean
+               Fwd Packet Length Std
+               Bwd Packet Length Std
+              Flow Bytes/s
+               Flow Packets/s
+               Flow IAT Mean
+               Flow IAT Std
+               Flow IAT Min
+               Fwd IAT Std
+               Fwd IAT Max
+               Fwd IAT Min
+              Bwd IAT Total
+               Fwd Header Length
+               Bwd Header Length
+              Fwd Packets/s
+               Bwd Packets/s
+               Min Packet Length
+               Packet Length Std
+               Packet Length Variance
+               Avg Bwd Segment Size
+              Subflow Fwd Packets
+               Subflow Fwd Bytes
+               Subflow Bwd Packets
+               act_data_pkt_fwd
+               min_seg_size_forward
+              Active Mean
+              Idle Mean
+               Idle Std
+               Idle Max
+               Label
+Test mode:    split 50.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+ Bwd Header Length <= 484
+|   Total Length of Fwd Packets <= 30
+|   |    Fwd Packet Length Std <= 6.429101
+|   |   |    min_seg_size_forward <= 28: BENIGN (62496.0/2.0)
+|   |   |    min_seg_size_forward > 28
+|   |   |   |    Bwd Packets/s <= 7380.073801
+|   |   |   |   |    Bwd Header Length <= 68: BENIGN (21978.0/49.0)
+|   |   |   |   |    Bwd Header Length > 68
+|   |   |   |   |   |    Flow IAT Std <= 491.036658
+|   |   |   |   |   |   |    Bwd Header Length <= 72: ATTACK (16.0)
+|   |   |   |   |   |   |    Bwd Header Length > 72: BENIGN (9.0)
+|   |   |   |   |   |    Flow IAT Std > 491.036658: BENIGN (932.0/1.0)
+|   |   |   |    Bwd Packets/s > 7380.073801: BENIGN (26577.0/2881.0)
+|   |    Fwd Packet Length Std > 6.429101
+|   |   |    min_seg_size_forward <= 24: BENIGN (136.0)
+|   |   |    min_seg_size_forward > 24
+|   |   |   |   Total Length of Fwd Packets <= 24
+|   |   |   |   |    Fwd IAT Min <= 1
+|   |   |   |   |   |    Flow Duration <= 0: BENIGN (13.0/2.0)
+|   |   |   |   |   |    Flow Duration > 0: ATTACK (161.0/63.0)
+|   |   |   |   |    Fwd IAT Min > 1: ATTACK (3858.0/6.0)
+|   |   |   |   Total Length of Fwd Packets > 24
+|   |   |   |   |   Total Length of Fwd Packets <= 28: BENIGN (34.0)
+|   |   |   |   |   Total Length of Fwd Packets > 28: ATTACK (4.0)
+|   Total Length of Fwd Packets > 30
+|   |    Fwd Packet Length Mean <= 9.433526
+|   |   |    Bwd Header Length <= 196: BENIGN (967.0)
+|   |   |    Bwd Header Length > 196
+|   |   |   |    Total Length of Bwd Packets <= 38: BENIGN (77.0)
+|   |   |   |    Total Length of Bwd Packets > 38: ATTACK (12.0/1.0)
+|   |    Fwd Packet Length Mean > 9.433526
+|   |   |    Bwd Header Length <= 324: BENIGN (274054.0/1.0)
+|   |   |    Bwd Header Length > 324
+|   |   |   |    Idle Max <= 0
+|   |   |   |   |    Packet Length Std <= 321.350721
+|   |   |   |   |   |    Bwd Packet Length Std <= 348.456127: BENIGN (48.0/1.0)
+|   |   |   |   |   |    Bwd Packet Length Std > 348.456127
+|   |   |   |   |   |   |   Total Length of Fwd Packets <= 1263: ATTACK (12.0)
+|   |   |   |   |   |   |   Total Length of Fwd Packets > 1263: BENIGN (5.0)
+|   |   |   |   |    Packet Length Std > 321.350721: BENIGN (3593.0)
+|   |   |   |    Idle Max > 0: BENIGN (13507.0)
+ Bwd Header Length > 484
+|    Packet Length Std <= 194.035364
+|   |    Idle Max <= 0
+|   |   |   Flow Bytes/s <= 483.823447: ATTACK (6867.0/1.0)
+|   |   |   Flow Bytes/s > 483.823447: BENIGN (710.0)
+|   |    Idle Max > 0: BENIGN (736.0)
+|    Packet Length Std > 194.035364
+|   |    Avg Bwd Segment Size <= 153.324324
+|   |   |    Fwd IAT Max <= 4028311
+|   |   |   |   Flow Bytes/s <= 975.722797: ATTACK (38.0)
+|   |   |   |   Flow Bytes/s > 975.722797: BENIGN (171.0)
+|   |   |    Fwd IAT Max > 4028311: BENIGN (1231.0)
+|   |    Avg Bwd Segment Size > 153.324324: BENIGN (27667.0/1.0)
+
+Number of Leaves  : 	28
+
+Size of the tree : 	55
+
+
+Time taken to build model: 61.7 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.16 seconds
+
+=== Summary ===
+
+Correctly Classified Instances      221442               99.3218 %
+Incorrectly Classified Instances      1512                0.6782 %
+Kappa statistic                          0.874 
+Mean absolute error                      0.0132
+Root mean squared error                  0.0812
+Relative absolute error                 21.8807 %
+Root relative squared error             46.921  %
+Total Number of Instances           222954     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.214    0.993      1.000    0.997      0.880    0.972     0.998     BENIGN
+                 0.786    0.000    0.994      0.786    0.877      0.880    0.972     0.808     ATTACK
+Weighted Avg.    0.993    0.208    0.993      0.993    0.993      0.880    0.972     0.992     
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 216031     35 |      a = BENIGN
+   1477   5411 |      b = ATTACK
+
