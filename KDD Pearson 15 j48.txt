@@ -1,0 +1,3149 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     KDD_TempWekaCreatedfile_Test_Train-weka.filters.unsupervised.attribute.Remove-R1,7-8,11-12,15-18,20-22,26,28,30,37-41-weka.filters.unsupervised.attribute.Remove-R5-weka.filters.unsupervised.attribute.Remove-R4-5,7-9
+Instances:    148516
+Attributes:   16
+              protocol_type
+              service
+              flag
+              hot
+              count
+              srv_count
+              serror_rate
+              rerror_rate
+              same_srv_rate
+              srv_diff_host_rate
+              dst_host_count
+              dst_host_srv_count
+              dst_host_same_srv_rate
+              dst_host_diff_srv_rate
+              dst_host_same_src_port_rate
+              Label
+Test mode:    split 50.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+same_srv_rate <= 0.49
+|   dst_host_diff_srv_rate <= 0.15
+|   |   dst_host_diff_srv_rate <= 0.01
+|   |   |   rerror_rate <= 0
+|   |   |   |   serror_rate <= 0.48
+|   |   |   |   |   dst_host_srv_count <= 251: normal (767.0/3.0)
+|   |   |   |   |   dst_host_srv_count > 251: snmpgetattack (3.0/1.0)
+|   |   |   |   serror_rate > 0.48
+|   |   |   |   |   dst_host_srv_count <= 3: neptune (2.0)
+|   |   |   |   |   dst_host_srv_count > 3: buffer_overflow (2.0/1.0)
+|   |   |   rerror_rate > 0
+|   |   |   |   service = private: neptune (10.0)
+|   |   |   |   service = ftp_data: neptune (0.0)
+|   |   |   |   service = eco_i: neptune (0.0)
+|   |   |   |   service = telnet: buffer_overflow (1.0)
+|   |   |   |   service = http: neptune (0.0)
+|   |   |   |   service = smtp: neptune (0.0)
+|   |   |   |   service = ftp: neptune (0.0)
+|   |   |   |   service = ldap: neptune (0.0)
+|   |   |   |   service = pop_3: mscan (3.0)
+|   |   |   |   service = courier: neptune (0.0)
+|   |   |   |   service = discard: neptune (0.0)
+|   |   |   |   service = ecr_i: neptune (0.0)
+|   |   |   |   service = imap4: neptune (0.0)
+|   |   |   |   service = domain_u: neptune (0.0)
+|   |   |   |   service = mtp: neptune (0.0)
+|   |   |   |   service = systat: neptune (0.0)
+|   |   |   |   service = iso_tsap: neptune (0.0)
+|   |   |   |   service = other: httptunnel (3.0/1.0)
+|   |   |   |   service = csnet_ns: neptune (0.0)
+|   |   |   |   service = finger: neptune (0.0)
+|   |   |   |   service = uucp: neptune (0.0)
+|   |   |   |   service = whois: neptune (0.0)
+|   |   |   |   service = netbios_ns: neptune (0.0)
+|   |   |   |   service = link: neptune (0.0)
+|   |   |   |   service = Z39_50: neptune (0.0)
+|   |   |   |   service = sunrpc: neptune (0.0)
+|   |   |   |   service = auth: neptune (0.0)
+|   |   |   |   service = netbios_dgm: neptune (0.0)
+|   |   |   |   service = uucp_path: neptune (0.0)
+|   |   |   |   service = vmnet: neptune (0.0)
+|   |   |   |   service = domain: neptune (0.0)
+|   |   |   |   service = name: neptune (0.0)
+|   |   |   |   service = pop_2: neptune (0.0)
+|   |   |   |   service = http_443: neptune (0.0)
+|   |   |   |   service = urp_i: neptune (0.0)
+|   |   |   |   service = login: neptune (0.0)
+|   |   |   |   service = gopher: neptune (0.0)
+|   |   |   |   service = exec: neptune (0.0)
+|   |   |   |   service = time: neptune (0.0)
+|   |   |   |   service = remote_job: neptune (0.0)
+|   |   |   |   service = ssh: neptune (0.0)
+|   |   |   |   service = kshell: neptune (0.0)
+|   |   |   |   service = sql_net: neptune (0.0)
+|   |   |   |   service = shell: neptune (0.0)
+|   |   |   |   service = hostnames: neptune (0.0)
+|   |   |   |   service = echo: neptune (0.0)
+|   |   |   |   service = daytime: neptune (0.0)
+|   |   |   |   service = pm_dump: neptune (0.0)
+|   |   |   |   service = IRC: normal (1.0)
+|   |   |   |   service = netstat: neptune (0.0)
+|   |   |   |   service = ctf: neptune (0.0)
+|   |   |   |   service = nntp: neptune (0.0)
+|   |   |   |   service = netbios_ssn: neptune (0.0)
+|   |   |   |   service = tim_i: neptune (0.0)
+|   |   |   |   service = supdup: neptune (0.0)
+|   |   |   |   service = bgp: neptune (0.0)
+|   |   |   |   service = nnsp: neptune (0.0)
+|   |   |   |   service = rje: neptune (0.0)
+|   |   |   |   service = printer: neptune (0.0)
+|   |   |   |   service = efs: neptune (0.0)
+|   |   |   |   service = X11: neptune (0.0)
+|   |   |   |   service = ntp_u: neptune (0.0)
+|   |   |   |   service = klogin: neptune (0.0)
+|   |   |   |   service = red_i: neptune (0.0)
+|   |   |   |   service = urh_i: neptune (0.0)
+|   |   |   |   service = http_8001: neptune (0.0)
+|   |   |   |   service = aol: neptune (0.0)
+|   |   |   |   service = http_2784: neptune (0.0)
+|   |   |   |   service = tftp_u: neptune (0.0)
+|   |   |   |   service = harvest: neptune (0.0)
+|   |   dst_host_diff_srv_rate > 0.01
+|   |   |   dst_host_same_src_port_rate <= 0.03
+|   |   |   |   count <= 8
+|   |   |   |   |   serror_rate <= 0.46
+|   |   |   |   |   |   rerror_rate <= 0.14
+|   |   |   |   |   |   |   hot <= 0: normal (140.0/14.0)
+|   |   |   |   |   |   |   hot > 0
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0: warezmaster (9.0/1.0)
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0: normal (6.0)
+|   |   |   |   |   |   rerror_rate > 0.14
+|   |   |   |   |   |   |   dst_host_srv_count <= 4
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.04
+|   |   |   |   |   |   |   |   |   flag = REJ
+|   |   |   |   |   |   |   |   |   |   rerror_rate <= 0.58: satan (2.0)
+|   |   |   |   |   |   |   |   |   |   rerror_rate > 0.58: portsweep (7.0/3.0)
+|   |   |   |   |   |   |   |   |   flag = SF: mscan (1.0)
+|   |   |   |   |   |   |   |   |   flag = RSTO: normal (3.0)
+|   |   |   |   |   |   |   |   |   flag = S0: portsweep (0.0)
+|   |   |   |   |   |   |   |   |   flag = RSTR: portsweep (2.0)
+|   |   |   |   |   |   |   |   |   flag = SH: portsweep (0.0)
+|   |   |   |   |   |   |   |   |   flag = S3: portsweep (0.0)
+|   |   |   |   |   |   |   |   |   flag = S2: portsweep (0.0)
+|   |   |   |   |   |   |   |   |   flag = S1: portsweep (0.0)
+|   |   |   |   |   |   |   |   |   flag = RSTOS0: portsweep (0.0)
+|   |   |   |   |   |   |   |   |   flag = OTH: portsweep (0.0)
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.04: satan (24.0)
+|   |   |   |   |   |   |   dst_host_srv_count > 4
+|   |   |   |   |   |   |   |   count <= 5: mscan (281.0/6.0)
+|   |   |   |   |   |   |   |   count > 5
+|   |   |   |   |   |   |   |   |   flag = REJ: satan (0.0)
+|   |   |   |   |   |   |   |   |   flag = SF: satan (3.0)
+|   |   |   |   |   |   |   |   |   flag = RSTO: neptune (2.0)
+|   |   |   |   |   |   |   |   |   flag = S0: satan (0.0)
+|   |   |   |   |   |   |   |   |   flag = RSTR: satan (0.0)
+|   |   |   |   |   |   |   |   |   flag = SH: satan (0.0)
+|   |   |   |   |   |   |   |   |   flag = S3: satan (0.0)
+|   |   |   |   |   |   |   |   |   flag = S2: satan (0.0)
+|   |   |   |   |   |   |   |   |   flag = S1: satan (0.0)
+|   |   |   |   |   |   |   |   |   flag = RSTOS0: satan (0.0)
+|   |   |   |   |   |   |   |   |   flag = OTH: satan (0.0)
+|   |   |   |   |   serror_rate > 0.46
+|   |   |   |   |   |   serror_rate <= 0.77
+|   |   |   |   |   |   |   count <= 5: neptune (5.0/1.0)
+|   |   |   |   |   |   |   count > 5: portsweep (2.0)
+|   |   |   |   |   |   serror_rate > 0.77: neptune (186.0)
+|   |   |   |   count > 8
+|   |   |   |   |   protocol_type = tcp
+|   |   |   |   |   |   srv_count <= 1
+|   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.03
+|   |   |   |   |   |   |   |   serror_rate <= 0.53: normal (21.0)
+|   |   |   |   |   |   |   |   serror_rate > 0.53: neptune (9.0)
+|   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.03
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.09
+|   |   |   |   |   |   |   |   |   flag = REJ
+|   |   |   |   |   |   |   |   |   |   rerror_rate <= 0.91
+|   |   |   |   |   |   |   |   |   |   |   serror_rate <= 0.5: satan (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   serror_rate > 0.5: neptune (2.0)
+|   |   |   |   |   |   |   |   |   |   rerror_rate > 0.91: neptune (423.0/3.0)
+|   |   |   |   |   |   |   |   |   flag = SF
+|   |   |   |   |   |   |   |   |   |   rerror_rate <= 0.41: normal (14.0/1.0)
+|   |   |   |   |   |   |   |   |   |   rerror_rate > 0.41: neptune (2.0/1.0)
+|   |   |   |   |   |   |   |   |   flag = RSTO: neptune (119.0)
+|   |   |   |   |   |   |   |   |   flag = S0: neptune (1887.0)
+|   |   |   |   |   |   |   |   |   flag = RSTR: neptune (0.0)
+|   |   |   |   |   |   |   |   |   flag = SH: neptune (0.0)
+|   |   |   |   |   |   |   |   |   flag = S3: neptune (0.0)
+|   |   |   |   |   |   |   |   |   flag = S2: neptune (0.0)
+|   |   |   |   |   |   |   |   |   flag = S1: neptune (0.0)
+|   |   |   |   |   |   |   |   |   flag = RSTOS0: neptune (0.0)
+|   |   |   |   |   |   |   |   |   flag = OTH: neptune (0.0)
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.09
+|   |   |   |   |   |   |   |   |   serror_rate <= 0.62
+|   |   |   |   |   |   |   |   |   |   rerror_rate <= 0.99: satan (20.0/1.0)
+|   |   |   |   |   |   |   |   |   |   rerror_rate > 0.99: neptune (7.0)
+|   |   |   |   |   |   |   |   |   serror_rate > 0.62: neptune (29.0)
+|   |   |   |   |   |   srv_count > 1
+|   |   |   |   |   |   |   flag = REJ: neptune (7916.0)
+|   |   |   |   |   |   |   flag = SF
+|   |   |   |   |   |   |   |   service = private: normal (0.0)
+|   |   |   |   |   |   |   |   service = ftp_data: normal (5.0)
+|   |   |   |   |   |   |   |   service = eco_i: normal (0.0)
+|   |   |   |   |   |   |   |   service = telnet: normal (0.0)
+|   |   |   |   |   |   |   |   service = http: normal (0.0)
+|   |   |   |   |   |   |   |   service = smtp: normal (13.0)
+|   |   |   |   |   |   |   |   service = ftp: normal (0.0)
+|   |   |   |   |   |   |   |   service = ldap: normal (0.0)
+|   |   |   |   |   |   |   |   service = pop_3: normal (0.0)
+|   |   |   |   |   |   |   |   service = courier: normal (0.0)
+|   |   |   |   |   |   |   |   service = discard: normal (0.0)
+|   |   |   |   |   |   |   |   service = ecr_i: normal (0.0)
+|   |   |   |   |   |   |   |   service = imap4: normal (0.0)
+|   |   |   |   |   |   |   |   service = domain_u: normal (0.0)
+|   |   |   |   |   |   |   |   service = mtp: normal (0.0)
+|   |   |   |   |   |   |   |   service = systat: normal (0.0)
+|   |   |   |   |   |   |   |   service = iso_tsap: normal (0.0)
+|   |   |   |   |   |   |   |   service = other: normal (0.0)
+|   |   |   |   |   |   |   |   service = csnet_ns: normal (0.0)
+|   |   |   |   |   |   |   |   service = finger: satan (2.0)
+|   |   |   |   |   |   |   |   service = uucp: normal (0.0)
+|   |   |   |   |   |   |   |   service = whois: normal (0.0)
+|   |   |   |   |   |   |   |   service = netbios_ns: normal (0.0)
+|   |   |   |   |   |   |   |   service = link: normal (0.0)
+|   |   |   |   |   |   |   |   service = Z39_50: normal (0.0)
+|   |   |   |   |   |   |   |   service = sunrpc: normal (0.0)
+|   |   |   |   |   |   |   |   service = auth: normal (0.0)
+|   |   |   |   |   |   |   |   service = netbios_dgm: normal (0.0)
+|   |   |   |   |   |   |   |   service = uucp_path: normal (0.0)
+|   |   |   |   |   |   |   |   service = vmnet: normal (0.0)
+|   |   |   |   |   |   |   |   service = domain: normal (0.0)
+|   |   |   |   |   |   |   |   service = name: normal (0.0)
+|   |   |   |   |   |   |   |   service = pop_2: normal (0.0)
+|   |   |   |   |   |   |   |   service = http_443: normal (0.0)
+|   |   |   |   |   |   |   |   service = urp_i: normal (0.0)
+|   |   |   |   |   |   |   |   service = login: normal (0.0)
+|   |   |   |   |   |   |   |   service = gopher: normal (0.0)
+|   |   |   |   |   |   |   |   service = exec: normal (0.0)
+|   |   |   |   |   |   |   |   service = time: normal (0.0)
+|   |   |   |   |   |   |   |   service = remote_job: normal (0.0)
+|   |   |   |   |   |   |   |   service = ssh: normal (0.0)
+|   |   |   |   |   |   |   |   service = kshell: normal (0.0)
+|   |   |   |   |   |   |   |   service = sql_net: normal (0.0)
+|   |   |   |   |   |   |   |   service = shell: normal (0.0)
+|   |   |   |   |   |   |   |   service = hostnames: normal (0.0)
+|   |   |   |   |   |   |   |   service = echo: normal (0.0)
+|   |   |   |   |   |   |   |   service = daytime: normal (0.0)
+|   |   |   |   |   |   |   |   service = pm_dump: normal (0.0)
+|   |   |   |   |   |   |   |   service = IRC: normal (0.0)
+|   |   |   |   |   |   |   |   service = netstat: normal (0.0)
+|   |   |   |   |   |   |   |   service = ctf: normal (0.0)
+|   |   |   |   |   |   |   |   service = nntp: normal (0.0)
+|   |   |   |   |   |   |   |   service = netbios_ssn: normal (0.0)
+|   |   |   |   |   |   |   |   service = tim_i: normal (0.0)
+|   |   |   |   |   |   |   |   service = supdup: normal (0.0)
+|   |   |   |   |   |   |   |   service = bgp: normal (0.0)
+|   |   |   |   |   |   |   |   service = nnsp: normal (0.0)
+|   |   |   |   |   |   |   |   service = rje: normal (0.0)
+|   |   |   |   |   |   |   |   service = printer: normal (0.0)
+|   |   |   |   |   |   |   |   service = efs: normal (0.0)
+|   |   |   |   |   |   |   |   service = X11: normal (0.0)
+|   |   |   |   |   |   |   |   service = ntp_u: normal (0.0)
+|   |   |   |   |   |   |   |   service = klogin: normal (0.0)
+|   |   |   |   |   |   |   |   service = red_i: normal (0.0)
+|   |   |   |   |   |   |   |   service = urh_i: normal (0.0)
+|   |   |   |   |   |   |   |   service = http_8001: normal (0.0)
+|   |   |   |   |   |   |   |   service = aol: normal (0.0)
+|   |   |   |   |   |   |   |   service = http_2784: normal (0.0)
+|   |   |   |   |   |   |   |   service = tftp_u: normal (0.0)
+|   |   |   |   |   |   |   |   service = harvest: normal (0.0)
+|   |   |   |   |   |   |   flag = RSTO: neptune (1455.0)
+|   |   |   |   |   |   |   flag = S0: neptune (32411.0)
+|   |   |   |   |   |   |   flag = RSTR: normal (2.0)
+|   |   |   |   |   |   |   flag = SH: neptune (0.0)
+|   |   |   |   |   |   |   flag = S3: neptune (0.0)
+|   |   |   |   |   |   |   flag = S2: neptune (0.0)
+|   |   |   |   |   |   |   flag = S1: neptune (0.0)
+|   |   |   |   |   |   |   flag = RSTOS0: neptune (0.0)
+|   |   |   |   |   |   |   flag = OTH: neptune (0.0)
+|   |   |   |   |   protocol_type = icmp: normal (6.0)
+|   |   |   |   |   protocol_type = udp
+|   |   |   |   |   |   dst_host_count <= 224: normal (6.0)
+|   |   |   |   |   |   dst_host_count > 224: satan (8.0)
+|   |   |   dst_host_same_src_port_rate > 0.03
+|   |   |   |   rerror_rate <= 0.09
+|   |   |   |   |   serror_rate <= 0.99
+|   |   |   |   |   |   protocol_type = tcp: normal (259.0)
+|   |   |   |   |   |   protocol_type = icmp: normal (28.0/1.0)
+|   |   |   |   |   |   protocol_type = udp
+|   |   |   |   |   |   |   count <= 8: normal (32.0)
+|   |   |   |   |   |   |   count > 8
+|   |   |   |   |   |   |   |   dst_host_count <= 160: normal (2.0)
+|   |   |   |   |   |   |   |   dst_host_count > 160: satan (112.0/1.0)
+|   |   |   |   |   serror_rate > 0.99: neptune (87.0)
+|   |   |   |   rerror_rate > 0.09
+|   |   |   |   |   dst_host_count <= 102: neptune (19.0/1.0)
+|   |   |   |   |   dst_host_count > 102: portsweep (122.0)
+|   dst_host_diff_srv_rate > 0.15
+|   |   serror_rate <= 0.46
+|   |   |   rerror_rate <= 0.99
+|   |   |   |   count <= 7
+|   |   |   |   |   rerror_rate <= 0.22
+|   |   |   |   |   |   flag = REJ: normal (0.0)
+|   |   |   |   |   |   flag = SF
+|   |   |   |   |   |   |   service = private
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.91: satan (20.0/2.0)
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.91
+|   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.08: saint (2.0)
+|   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.08: satan (4.0)
+|   |   |   |   |   |   |   service = ftp_data: normal (4.0)
+|   |   |   |   |   |   |   service = eco_i: normal (0.0)
+|   |   |   |   |   |   |   service = telnet: normal (0.0)
+|   |   |   |   |   |   |   service = http: normal (0.0)
+|   |   |   |   |   |   |   service = smtp: normal (13.0/1.0)
+|   |   |   |   |   |   |   service = ftp: normal (1.0)
+|   |   |   |   |   |   |   service = ldap: normal (0.0)
+|   |   |   |   |   |   |   service = pop_3: normal (2.0)
+|   |   |   |   |   |   |   service = courier: normal (0.0)
+|   |   |   |   |   |   |   service = discard: normal (0.0)
+|   |   |   |   |   |   |   service = ecr_i: normal (0.0)
+|   |   |   |   |   |   |   service = imap4: normal (0.0)
+|   |   |   |   |   |   |   service = domain_u: saint (1.0)
+|   |   |   |   |   |   |   service = mtp: normal (0.0)
+|   |   |   |   |   |   |   service = systat: normal (0.0)
+|   |   |   |   |   |   |   service = iso_tsap: normal (0.0)
+|   |   |   |   |   |   |   service = other
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.24
+|   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.74: normal (18.0)
+|   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.74: satan (11.0)
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.24: normal (408.0/2.0)
+|   |   |   |   |   |   |   service = csnet_ns: normal (0.0)
+|   |   |   |   |   |   |   service = finger: normal (2.0)
+|   |   |   |   |   |   |   service = uucp: normal (0.0)
+|   |   |   |   |   |   |   service = whois: normal (0.0)
+|   |   |   |   |   |   |   service = netbios_ns: normal (0.0)
+|   |   |   |   |   |   |   service = link: normal (0.0)
+|   |   |   |   |   |   |   service = Z39_50: normal (0.0)
+|   |   |   |   |   |   |   service = sunrpc: normal (0.0)
+|   |   |   |   |   |   |   service = auth: normal (1.0)
+|   |   |   |   |   |   |   service = netbios_dgm: normal (0.0)
+|   |   |   |   |   |   |   service = uucp_path: normal (0.0)
+|   |   |   |   |   |   |   service = vmnet: normal (0.0)
+|   |   |   |   |   |   |   service = domain: normal (0.0)
+|   |   |   |   |   |   |   service = name: normal (0.0)
+|   |   |   |   |   |   |   service = pop_2: normal (0.0)
+|   |   |   |   |   |   |   service = http_443: normal (0.0)
+|   |   |   |   |   |   |   service = urp_i: normal (0.0)
+|   |   |   |   |   |   |   service = login: normal (0.0)
+|   |   |   |   |   |   |   service = gopher: satan (1.0)
+|   |   |   |   |   |   |   service = exec: normal (0.0)
+|   |   |   |   |   |   |   service = time: normal (0.0)
+|   |   |   |   |   |   |   service = remote_job: normal (0.0)
+|   |   |   |   |   |   |   service = ssh: normal (0.0)
+|   |   |   |   |   |   |   service = kshell: normal (0.0)
+|   |   |   |   |   |   |   service = sql_net: normal (0.0)
+|   |   |   |   |   |   |   service = shell: normal (0.0)
+|   |   |   |   |   |   |   service = hostnames: normal (0.0)
+|   |   |   |   |   |   |   service = echo: normal (0.0)
+|   |   |   |   |   |   |   service = daytime: normal (0.0)
+|   |   |   |   |   |   |   service = pm_dump: normal (0.0)
+|   |   |   |   |   |   |   service = IRC: normal (0.0)
+|   |   |   |   |   |   |   service = netstat: normal (0.0)
+|   |   |   |   |   |   |   service = ctf: normal (0.0)
+|   |   |   |   |   |   |   service = nntp: normal (0.0)
+|   |   |   |   |   |   |   service = netbios_ssn: normal (0.0)
+|   |   |   |   |   |   |   service = tim_i: normal (0.0)
+|   |   |   |   |   |   |   service = supdup: normal (0.0)
+|   |   |   |   |   |   |   service = bgp: normal (0.0)
+|   |   |   |   |   |   |   service = nnsp: normal (0.0)
+|   |   |   |   |   |   |   service = rje: normal (0.0)
+|   |   |   |   |   |   |   service = printer: normal (0.0)
+|   |   |   |   |   |   |   service = efs: normal (0.0)
+|   |   |   |   |   |   |   service = X11: normal (0.0)
+|   |   |   |   |   |   |   service = ntp_u: normal (1.0)
+|   |   |   |   |   |   |   service = klogin: normal (0.0)
+|   |   |   |   |   |   |   service = red_i: normal (0.0)
+|   |   |   |   |   |   |   service = urh_i: normal (0.0)
+|   |   |   |   |   |   |   service = http_8001: normal (0.0)
+|   |   |   |   |   |   |   service = aol: normal (0.0)
+|   |   |   |   |   |   |   service = http_2784: normal (0.0)
+|   |   |   |   |   |   |   service = tftp_u: normal (0.0)
+|   |   |   |   |   |   |   service = harvest: normal (0.0)
+|   |   |   |   |   |   flag = RSTO: normal (0.0)
+|   |   |   |   |   |   flag = S0: normal (0.0)
+|   |   |   |   |   |   flag = RSTR: portsweep (3.0/1.0)
+|   |   |   |   |   |   flag = SH: nmap (1.0)
+|   |   |   |   |   |   flag = S3: normal (0.0)
+|   |   |   |   |   |   flag = S2: normal (0.0)
+|   |   |   |   |   |   flag = S1: normal (1.0)
+|   |   |   |   |   |   flag = RSTOS0: normal (0.0)
+|   |   |   |   |   |   flag = OTH: normal (0.0)
+|   |   |   |   |   rerror_rate > 0.22
+|   |   |   |   |   |   dst_host_same_srv_rate <= 0.01
+|   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.2: satan (10.0/2.0)
+|   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.2: portsweep (6.0)
+|   |   |   |   |   |   dst_host_same_srv_rate > 0.01
+|   |   |   |   |   |   |   flag = REJ
+|   |   |   |   |   |   |   |   srv_diff_host_rate <= 0.5: saint (2.0)
+|   |   |   |   |   |   |   |   srv_diff_host_rate > 0.5: mscan (4.0)
+|   |   |   |   |   |   |   flag = SF: mscan (10.0/2.0)
+|   |   |   |   |   |   |   flag = RSTO: normal (1.0)
+|   |   |   |   |   |   |   flag = S0: land (1.0)
+|   |   |   |   |   |   |   flag = RSTR: normal (1.0)
+|   |   |   |   |   |   |   flag = SH: mscan (0.0)
+|   |   |   |   |   |   |   flag = S3: mscan (0.0)
+|   |   |   |   |   |   |   flag = S2: mscan (0.0)
+|   |   |   |   |   |   |   flag = S1: mscan (0.0)
+|   |   |   |   |   |   |   flag = RSTOS0: mscan (0.0)
+|   |   |   |   |   |   |   flag = OTH: mscan (0.0)
+|   |   |   |   count > 7
+|   |   |   |   |   dst_host_same_srv_rate <= 0
+|   |   |   |   |   |   rerror_rate <= 0.9
+|   |   |   |   |   |   |   same_srv_rate <= 0.06
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.47
+|   |   |   |   |   |   |   |   |   serror_rate <= 0.1: satan (73.0)
+|   |   |   |   |   |   |   |   |   serror_rate > 0.1
+|   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.31
+|   |   |   |   |   |   |   |   |   |   |   same_srv_rate <= 0.02
+|   |   |   |   |   |   |   |   |   |   |   |   count <= 134: saint (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   count > 134: satan (6.0)
+|   |   |   |   |   |   |   |   |   |   |   same_srv_rate > 0.02: satan (7.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.31: portsweep (3.0)
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.47
+|   |   |   |   |   |   |   |   |   rerror_rate <= 0.89: satan (1275.0/4.0)
+|   |   |   |   |   |   |   |   |   rerror_rate > 0.89
+|   |   |   |   |   |   |   |   |   |   count <= 486: satan (187.0/6.0)
+|   |   |   |   |   |   |   |   |   |   count > 486
+|   |   |   |   |   |   |   |   |   |   |   count <= 499: saint (4.0)
+|   |   |   |   |   |   |   |   |   |   |   count > 499: satan (57.0)
+|   |   |   |   |   |   |   same_srv_rate > 0.06
+|   |   |   |   |   |   |   |   service = private
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.23: saint (2.0)
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.23: satan (53.0/7.0)
+|   |   |   |   |   |   |   |   service = ftp_data: satan (0.0)
+|   |   |   |   |   |   |   |   service = eco_i: satan (0.0)
+|   |   |   |   |   |   |   |   service = telnet: satan (0.0)
+|   |   |   |   |   |   |   |   service = http: satan (0.0)
+|   |   |   |   |   |   |   |   service = smtp: satan (0.0)
+|   |   |   |   |   |   |   |   service = ftp: satan (0.0)
+|   |   |   |   |   |   |   |   service = ldap: satan (0.0)
+|   |   |   |   |   |   |   |   service = pop_3: satan (0.0)
+|   |   |   |   |   |   |   |   service = courier: satan (0.0)
+|   |   |   |   |   |   |   |   service = discard: satan (0.0)
+|   |   |   |   |   |   |   |   service = ecr_i: satan (0.0)
+|   |   |   |   |   |   |   |   service = imap4: satan (0.0)
+|   |   |   |   |   |   |   |   service = domain_u: satan (0.0)
+|   |   |   |   |   |   |   |   service = mtp: satan (0.0)
+|   |   |   |   |   |   |   |   service = systat: satan (0.0)
+|   |   |   |   |   |   |   |   service = iso_tsap: satan (0.0)
+|   |   |   |   |   |   |   |   service = other
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.52: satan (33.0)
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.52: normal (6.0/1.0)
+|   |   |   |   |   |   |   |   service = csnet_ns: satan (0.0)
+|   |   |   |   |   |   |   |   service = finger: satan (0.0)
+|   |   |   |   |   |   |   |   service = uucp: satan (1.0)
+|   |   |   |   |   |   |   |   service = whois: satan (0.0)
+|   |   |   |   |   |   |   |   service = netbios_ns: satan (0.0)
+|   |   |   |   |   |   |   |   service = link: satan (0.0)
+|   |   |   |   |   |   |   |   service = Z39_50: satan (0.0)
+|   |   |   |   |   |   |   |   service = sunrpc: satan (0.0)
+|   |   |   |   |   |   |   |   service = auth: satan (0.0)
+|   |   |   |   |   |   |   |   service = netbios_dgm: satan (0.0)
+|   |   |   |   |   |   |   |   service = uucp_path: satan (0.0)
+|   |   |   |   |   |   |   |   service = vmnet: satan (0.0)
+|   |   |   |   |   |   |   |   service = domain: satan (0.0)
+|   |   |   |   |   |   |   |   service = name: satan (0.0)
+|   |   |   |   |   |   |   |   service = pop_2: satan (0.0)
+|   |   |   |   |   |   |   |   service = http_443: satan (0.0)
+|   |   |   |   |   |   |   |   service = urp_i: satan (0.0)
+|   |   |   |   |   |   |   |   service = login: satan (0.0)
+|   |   |   |   |   |   |   |   service = gopher: satan (0.0)
+|   |   |   |   |   |   |   |   service = exec: satan (0.0)
+|   |   |   |   |   |   |   |   service = time: satan (0.0)
+|   |   |   |   |   |   |   |   service = remote_job: satan (0.0)
+|   |   |   |   |   |   |   |   service = ssh: satan (0.0)
+|   |   |   |   |   |   |   |   service = kshell: satan (0.0)
+|   |   |   |   |   |   |   |   service = sql_net: satan (0.0)
+|   |   |   |   |   |   |   |   service = shell: satan (0.0)
+|   |   |   |   |   |   |   |   service = hostnames: satan (0.0)
+|   |   |   |   |   |   |   |   service = echo: satan (0.0)
+|   |   |   |   |   |   |   |   service = daytime: satan (0.0)
+|   |   |   |   |   |   |   |   service = pm_dump: satan (0.0)
+|   |   |   |   |   |   |   |   service = IRC: satan (0.0)
+|   |   |   |   |   |   |   |   service = netstat: satan (0.0)
+|   |   |   |   |   |   |   |   service = ctf: satan (0.0)
+|   |   |   |   |   |   |   |   service = nntp: satan (0.0)
+|   |   |   |   |   |   |   |   service = netbios_ssn: satan (0.0)
+|   |   |   |   |   |   |   |   service = tim_i: satan (0.0)
+|   |   |   |   |   |   |   |   service = supdup: satan (0.0)
+|   |   |   |   |   |   |   |   service = bgp: satan (0.0)
+|   |   |   |   |   |   |   |   service = nnsp: satan (0.0)
+|   |   |   |   |   |   |   |   service = rje: satan (0.0)
+|   |   |   |   |   |   |   |   service = printer: satan (0.0)
+|   |   |   |   |   |   |   |   service = efs: satan (0.0)
+|   |   |   |   |   |   |   |   service = X11: satan (0.0)
+|   |   |   |   |   |   |   |   service = ntp_u: satan (0.0)
+|   |   |   |   |   |   |   |   service = klogin: satan (0.0)
+|   |   |   |   |   |   |   |   service = red_i: satan (0.0)
+|   |   |   |   |   |   |   |   service = urh_i: satan (0.0)
+|   |   |   |   |   |   |   |   service = http_8001: satan (0.0)
+|   |   |   |   |   |   |   |   service = aol: satan (0.0)
+|   |   |   |   |   |   |   |   service = http_2784: satan (0.0)
+|   |   |   |   |   |   |   |   service = tftp_u: satan (0.0)
+|   |   |   |   |   |   |   |   service = harvest: satan (0.0)
+|   |   |   |   |   |   rerror_rate > 0.9
+|   |   |   |   |   |   |   same_srv_rate <= 0
+|   |   |   |   |   |   |   |   serror_rate <= 0.03: satan (206.0/7.0)
+|   |   |   |   |   |   |   |   serror_rate > 0.03
+|   |   |   |   |   |   |   |   |   rerror_rate <= 0.93
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.87: saint (4.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.87
+|   |   |   |   |   |   |   |   |   |   |   serror_rate <= 0.04
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.96: satan (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.96: saint (7.0)
+|   |   |   |   |   |   |   |   |   |   |   serror_rate > 0.04
+|   |   |   |   |   |   |   |   |   |   |   |   count <= 341
+|   |   |   |   |   |   |   |   |   |   |   |   |   rerror_rate <= 0.92
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   count <= 326: satan (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   count > 326: saint (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   rerror_rate > 0.92: saint (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   count > 341: satan (538.0/39.0)
+|   |   |   |   |   |   |   |   |   rerror_rate > 0.93
+|   |   |   |   |   |   |   |   |   |   service = private
+|   |   |   |   |   |   |   |   |   |   |   count <= 509: satan (52.0)
+|   |   |   |   |   |   |   |   |   |   |   count > 509: saint (4.0)
+|   |   |   |   |   |   |   |   |   |   service = ftp_data: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = eco_i: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = telnet: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = http: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = smtp: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = ftp: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = ldap: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = pop_3: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = courier: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = discard: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = ecr_i: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = imap4: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = domain_u: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = mtp: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = systat: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = iso_tsap: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = other
+|   |   |   |   |   |   |   |   |   |   |   count <= 507
+|   |   |   |   |   |   |   |   |   |   |   |   count <= 446: saint (26.0)
+|   |   |   |   |   |   |   |   |   |   |   |   count > 446
+|   |   |   |   |   |   |   |   |   |   |   |   |   flag = REJ: saint (68.0/22.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   flag = SF: saint (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   flag = RSTO: saint (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   flag = S0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   count <= 481: satan (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   count > 481
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   count <= 491: saint (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   count > 491: satan (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   flag = RSTR: saint (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   flag = SH: saint (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   flag = S3: saint (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   flag = S2: saint (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   flag = S1: saint (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   flag = RSTOS0: saint (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   flag = OTH: saint (0.0)
+|   |   |   |   |   |   |   |   |   |   |   count > 507
+|   |   |   |   |   |   |   |   |   |   |   |   flag = REJ: satan (94.0/20.0)
+|   |   |   |   |   |   |   |   |   |   |   |   flag = SF: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   flag = RSTO: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   flag = S0: saint (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   flag = RSTR: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   flag = SH: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   flag = S3: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   flag = S2: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   flag = S1: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   flag = RSTOS0: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   flag = OTH: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = csnet_ns: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = finger: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = uucp: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = whois: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = netbios_ns: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = link: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = Z39_50: satan (1.0)
+|   |   |   |   |   |   |   |   |   |   service = sunrpc: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = auth: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = netbios_dgm: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = uucp_path: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = vmnet: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = domain: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = name: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = pop_2: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = http_443: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = urp_i: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = login: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = gopher: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = exec: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = time: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = remote_job: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = ssh: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = kshell: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = sql_net: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = shell: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = hostnames: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = echo: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = daytime: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = pm_dump: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = IRC: saint (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   service = netstat: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = ctf: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = nntp: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = netbios_ssn: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = tim_i: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = supdup: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = bgp: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = nnsp: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = rje: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = printer: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = efs: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = X11: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = ntp_u: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = klogin: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = red_i: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = urh_i: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = http_8001: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = aol: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = http_2784: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = tftp_u: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = harvest: satan (0.0)
+|   |   |   |   |   |   |   same_srv_rate > 0
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.27: satan (243.0)
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.27: portsweep (2.0)
+|   |   |   |   |   dst_host_same_srv_rate > 0
+|   |   |   |   |   |   dst_host_count <= 125
+|   |   |   |   |   |   |   same_srv_rate <= 0.03
+|   |   |   |   |   |   |   |   serror_rate <= 0.01: satan (6.0)
+|   |   |   |   |   |   |   |   serror_rate > 0.01: portsweep (5.0)
+|   |   |   |   |   |   |   same_srv_rate > 0.03
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.24
+|   |   |   |   |   |   |   |   |   dst_host_count <= 52: saint (4.0)
+|   |   |   |   |   |   |   |   |   dst_host_count > 52: normal (2.0/1.0)
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.24: normal (25.0)
+|   |   |   |   |   |   dst_host_count > 125
+|   |   |   |   |   |   |   flag = REJ: satan (81.0)
+|   |   |   |   |   |   |   flag = SF
+|   |   |   |   |   |   |   |   count <= 61
+|   |   |   |   |   |   |   |   |   serror_rate <= 0.08
+|   |   |   |   |   |   |   |   |   |   service = private
+|   |   |   |   |   |   |   |   |   |   |   count <= 38
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.97
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.95: satan (309.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.95: normal (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.97
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.31: satan (72.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.31
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.99: normal (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.99
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   same_srv_rate <= 0.23: satan (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   same_srv_rate > 0.23: normal (3.0)
+|   |   |   |   |   |   |   |   |   |   |   count > 38
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.39: satan (47.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.39
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.04: normal (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.04
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.65: satan (18.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.65: normal (3.0)
+|   |   |   |   |   |   |   |   |   |   service = ftp_data: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = eco_i: satan (1.0)
+|   |   |   |   |   |   |   |   |   |   service = telnet: normal (1.0)
+|   |   |   |   |   |   |   |   |   |   service = http: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = smtp: normal (1.0)
+|   |   |   |   |   |   |   |   |   |   service = ftp: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = ldap: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = pop_3: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = courier: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = discard: satan (1.0)
+|   |   |   |   |   |   |   |   |   |   service = ecr_i: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = imap4: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = domain_u: satan (7.0)
+|   |   |   |   |   |   |   |   |   |   service = mtp: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = systat: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = iso_tsap: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = other
+|   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.37: satan (44.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.37: normal (12.0)
+|   |   |   |   |   |   |   |   |   |   service = csnet_ns: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = finger: satan (1.0)
+|   |   |   |   |   |   |   |   |   |   service = uucp: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = whois: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = netbios_ns: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = link: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = Z39_50: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = sunrpc: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = auth: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = netbios_dgm: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = uucp_path: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = vmnet: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = domain: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = name: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = pop_2: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = http_443: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = urp_i: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = login: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = gopher: satan (1.0)
+|   |   |   |   |   |   |   |   |   |   service = exec: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = time: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = remote_job: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = ssh: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = kshell: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = sql_net: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = shell: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = hostnames: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = echo: satan (1.0)
+|   |   |   |   |   |   |   |   |   |   service = daytime: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = pm_dump: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = IRC: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = netstat: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = ctf: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = nntp: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = netbios_ssn: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = tim_i: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = supdup: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = bgp: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = nnsp: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = rje: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = printer: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = efs: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = X11: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = ntp_u: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = klogin: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = red_i: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = urh_i: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = http_8001: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = aol: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = http_2784: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = tftp_u: satan (0.0)
+|   |   |   |   |   |   |   |   |   |   service = harvest: satan (0.0)
+|   |   |   |   |   |   |   |   |   serror_rate > 0.08: normal (7.0)
+|   |   |   |   |   |   |   |   count > 61
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.44: satan (36.0)
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.44
+|   |   |   |   |   |   |   |   |   |   protocol_type = tcp: satan (3.0)
+|   |   |   |   |   |   |   |   |   |   protocol_type = icmp: normal (0.0)
+|   |   |   |   |   |   |   |   |   |   protocol_type = udp: normal (78.0/4.0)
+|   |   |   |   |   |   |   flag = RSTO: satan (1.0)
+|   |   |   |   |   |   |   flag = S0: satan (9.0/1.0)
+|   |   |   |   |   |   |   flag = RSTR: portsweep (3.0/1.0)
+|   |   |   |   |   |   |   flag = SH: nmap (1.0)
+|   |   |   |   |   |   |   flag = S3: satan (1.0)
+|   |   |   |   |   |   |   flag = S2: saint (1.0)
+|   |   |   |   |   |   |   flag = S1: satan (0.0)
+|   |   |   |   |   |   |   flag = RSTOS0: portsweep (6.0)
+|   |   |   |   |   |   |   flag = OTH: satan (0.0)
+|   |   |   rerror_rate > 0.99
+|   |   |   |   dst_host_same_src_port_rate <= 0.26
+|   |   |   |   |   srv_diff_host_rate <= 0.47
+|   |   |   |   |   |   dst_host_same_srv_rate <= 0: satan (42.0/1.0)
+|   |   |   |   |   |   dst_host_same_srv_rate > 0: neptune (39.0/2.0)
+|   |   |   |   |   srv_diff_host_rate > 0.47: mscan (15.0)
+|   |   |   |   dst_host_same_src_port_rate > 0.26
+|   |   |   |   |   dst_host_count <= 185
+|   |   |   |   |   |   srv_count <= 1: portsweep (12.0)
+|   |   |   |   |   |   srv_count > 1: normal (11.0)
+|   |   |   |   |   dst_host_count > 185: portsweep (245.0)
+|   |   serror_rate > 0.46
+|   |   |   rerror_rate <= 0.01
+|   |   |   |   flag = REJ: neptune (0.0)
+|   |   |   |   flag = SF: teardrop (93.0)
+|   |   |   |   flag = RSTO: neptune (0.0)
+|   |   |   |   flag = S0: neptune (164.0)
+|   |   |   |   flag = RSTR: neptune (0.0)
+|   |   |   |   flag = SH: nmap (5.0)
+|   |   |   |   flag = S3: neptune (0.0)
+|   |   |   |   flag = S2: neptune (0.0)
+|   |   |   |   flag = S1: neptune (0.0)
+|   |   |   |   flag = RSTOS0: neptune (0.0)
+|   |   |   |   flag = OTH: neptune (0.0)
+|   |   |   rerror_rate > 0.01: portsweep (74.0)
+same_srv_rate > 0.49
+|   flag = REJ
+|   |   dst_host_srv_count <= 2
+|   |   |   dst_host_count <= 73
+|   |   |   |   dst_host_diff_srv_rate <= 0.87: normal (21.0/3.0)
+|   |   |   |   dst_host_diff_srv_rate > 0.87
+|   |   |   |   |   dst_host_same_srv_rate <= 0.41: ipsweep (383.0)
+|   |   |   |   |   dst_host_same_srv_rate > 0.41: normal (2.0)
+|   |   |   dst_host_count > 73
+|   |   |   |   dst_host_same_src_port_rate <= 0.01
+|   |   |   |   |   service = private
+|   |   |   |   |   |   dst_host_diff_srv_rate <= 0.04: portsweep (3.0)
+|   |   |   |   |   |   dst_host_diff_srv_rate > 0.04
+|   |   |   |   |   |   |   srv_count <= 1: satan (5.0/1.0)
+|   |   |   |   |   |   |   srv_count > 1: neptune (2.0)
+|   |   |   |   |   service = ftp_data: normal (0.0)
+|   |   |   |   |   service = eco_i: normal (0.0)
+|   |   |   |   |   service = telnet: normal (0.0)
+|   |   |   |   |   service = http: neptune (1.0)
+|   |   |   |   |   service = smtp: normal (2.0)
+|   |   |   |   |   service = ftp: normal (0.0)
+|   |   |   |   |   service = ldap: normal (0.0)
+|   |   |   |   |   service = pop_3: mscan (1.0)
+|   |   |   |   |   service = courier: normal (0.0)
+|   |   |   |   |   service = discard: normal (0.0)
+|   |   |   |   |   service = ecr_i: normal (0.0)
+|   |   |   |   |   service = imap4: normal (0.0)
+|   |   |   |   |   service = domain_u: normal (0.0)
+|   |   |   |   |   service = mtp: normal (0.0)
+|   |   |   |   |   service = systat: normal (0.0)
+|   |   |   |   |   service = iso_tsap: normal (0.0)
+|   |   |   |   |   service = other: httptunnel (7.0)
+|   |   |   |   |   service = csnet_ns: normal (0.0)
+|   |   |   |   |   service = finger: normal (0.0)
+|   |   |   |   |   service = uucp: normal (0.0)
+|   |   |   |   |   service = whois: normal (0.0)
+|   |   |   |   |   service = netbios_ns: normal (0.0)
+|   |   |   |   |   service = link: normal (0.0)
+|   |   |   |   |   service = Z39_50: normal (0.0)
+|   |   |   |   |   service = sunrpc: mscan (1.0)
+|   |   |   |   |   service = auth: normal (3.0)
+|   |   |   |   |   service = netbios_dgm: normal (0.0)
+|   |   |   |   |   service = uucp_path: normal (0.0)
+|   |   |   |   |   service = vmnet: normal (0.0)
+|   |   |   |   |   service = domain: normal (0.0)
+|   |   |   |   |   service = name: normal (0.0)
+|   |   |   |   |   service = pop_2: normal (0.0)
+|   |   |   |   |   service = http_443: normal (0.0)
+|   |   |   |   |   service = urp_i: normal (0.0)
+|   |   |   |   |   service = login: normal (0.0)
+|   |   |   |   |   service = gopher: normal (0.0)
+|   |   |   |   |   service = exec: normal (0.0)
+|   |   |   |   |   service = time: normal (0.0)
+|   |   |   |   |   service = remote_job: normal (0.0)
+|   |   |   |   |   service = ssh: normal (0.0)
+|   |   |   |   |   service = kshell: normal (0.0)
+|   |   |   |   |   service = sql_net: normal (0.0)
+|   |   |   |   |   service = shell: normal (0.0)
+|   |   |   |   |   service = hostnames: normal (0.0)
+|   |   |   |   |   service = echo: normal (0.0)
+|   |   |   |   |   service = daytime: normal (0.0)
+|   |   |   |   |   service = pm_dump: normal (0.0)
+|   |   |   |   |   service = IRC: normal (0.0)
+|   |   |   |   |   service = netstat: normal (0.0)
+|   |   |   |   |   service = ctf: normal (0.0)
+|   |   |   |   |   service = nntp: normal (0.0)
+|   |   |   |   |   service = netbios_ssn: normal (0.0)
+|   |   |   |   |   service = tim_i: normal (0.0)
+|   |   |   |   |   service = supdup: normal (0.0)
+|   |   |   |   |   service = bgp: normal (0.0)
+|   |   |   |   |   service = nnsp: normal (0.0)
+|   |   |   |   |   service = rje: normal (0.0)
+|   |   |   |   |   service = printer: normal (0.0)
+|   |   |   |   |   service = efs: normal (0.0)
+|   |   |   |   |   service = X11: normal (5.0/1.0)
+|   |   |   |   |   service = ntp_u: normal (0.0)
+|   |   |   |   |   service = klogin: normal (0.0)
+|   |   |   |   |   service = red_i: normal (0.0)
+|   |   |   |   |   service = urh_i: normal (0.0)
+|   |   |   |   |   service = http_8001: normal (0.0)
+|   |   |   |   |   service = aol: normal (0.0)
+|   |   |   |   |   service = http_2784: normal (0.0)
+|   |   |   |   |   service = tftp_u: normal (0.0)
+|   |   |   |   |   service = harvest: normal (0.0)
+|   |   |   |   dst_host_same_src_port_rate > 0.01: portsweep (384.0)
+|   |   dst_host_srv_count > 2
+|   |   |   dst_host_same_srv_rate <= 0.51
+|   |   |   |   service = private: neptune (17.0)
+|   |   |   |   service = ftp_data: portsweep (3.0/1.0)
+|   |   |   |   service = eco_i: mscan (0.0)
+|   |   |   |   service = telnet: mscan (68.0)
+|   |   |   |   service = http
+|   |   |   |   |   same_srv_rate <= 0.97: neptune (10.0/1.0)
+|   |   |   |   |   same_srv_rate > 0.97: normal (41.0/2.0)
+|   |   |   |   service = smtp: normal (8.0)
+|   |   |   |   service = ftp: mscan (0.0)
+|   |   |   |   service = ldap: mscan (0.0)
+|   |   |   |   service = pop_3: mscan (11.0)
+|   |   |   |   service = courier: mscan (0.0)
+|   |   |   |   service = discard: mscan (0.0)
+|   |   |   |   service = ecr_i: mscan (0.0)
+|   |   |   |   service = imap4: mscan (50.0)
+|   |   |   |   service = domain_u: mscan (0.0)
+|   |   |   |   service = mtp: mscan (0.0)
+|   |   |   |   service = systat: mscan (0.0)
+|   |   |   |   service = iso_tsap: mscan (0.0)
+|   |   |   |   service = other: httptunnel (100.0)
+|   |   |   |   service = csnet_ns: mscan (0.0)
+|   |   |   |   service = finger: mscan (0.0)
+|   |   |   |   service = uucp: mscan (0.0)
+|   |   |   |   service = whois: mscan (0.0)
+|   |   |   |   service = netbios_ns: mscan (0.0)
+|   |   |   |   service = link: mscan (0.0)
+|   |   |   |   service = Z39_50: mscan (0.0)
+|   |   |   |   service = sunrpc: mscan (55.0)
+|   |   |   |   service = auth: normal (13.0)
+|   |   |   |   service = netbios_dgm: mscan (0.0)
+|   |   |   |   service = uucp_path: mscan (0.0)
+|   |   |   |   service = vmnet: mscan (0.0)
+|   |   |   |   service = domain: mscan (0.0)
+|   |   |   |   service = name: mscan (0.0)
+|   |   |   |   service = pop_2: mscan (0.0)
+|   |   |   |   service = http_443: portsweep (1.0)
+|   |   |   |   service = urp_i: mscan (0.0)
+|   |   |   |   service = login: mscan (0.0)
+|   |   |   |   service = gopher: mscan (0.0)
+|   |   |   |   service = exec: mscan (0.0)
+|   |   |   |   service = time: mscan (0.0)
+|   |   |   |   service = remote_job: mscan (0.0)
+|   |   |   |   service = ssh: mscan (0.0)
+|   |   |   |   service = kshell: mscan (0.0)
+|   |   |   |   service = sql_net: mscan (0.0)
+|   |   |   |   service = shell: mscan (0.0)
+|   |   |   |   service = hostnames: mscan (0.0)
+|   |   |   |   service = echo: mscan (0.0)
+|   |   |   |   service = daytime: mscan (0.0)
+|   |   |   |   service = pm_dump: mscan (0.0)
+|   |   |   |   service = IRC: normal (1.0)
+|   |   |   |   service = netstat: mscan (0.0)
+|   |   |   |   service = ctf: mscan (0.0)
+|   |   |   |   service = nntp: mscan (0.0)
+|   |   |   |   service = netbios_ssn: mscan (0.0)
+|   |   |   |   service = tim_i: mscan (0.0)
+|   |   |   |   service = supdup: mscan (0.0)
+|   |   |   |   service = bgp: mscan (0.0)
+|   |   |   |   service = nnsp: mscan (0.0)
+|   |   |   |   service = rje: mscan (0.0)
+|   |   |   |   service = printer: mscan (0.0)
+|   |   |   |   service = efs: mscan (0.0)
+|   |   |   |   service = X11: normal (8.0)
+|   |   |   |   service = ntp_u: mscan (0.0)
+|   |   |   |   service = klogin: mscan (0.0)
+|   |   |   |   service = red_i: mscan (0.0)
+|   |   |   |   service = urh_i: mscan (0.0)
+|   |   |   |   service = http_8001: mscan (0.0)
+|   |   |   |   service = aol: mscan (0.0)
+|   |   |   |   service = http_2784: mscan (0.0)
+|   |   |   |   service = tftp_u: mscan (0.0)
+|   |   |   |   service = harvest: mscan (0.0)
+|   |   |   dst_host_same_srv_rate > 0.51
+|   |   |   |   service = private: normal (0.0)
+|   |   |   |   service = ftp_data: ipsweep (11.0)
+|   |   |   |   service = eco_i: normal (0.0)
+|   |   |   |   service = telnet: normal (0.0)
+|   |   |   |   service = http: normal (2573.0/1.0)
+|   |   |   |   service = smtp: normal (3.0)
+|   |   |   |   service = ftp: normal (0.0)
+|   |   |   |   service = ldap: normal (0.0)
+|   |   |   |   service = pop_3: normal (0.0)
+|   |   |   |   service = courier: normal (0.0)
+|   |   |   |   service = discard: normal (0.0)
+|   |   |   |   service = ecr_i: normal (0.0)
+|   |   |   |   service = imap4: normal (0.0)
+|   |   |   |   service = domain_u: normal (0.0)
+|   |   |   |   service = mtp: normal (0.0)
+|   |   |   |   service = systat: normal (0.0)
+|   |   |   |   service = iso_tsap: normal (0.0)
+|   |   |   |   service = other: normal (40.0)
+|   |   |   |   service = csnet_ns: normal (0.0)
+|   |   |   |   service = finger: normal (0.0)
+|   |   |   |   service = uucp: normal (0.0)
+|   |   |   |   service = whois: normal (0.0)
+|   |   |   |   service = netbios_ns: normal (0.0)
+|   |   |   |   service = link: normal (0.0)
+|   |   |   |   service = Z39_50: normal (0.0)
+|   |   |   |   service = sunrpc: normal (0.0)
+|   |   |   |   service = auth: normal (0.0)
+|   |   |   |   service = netbios_dgm: normal (0.0)
+|   |   |   |   service = uucp_path: normal (0.0)
+|   |   |   |   service = vmnet: normal (0.0)
+|   |   |   |   service = domain: normal (0.0)
+|   |   |   |   service = name: normal (0.0)
+|   |   |   |   service = pop_2: normal (0.0)
+|   |   |   |   service = http_443: normal (0.0)
+|   |   |   |   service = urp_i: normal (0.0)
+|   |   |   |   service = login: normal (0.0)
+|   |   |   |   service = gopher: normal (0.0)
+|   |   |   |   service = exec: normal (0.0)
+|   |   |   |   service = time: normal (0.0)
+|   |   |   |   service = remote_job: normal (0.0)
+|   |   |   |   service = ssh: normal (0.0)
+|   |   |   |   service = kshell: normal (0.0)
+|   |   |   |   service = sql_net: normal (0.0)
+|   |   |   |   service = shell: normal (0.0)
+|   |   |   |   service = hostnames: normal (0.0)
+|   |   |   |   service = echo: normal (0.0)
+|   |   |   |   service = daytime: normal (0.0)
+|   |   |   |   service = pm_dump: normal (0.0)
+|   |   |   |   service = IRC: normal (0.0)
+|   |   |   |   service = netstat: normal (0.0)
+|   |   |   |   service = ctf: normal (0.0)
+|   |   |   |   service = nntp: normal (0.0)
+|   |   |   |   service = netbios_ssn: normal (0.0)
+|   |   |   |   service = tim_i: normal (0.0)
+|   |   |   |   service = supdup: normal (0.0)
+|   |   |   |   service = bgp: normal (0.0)
+|   |   |   |   service = nnsp: normal (0.0)
+|   |   |   |   service = rje: normal (0.0)
+|   |   |   |   service = printer: normal (0.0)
+|   |   |   |   service = efs: normal (0.0)
+|   |   |   |   service = X11: normal (0.0)
+|   |   |   |   service = ntp_u: normal (0.0)
+|   |   |   |   service = klogin: normal (0.0)
+|   |   |   |   service = red_i: normal (0.0)
+|   |   |   |   service = urh_i: normal (0.0)
+|   |   |   |   service = http_8001: normal (0.0)
+|   |   |   |   service = aol: normal (0.0)
+|   |   |   |   service = http_2784: normal (0.0)
+|   |   |   |   service = tftp_u: normal (0.0)
+|   |   |   |   service = harvest: normal (0.0)
+|   flag = SF
+|   |   dst_host_count <= 4
+|   |   |   protocol_type = tcp
+|   |   |   |   dst_host_srv_count <= 60
+|   |   |   |   |   service = private: normal (2.0)
+|   |   |   |   |   service = ftp_data
+|   |   |   |   |   |   dst_host_diff_srv_rate <= 0.25
+|   |   |   |   |   |   |   same_srv_rate <= 0.87
+|   |   |   |   |   |   |   |   dst_host_srv_count <= 2: normal (2.0)
+|   |   |   |   |   |   |   |   dst_host_srv_count > 2: loadmodule (3.0)
+|   |   |   |   |   |   |   same_srv_rate > 0.87
+|   |   |   |   |   |   |   |   count <= 2
+|   |   |   |   |   |   |   |   |   dst_host_srv_count <= 4
+|   |   |   |   |   |   |   |   |   |   hot <= 0
+|   |   |   |   |   |   |   |   |   |   |   srv_diff_host_rate <= 0.25
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   count <= 1: warezmaster (21.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   count > 1: normal (10.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 2: warezmaster (24.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   srv_diff_host_rate > 0.25: warezmaster (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   hot > 0: warezmaster (7.0)
+|   |   |   |   |   |   |   |   |   dst_host_srv_count > 4
+|   |   |   |   |   |   |   |   |   |   srv_count <= 3
+|   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 20
+|   |   |   |   |   |   |   |   |   |   |   |   count <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   hot <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count <= 1: warezclient (50.0/24.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count > 1: warezmaster (37.0/16.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   hot > 0: warezmaster (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count > 3: warezclient (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   count > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   hot <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count <= 3: warezclient (50.0/23.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count > 3: warezmaster (35.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   hot > 0: warezmaster (5.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 20: warezclient (245.0/77.0)
+|   |   |   |   |   |   |   |   |   |   srv_count > 3
+|   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 20: warezmaster (2.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 20: normal (3.0/1.0)
+|   |   |   |   |   |   |   |   count > 2
+|   |   |   |   |   |   |   |   |   count <= 5: buffer_overflow (4.0/1.0)
+|   |   |   |   |   |   |   |   |   count > 5: normal (4.0)
+|   |   |   |   |   |   dst_host_diff_srv_rate > 0.25
+|   |   |   |   |   |   |   dst_host_srv_count <= 33
+|   |   |   |   |   |   |   |   count <= 1: warezmaster (21.0/6.0)
+|   |   |   |   |   |   |   |   count > 1: normal (14.0/6.0)
+|   |   |   |   |   |   |   dst_host_srv_count > 33
+|   |   |   |   |   |   |   |   dst_host_srv_count <= 44: warezclient (2.0)
+|   |   |   |   |   |   |   |   dst_host_srv_count > 44: normal (3.0)
+|   |   |   |   |   service = eco_i: normal (0.0)
+|   |   |   |   |   service = telnet
+|   |   |   |   |   |   hot <= 0
+|   |   |   |   |   |   |   dst_host_count <= 3: normal (73.0/3.0)
+|   |   |   |   |   |   |   dst_host_count > 3: ipsweep (5.0/1.0)
+|   |   |   |   |   |   hot > 0
+|   |   |   |   |   |   |   hot <= 2
+|   |   |   |   |   |   |   |   dst_host_count <= 1
+|   |   |   |   |   |   |   |   |   hot <= 1: normal (3.0/1.0)
+|   |   |   |   |   |   |   |   |   hot > 1: loadmodule (4.0/2.0)
+|   |   |   |   |   |   |   |   dst_host_count > 1: xterm (2.0)
+|   |   |   |   |   |   |   hot > 2: buffer_overflow (15.0/2.0)
+|   |   |   |   |   service = http
+|   |   |   |   |   |   hot <= 1: normal (150.0)
+|   |   |   |   |   |   hot > 1: back (12.0/1.0)
+|   |   |   |   |   service = smtp: normal (38.0)
+|   |   |   |   |   service = ftp
+|   |   |   |   |   |   hot <= 3
+|   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.41: ps (2.0/1.0)
+|   |   |   |   |   |   |   dst_host_same_srv_rate > 0.41: warezmaster (14.0/6.0)
+|   |   |   |   |   |   hot > 3: normal (42.0/2.0)
+|   |   |   |   |   service = ldap: normal (0.0)
+|   |   |   |   |   service = pop_3
+|   |   |   |   |   |   dst_host_srv_count <= 3: normal (10.0)
+|   |   |   |   |   |   dst_host_srv_count > 3
+|   |   |   |   |   |   |   dst_host_count <= 1: normal (5.0/1.0)
+|   |   |   |   |   |   |   dst_host_count > 1: guess_passwd (4.0/1.0)
+|   |   |   |   |   service = courier: normal (0.0)
+|   |   |   |   |   service = discard: normal (0.0)
+|   |   |   |   |   service = ecr_i: normal (0.0)
+|   |   |   |   |   service = imap4: imap (2.0)
+|   |   |   |   |   service = domain_u: normal (0.0)
+|   |   |   |   |   service = mtp: normal (0.0)
+|   |   |   |   |   service = systat: normal (0.0)
+|   |   |   |   |   service = iso_tsap: normal (0.0)
+|   |   |   |   |   service = other: normal (0.0)
+|   |   |   |   |   service = csnet_ns: normal (0.0)
+|   |   |   |   |   service = finger: normal (23.0)
+|   |   |   |   |   service = uucp: normal (0.0)
+|   |   |   |   |   service = whois: normal (0.0)
+|   |   |   |   |   service = netbios_ns: normal (0.0)
+|   |   |   |   |   service = link: normal (0.0)
+|   |   |   |   |   service = Z39_50: normal (0.0)
+|   |   |   |   |   service = sunrpc: normal (0.0)
+|   |   |   |   |   service = auth: normal (26.0/4.0)
+|   |   |   |   |   service = netbios_dgm: normal (0.0)
+|   |   |   |   |   service = uucp_path: normal (0.0)
+|   |   |   |   |   service = vmnet: normal (0.0)
+|   |   |   |   |   service = domain: normal (0.0)
+|   |   |   |   |   service = name: normal (0.0)
+|   |   |   |   |   service = pop_2: normal (0.0)
+|   |   |   |   |   service = http_443: normal (0.0)
+|   |   |   |   |   service = urp_i: normal (0.0)
+|   |   |   |   |   service = login: ftp_write (2.0)
+|   |   |   |   |   service = gopher: normal (0.0)
+|   |   |   |   |   service = exec: normal (0.0)
+|   |   |   |   |   service = time: normal (9.0)
+|   |   |   |   |   service = remote_job: normal (0.0)
+|   |   |   |   |   service = ssh: ipsweep (2.0)
+|   |   |   |   |   service = kshell: normal (0.0)
+|   |   |   |   |   service = sql_net: normal (0.0)
+|   |   |   |   |   service = shell: normal (1.0)
+|   |   |   |   |   service = hostnames: normal (0.0)
+|   |   |   |   |   service = echo: normal (0.0)
+|   |   |   |   |   service = daytime: normal (0.0)
+|   |   |   |   |   service = pm_dump: normal (0.0)
+|   |   |   |   |   service = IRC: normal (2.0)
+|   |   |   |   |   service = netstat: normal (0.0)
+|   |   |   |   |   service = ctf: normal (0.0)
+|   |   |   |   |   service = nntp: normal (0.0)
+|   |   |   |   |   service = netbios_ssn: normal (0.0)
+|   |   |   |   |   service = tim_i: normal (0.0)
+|   |   |   |   |   service = supdup: normal (0.0)
+|   |   |   |   |   service = bgp: normal (0.0)
+|   |   |   |   |   service = nnsp: normal (0.0)
+|   |   |   |   |   service = rje: normal (0.0)
+|   |   |   |   |   service = printer: normal (0.0)
+|   |   |   |   |   service = efs: normal (0.0)
+|   |   |   |   |   service = X11: normal (8.0/2.0)
+|   |   |   |   |   service = ntp_u: normal (0.0)
+|   |   |   |   |   service = klogin: normal (0.0)
+|   |   |   |   |   service = red_i: normal (0.0)
+|   |   |   |   |   service = urh_i: normal (0.0)
+|   |   |   |   |   service = http_8001: normal (0.0)
+|   |   |   |   |   service = aol: normal (0.0)
+|   |   |   |   |   service = http_2784: normal (0.0)
+|   |   |   |   |   service = tftp_u: normal (0.0)
+|   |   |   |   |   service = harvest: normal (0.0)
+|   |   |   |   dst_host_srv_count > 60: normal (2656.0/8.0)
+|   |   |   protocol_type = icmp
+|   |   |   |   service = private: ipsweep (0.0)
+|   |   |   |   service = ftp_data: ipsweep (0.0)
+|   |   |   |   service = eco_i
+|   |   |   |   |   srv_count <= 52
+|   |   |   |   |   |   dst_host_count <= 2
+|   |   |   |   |   |   |   srv_diff_host_rate <= 0.5: ipsweep (538.0/18.0)
+|   |   |   |   |   |   |   srv_diff_host_rate > 0.5
+|   |   |   |   |   |   |   |   dst_host_srv_count <= 132
+|   |   |   |   |   |   |   |   |   dst_host_srv_count <= 40: ipsweep (720.0/50.0)
+|   |   |   |   |   |   |   |   |   dst_host_srv_count > 40
+|   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 42
+|   |   |   |   |   |   |   |   |   |   |   srv_count <= 31: ipsweep (27.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   srv_count > 31
+|   |   |   |   |   |   |   |   |   |   |   |   srv_count <= 43: nmap (24.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   srv_count > 43: ipsweep (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 42: ipsweep (1583.0/194.0)
+|   |   |   |   |   |   |   |   dst_host_srv_count > 132
+|   |   |   |   |   |   |   |   |   srv_count <= 36
+|   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 254
+|   |   |   |   |   |   |   |   |   |   |   srv_count <= 7
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 225
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 163: ipsweep (22.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 163: nmap (17.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 225: ipsweep (16.0)
+|   |   |   |   |   |   |   |   |   |   |   srv_count > 7
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_count <= 1: ipsweep (165.0/74.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_count > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   srv_count <= 27: nmap (107.0/48.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   srv_count > 27
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 209: ipsweep (24.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 209: nmap (20.0/6.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 254: ipsweep (71.0/3.0)
+|   |   |   |   |   |   |   |   |   srv_count > 36: ipsweep (237.0/48.0)
+|   |   |   |   |   |   dst_host_count > 2
+|   |   |   |   |   |   |   srv_count <= 2
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.71
+|   |   |   |   |   |   |   |   |   srv_count <= 1: ipsweep (142.0/14.0)
+|   |   |   |   |   |   |   |   |   srv_count > 1
+|   |   |   |   |   |   |   |   |   |   dst_host_count <= 3: nmap (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_count > 3: ipsweep (19.0/4.0)
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.71: nmap (2.0)
+|   |   |   |   |   |   |   srv_count > 2: nmap (472.0/3.0)
+|   |   |   |   |   srv_count > 52: saint (84.0)
+|   |   |   |   service = telnet: ipsweep (0.0)
+|   |   |   |   service = http: ipsweep (0.0)
+|   |   |   |   service = smtp: ipsweep (0.0)
+|   |   |   |   service = ftp: ipsweep (0.0)
+|   |   |   |   service = ldap: ipsweep (0.0)
+|   |   |   |   service = pop_3: ipsweep (0.0)
+|   |   |   |   service = courier: ipsweep (0.0)
+|   |   |   |   service = discard: ipsweep (0.0)
+|   |   |   |   service = ecr_i
+|   |   |   |   |   dst_host_srv_count <= 4
+|   |   |   |   |   |   count <= 221
+|   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.83: pod (6.0)
+|   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.83
+|   |   |   |   |   |   |   |   srv_diff_host_rate <= 0.58
+|   |   |   |   |   |   |   |   |   dst_host_count <= 2
+|   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 2: ipsweep (17.0/12.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 2: normal (3.0)
+|   |   |   |   |   |   |   |   |   dst_host_count > 2: ipsweep (14.0/6.0)
+|   |   |   |   |   |   |   |   srv_diff_host_rate > 0.58: pod (2.0)
+|   |   |   |   |   |   count > 221: smurf (3.0)
+|   |   |   |   |   dst_host_srv_count > 4: pod (149.0/11.0)
+|   |   |   |   service = imap4: ipsweep (0.0)
+|   |   |   |   service = domain_u: ipsweep (0.0)
+|   |   |   |   service = mtp: ipsweep (0.0)
+|   |   |   |   service = systat: ipsweep (0.0)
+|   |   |   |   service = iso_tsap: ipsweep (0.0)
+|   |   |   |   service = other: ipsweep (0.0)
+|   |   |   |   service = csnet_ns: ipsweep (0.0)
+|   |   |   |   service = finger: ipsweep (0.0)
+|   |   |   |   service = uucp: ipsweep (0.0)
+|   |   |   |   service = whois: ipsweep (0.0)
+|   |   |   |   service = netbios_ns: ipsweep (0.0)
+|   |   |   |   service = link: ipsweep (0.0)
+|   |   |   |   service = Z39_50: ipsweep (0.0)
+|   |   |   |   service = sunrpc: ipsweep (0.0)
+|   |   |   |   service = auth: ipsweep (0.0)
+|   |   |   |   service = netbios_dgm: ipsweep (0.0)
+|   |   |   |   service = uucp_path: ipsweep (0.0)
+|   |   |   |   service = vmnet: ipsweep (0.0)
+|   |   |   |   service = domain: ipsweep (0.0)
+|   |   |   |   service = name: ipsweep (0.0)
+|   |   |   |   service = pop_2: ipsweep (0.0)
+|   |   |   |   service = http_443: ipsweep (0.0)
+|   |   |   |   service = urp_i
+|   |   |   |   |   dst_host_count <= 3: normal (2.0)
+|   |   |   |   |   dst_host_count > 3: satan (3.0/1.0)
+|   |   |   |   service = login: ipsweep (0.0)
+|   |   |   |   service = gopher: ipsweep (0.0)
+|   |   |   |   service = exec: ipsweep (0.0)
+|   |   |   |   service = time: ipsweep (0.0)
+|   |   |   |   service = remote_job: ipsweep (0.0)
+|   |   |   |   service = ssh: ipsweep (0.0)
+|   |   |   |   service = kshell: ipsweep (0.0)
+|   |   |   |   service = sql_net: ipsweep (0.0)
+|   |   |   |   service = shell: ipsweep (0.0)
+|   |   |   |   service = hostnames: ipsweep (0.0)
+|   |   |   |   service = echo: ipsweep (0.0)
+|   |   |   |   service = daytime: ipsweep (0.0)
+|   |   |   |   service = pm_dump: ipsweep (0.0)
+|   |   |   |   service = IRC: ipsweep (0.0)
+|   |   |   |   service = netstat: ipsweep (0.0)
+|   |   |   |   service = ctf: ipsweep (0.0)
+|   |   |   |   service = nntp: ipsweep (0.0)
+|   |   |   |   service = netbios_ssn: ipsweep (0.0)
+|   |   |   |   service = tim_i: pod (7.0/1.0)
+|   |   |   |   service = supdup: ipsweep (0.0)
+|   |   |   |   service = bgp: ipsweep (0.0)
+|   |   |   |   service = nnsp: ipsweep (0.0)
+|   |   |   |   service = rje: ipsweep (0.0)
+|   |   |   |   service = printer: ipsweep (0.0)
+|   |   |   |   service = efs: ipsweep (0.0)
+|   |   |   |   service = X11: ipsweep (0.0)
+|   |   |   |   service = ntp_u: ipsweep (0.0)
+|   |   |   |   service = klogin: ipsweep (0.0)
+|   |   |   |   service = red_i: ipsweep (0.0)
+|   |   |   |   service = urh_i: ipsweep (0.0)
+|   |   |   |   service = http_8001: ipsweep (0.0)
+|   |   |   |   service = aol: ipsweep (0.0)
+|   |   |   |   service = http_2784: ipsweep (0.0)
+|   |   |   |   service = tftp_u: ipsweep (0.0)
+|   |   |   |   service = harvest: ipsweep (0.0)
+|   |   |   protocol_type = udp: normal (99.0/8.0)
+|   |   dst_host_count > 4
+|   |   |   protocol_type = tcp
+|   |   |   |   hot <= 1
+|   |   |   |   |   service = private: normal (0.0)
+|   |   |   |   |   service = ftp_data
+|   |   |   |   |   |   dst_host_same_src_port_rate <= 0.98
+|   |   |   |   |   |   |   dst_host_count <= 14
+|   |   |   |   |   |   |   |   dst_host_srv_count <= 32
+|   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.82: normal (109.0/20.0)
+|   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.82
+|   |   |   |   |   |   |   |   |   |   count <= 2
+|   |   |   |   |   |   |   |   |   |   |   count <= 1: warezmaster (20.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   count > 1
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.84: normal (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.84: warezmaster (20.0/5.0)
+|   |   |   |   |   |   |   |   |   |   count > 2: normal (7.0)
+|   |   |   |   |   |   |   |   dst_host_srv_count > 32
+|   |   |   |   |   |   |   |   |   dst_host_srv_count <= 43
+|   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.55: normal (11.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.55
+|   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 37: normal (2.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 37: warezclient (10.0)
+|   |   |   |   |   |   |   |   |   dst_host_srv_count > 43: normal (152.0/1.0)
+|   |   |   |   |   |   |   dst_host_count > 14
+|   |   |   |   |   |   |   |   srv_count <= 2
+|   |   |   |   |   |   |   |   |   dst_host_count <= 220
+|   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 18
+|   |   |   |   |   |   |   |   |   |   |   dst_host_count <= 33
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.1
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.14
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.06: normal (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.06
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.08: warezclient (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.08: warezmaster (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.14
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.3: warezmaster (20.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.3: normal (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.1: normal (38.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_count > 33
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.02
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count <= 119: warezmaster (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count > 119: normal (18.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.02: normal (235.0/1.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 18: normal (1767.0/32.0)
+|   |   |   |   |   |   |   |   |   dst_host_count > 220
+|   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.31
+|   |   |   |   |   |   |   |   |   |   |   same_srv_rate <= 0.83
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.13
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.05: normal (11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.05: warezmaster (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.13: normal (33.0)
+|   |   |   |   |   |   |   |   |   |   |   same_srv_rate > 0.83: normal (451.0/19.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.31
+|   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.06: normal (260.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.06
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.4
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.07
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.31: normal (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.31: warezclient (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.07: warezclient (12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.4: normal (9.0)
+|   |   |   |   |   |   |   |   srv_count > 2: normal (1899.0)
+|   |   |   |   |   |   dst_host_same_src_port_rate > 0.98
+|   |   |   |   |   |   |   srv_count <= 2
+|   |   |   |   |   |   |   |   dst_host_srv_count <= 38
+|   |   |   |   |   |   |   |   |   dst_host_srv_count <= 15: warezmaster (102.0/37.0)
+|   |   |   |   |   |   |   |   |   dst_host_srv_count > 15
+|   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 24
+|   |   |   |   |   |   |   |   |   |   |   dst_host_count <= 15: warezclient (84.0/29.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_count > 15: warezmaster (4.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 24
+|   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 30
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 28
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count <= 12
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count <= 8: warezclient (30.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count > 8: warezmaster (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count > 12: warezclient (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 28
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count <= 5: normal (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count > 5: warezmaster (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 30: warezclient (52.0/16.0)
+|   |   |   |   |   |   |   |   dst_host_srv_count > 38
+|   |   |   |   |   |   |   |   |   dst_host_srv_count <= 68: warezclient (104.0/9.0)
+|   |   |   |   |   |   |   |   |   dst_host_srv_count > 68: normal (14.0)
+|   |   |   |   |   |   |   srv_count > 2: normal (103.0)
+|   |   |   |   |   service = eco_i: normal (0.0)
+|   |   |   |   |   service = telnet
+|   |   |   |   |   |   dst_host_srv_count <= 66
+|   |   |   |   |   |   |   srv_diff_host_rate <= 0.25
+|   |   |   |   |   |   |   |   dst_host_count <= 254
+|   |   |   |   |   |   |   |   |   hot <= 0: normal (484.0/19.0)
+|   |   |   |   |   |   |   |   |   hot > 0
+|   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.09
+|   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 16: normal (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 16: ps (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.09: xterm (2.0)
+|   |   |   |   |   |   |   |   dst_host_count > 254
+|   |   |   |   |   |   |   |   |   srv_count <= 1
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.02
+|   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.17
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.01: normal (33.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.01
+|   |   |   |   |   |   |   |   |   |   |   |   |   hot <= 0: guess_passwd (42.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   hot > 0: rootkit (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.17: normal (67.0/18.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.02
+|   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.7
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.04
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.13: normal (13.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.13: processtable (26.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.04: normal (111.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.7
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.72: buffer_overflow (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.72
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 7
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.84: normal (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.84
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.87: processtable (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.87: normal (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 7: processtable (18.0)
+|   |   |   |   |   |   |   |   |   srv_count > 1: guess_passwd (17.0/1.0)
+|   |   |   |   |   |   |   srv_diff_host_rate > 0.25
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.03: mscan (17.0/1.0)
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.03
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.06: processtable (6.0)
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.06: mscan (3.0)
+|   |   |   |   |   |   dst_host_srv_count > 66
+|   |   |   |   |   |   |   dst_host_count <= 253
+|   |   |   |   |   |   |   |   srv_count <= 1: normal (16.0/2.0)
+|   |   |   |   |   |   |   |   srv_count > 1: mscan (46.0)
+|   |   |   |   |   |   |   dst_host_count > 253
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.02
+|   |   |   |   |   |   |   |   |   count <= 1
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.01
+|   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.72
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 120: normal (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 120: mscan (3.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.72: guess_passwd (92.0/3.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.01
+|   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.62
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 112: processtable (105.0/51.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 112: guess_passwd (39.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.62: processtable (220.0/66.0)
+|   |   |   |   |   |   |   |   |   count > 1
+|   |   |   |   |   |   |   |   |   |   srv_diff_host_rate <= 0.44: guess_passwd (53.0)
+|   |   |   |   |   |   |   |   |   |   srv_diff_host_rate > 0.44: mscan (3.0)
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.02
+|   |   |   |   |   |   |   |   |   same_srv_rate <= 0.55
+|   |   |   |   |   |   |   |   |   |   count <= 3: processtable (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   count > 3: mscan (2.0)
+|   |   |   |   |   |   |   |   |   same_srv_rate > 0.55: processtable (169.0)
+|   |   |   |   |   service = http: normal (38771.0/15.0)
+|   |   |   |   |   service = smtp
+|   |   |   |   |   |   count <= 1
+|   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.91
+|   |   |   |   |   |   |   |   dst_host_srv_count <= 243
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.37: normal (6481.0/8.0)
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.37
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.39
+|   |   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.01
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_count <= 185: satan (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_count > 185: normal (3.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.01: normal (6.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.39: normal (205.0/2.0)
+|   |   |   |   |   |   |   |   dst_host_srv_count > 243
+|   |   |   |   |   |   |   |   |   dst_host_count <= 237: normal (138.0)
+|   |   |   |   |   |   |   |   |   dst_host_count > 237: mailbomb (6.0/1.0)
+|   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.91
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.09: normal (7.0)
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.09: ipsweep (11.0)
+|   |   |   |   |   |   count > 1
+|   |   |   |   |   |   |   dst_host_count <= 254: normal (283.0/1.0)
+|   |   |   |   |   |   |   dst_host_count > 254
+|   |   |   |   |   |   |   |   same_srv_rate <= 0.55: normal (75.0)
+|   |   |   |   |   |   |   |   same_srv_rate > 0.55
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.03: normal (8.0)
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.03
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.31
+|   |   |   |   |   |   |   |   |   |   |   srv_diff_host_rate <= 0.58: mailbomb (285.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   srv_diff_host_rate > 0.58
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.67: normal (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.67: mailbomb (3.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.31: normal (3.0)
+|   |   |   |   |   service = ftp
+|   |   |   |   |   |   hot <= 0
+|   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.44
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0: warezmaster (3.0/2.0)
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.08: normal (23.0)
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.08
+|   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.03
+|   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.1
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 15: normal (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 15: guess_passwd (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.1: guess_passwd (5.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.03: normal (6.0)
+|   |   |   |   |   |   |   dst_host_same_srv_rate > 0.44
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.03: guess_passwd (87.0)
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.03: normal (2.0/1.0)
+|   |   |   |   |   |   hot > 0
+|   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0
+|   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.04: rootkit (3.0/1.0)
+|   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.04: warezmaster (3.0/2.0)
+|   |   |   |   |   |   |   dst_host_same_src_port_rate > 0
+|   |   |   |   |   |   |   |   dst_host_count <= 106: ps (2.0)
+|   |   |   |   |   |   |   |   dst_host_count > 106: satan (2.0/1.0)
+|   |   |   |   |   service = ldap: normal (0.0)
+|   |   |   |   |   service = pop_3
+|   |   |   |   |   |   dst_host_same_srv_rate <= 0.2
+|   |   |   |   |   |   |   dst_host_srv_count <= 11
+|   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.11
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.02
+|   |   |   |   |   |   |   |   |   |   dst_host_count <= 254: normal (3.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_count > 254: guess_passwd (22.0/7.0)
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.02
+|   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 9: normal (155.0/2.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 9
+|   |   |   |   |   |   |   |   |   |   |   dst_host_count <= 205: normal (2.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_count > 205: guess_passwd (2.0)
+|   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.11
+|   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.05: guess_passwd (7.0)
+|   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.05: normal (2.0)
+|   |   |   |   |   |   |   dst_host_srv_count > 11
+|   |   |   |   |   |   |   |   count <= 1: guess_passwd (6.0/1.0)
+|   |   |   |   |   |   |   |   count > 1: mscan (3.0)
+|   |   |   |   |   |   dst_host_same_srv_rate > 0.2: guess_passwd (711.0)
+|   |   |   |   |   service = courier: normal (0.0)
+|   |   |   |   |   service = discard: normal (0.0)
+|   |   |   |   |   service = ecr_i: normal (0.0)
+|   |   |   |   |   service = imap4
+|   |   |   |   |   |   dst_host_diff_srv_rate <= 0.01
+|   |   |   |   |   |   |   dst_host_count <= 132: imap (2.0)
+|   |   |   |   |   |   |   dst_host_count > 132: normal (4.0/1.0)
+|   |   |   |   |   |   dst_host_diff_srv_rate > 0.01: mscan (11.0)
+|   |   |   |   |   service = domain_u: normal (0.0)
+|   |   |   |   |   service = mtp: normal (0.0)
+|   |   |   |   |   service = systat: normal (0.0)
+|   |   |   |   |   service = iso_tsap: normal (0.0)
+|   |   |   |   |   service = other
+|   |   |   |   |   |   dst_host_same_src_port_rate <= 0.03: httptunnel (18.0)
+|   |   |   |   |   |   dst_host_same_src_port_rate > 0.03
+|   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.06: normal (36.0)
+|   |   |   |   |   |   |   dst_host_same_srv_rate > 0.06
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.45: warezclient (2.0)
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.45: named (3.0/1.0)
+|   |   |   |   |   service = csnet_ns: normal (0.0)
+|   |   |   |   |   service = finger
+|   |   |   |   |   |   dst_host_diff_srv_rate <= 0.97
+|   |   |   |   |   |   |   srv_count <= 1: normal (528.0/2.0)
+|   |   |   |   |   |   |   srv_count > 1
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.01
+|   |   |   |   |   |   |   |   |   count <= 1: normal (7.0)
+|   |   |   |   |   |   |   |   |   count > 1: satan (17.0)
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.01: saint (3.0)
+|   |   |   |   |   |   dst_host_diff_srv_rate > 0.97: ipsweep (14.0/1.0)
+|   |   |   |   |   service = uucp: normal (0.0)
+|   |   |   |   |   service = whois: normal (0.0)
+|   |   |   |   |   service = netbios_ns: normal (0.0)
+|   |   |   |   |   service = link: normal (0.0)
+|   |   |   |   |   service = Z39_50: normal (0.0)
+|   |   |   |   |   service = sunrpc: normal (0.0)
+|   |   |   |   |   service = auth
+|   |   |   |   |   |   dst_host_same_src_port_rate <= 0.13: normal (199.0/2.0)
+|   |   |   |   |   |   dst_host_same_src_port_rate > 0.13: satan (3.0/1.0)
+|   |   |   |   |   service = netbios_dgm: normal (0.0)
+|   |   |   |   |   service = uucp_path: normal (0.0)
+|   |   |   |   |   service = vmnet: normal (0.0)
+|   |   |   |   |   service = domain
+|   |   |   |   |   |   dst_host_diff_srv_rate <= 0.7: named (3.0/1.0)
+|   |   |   |   |   |   dst_host_diff_srv_rate > 0.7: ipsweep (7.0)
+|   |   |   |   |   service = name: normal (0.0)
+|   |   |   |   |   service = pop_2: satan (1.0)
+|   |   |   |   |   service = http_443: normal (0.0)
+|   |   |   |   |   service = urp_i: normal (0.0)
+|   |   |   |   |   service = login: ftp_write (1.0)
+|   |   |   |   |   service = gopher: ipsweep (8.0/1.0)
+|   |   |   |   |   service = exec: normal (0.0)
+|   |   |   |   |   service = time
+|   |   |   |   |   |   dst_host_same_srv_rate <= 0.43: ipsweep (11.0/1.0)
+|   |   |   |   |   |   dst_host_same_srv_rate > 0.43: normal (57.0)
+|   |   |   |   |   service = remote_job: normal (0.0)
+|   |   |   |   |   service = ssh: normal (5.0)
+|   |   |   |   |   service = kshell: normal (0.0)
+|   |   |   |   |   service = sql_net: normal (0.0)
+|   |   |   |   |   service = shell: normal (1.0)
+|   |   |   |   |   service = hostnames: normal (0.0)
+|   |   |   |   |   service = echo: normal (0.0)
+|   |   |   |   |   service = daytime: normal (0.0)
+|   |   |   |   |   service = pm_dump: satan (1.0)
+|   |   |   |   |   service = IRC: normal (21.0/1.0)
+|   |   |   |   |   service = netstat: normal (0.0)
+|   |   |   |   |   service = ctf: normal (0.0)
+|   |   |   |   |   service = nntp: satan (2.0)
+|   |   |   |   |   service = netbios_ssn: normal (0.0)
+|   |   |   |   |   service = tim_i: normal (0.0)
+|   |   |   |   |   service = supdup: normal (0.0)
+|   |   |   |   |   service = bgp: normal (0.0)
+|   |   |   |   |   service = nnsp: normal (0.0)
+|   |   |   |   |   service = rje: normal (0.0)
+|   |   |   |   |   service = printer: normal (0.0)
+|   |   |   |   |   service = efs: normal (0.0)
+|   |   |   |   |   service = X11: normal (54.0/7.0)
+|   |   |   |   |   service = ntp_u: normal (0.0)
+|   |   |   |   |   service = klogin: normal (0.0)
+|   |   |   |   |   service = red_i: normal (0.0)
+|   |   |   |   |   service = urh_i: normal (0.0)
+|   |   |   |   |   service = http_8001: normal (0.0)
+|   |   |   |   |   service = aol: normal (0.0)
+|   |   |   |   |   service = http_2784: normal (0.0)
+|   |   |   |   |   service = tftp_u: normal (0.0)
+|   |   |   |   |   service = harvest: normal (0.0)
+|   |   |   |   hot > 1
+|   |   |   |   |   hot <= 2
+|   |   |   |   |   |   service = private: back (0.0)
+|   |   |   |   |   |   service = ftp_data
+|   |   |   |   |   |   |   count <= 1: warezclient (8.0)
+|   |   |   |   |   |   |   count > 1: warezmaster (6.0)
+|   |   |   |   |   |   service = eco_i: back (0.0)
+|   |   |   |   |   |   service = telnet: normal (10.0/5.0)
+|   |   |   |   |   |   service = http
+|   |   |   |   |   |   |   count <= 1
+|   |   |   |   |   |   |   |   dst_host_srv_count <= 236: back (49.0/3.0)
+|   |   |   |   |   |   |   |   dst_host_srv_count > 236
+|   |   |   |   |   |   |   |   |   dst_host_srv_count <= 249: phf (3.0)
+|   |   |   |   |   |   |   |   |   dst_host_srv_count > 249
+|   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0
+|   |   |   |   |   |   |   |   |   |   |   srv_count <= 2: back (32.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   srv_count > 2: normal (17.0/1.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0: normal (17.0)
+|   |   |   |   |   |   |   count > 1: back (1095.0/17.0)
+|   |   |   |   |   |   service = smtp: normal (7.0)
+|   |   |   |   |   |   service = ftp: warezmaster (486.0/7.0)
+|   |   |   |   |   |   service = ldap: back (0.0)
+|   |   |   |   |   |   service = pop_3: back (0.0)
+|   |   |   |   |   |   service = courier: back (0.0)
+|   |   |   |   |   |   service = discard: back (0.0)
+|   |   |   |   |   |   service = ecr_i: back (0.0)
+|   |   |   |   |   |   service = imap4: imap (1.0)
+|   |   |   |   |   |   service = domain_u: back (0.0)
+|   |   |   |   |   |   service = mtp: back (0.0)
+|   |   |   |   |   |   service = systat: back (0.0)
+|   |   |   |   |   |   service = iso_tsap: back (0.0)
+|   |   |   |   |   |   service = other: normal (2.0/1.0)
+|   |   |   |   |   |   service = csnet_ns: back (0.0)
+|   |   |   |   |   |   service = finger: normal (1.0)
+|   |   |   |   |   |   service = uucp: back (0.0)
+|   |   |   |   |   |   service = whois: back (0.0)
+|   |   |   |   |   |   service = netbios_ns: back (0.0)
+|   |   |   |   |   |   service = link: back (0.0)
+|   |   |   |   |   |   service = Z39_50: back (0.0)
+|   |   |   |   |   |   service = sunrpc: back (0.0)
+|   |   |   |   |   |   service = auth: back (0.0)
+|   |   |   |   |   |   service = netbios_dgm: back (0.0)
+|   |   |   |   |   |   service = uucp_path: back (0.0)
+|   |   |   |   |   |   service = vmnet: back (0.0)
+|   |   |   |   |   |   service = domain: back (0.0)
+|   |   |   |   |   |   service = name: back (0.0)
+|   |   |   |   |   |   service = pop_2: back (0.0)
+|   |   |   |   |   |   service = http_443: back (0.0)
+|   |   |   |   |   |   service = urp_i: back (0.0)
+|   |   |   |   |   |   service = login: back (0.0)
+|   |   |   |   |   |   service = gopher: back (0.0)
+|   |   |   |   |   |   service = exec: back (0.0)
+|   |   |   |   |   |   service = time: back (0.0)
+|   |   |   |   |   |   service = remote_job: back (0.0)
+|   |   |   |   |   |   service = ssh: back (0.0)
+|   |   |   |   |   |   service = kshell: back (0.0)
+|   |   |   |   |   |   service = sql_net: back (0.0)
+|   |   |   |   |   |   service = shell: back (0.0)
+|   |   |   |   |   |   service = hostnames: back (0.0)
+|   |   |   |   |   |   service = echo: back (0.0)
+|   |   |   |   |   |   service = daytime: back (0.0)
+|   |   |   |   |   |   service = pm_dump: back (0.0)
+|   |   |   |   |   |   service = IRC: back (0.0)
+|   |   |   |   |   |   service = netstat: back (0.0)
+|   |   |   |   |   |   service = ctf: back (0.0)
+|   |   |   |   |   |   service = nntp: back (0.0)
+|   |   |   |   |   |   service = netbios_ssn: back (0.0)
+|   |   |   |   |   |   service = tim_i: back (0.0)
+|   |   |   |   |   |   service = supdup: back (0.0)
+|   |   |   |   |   |   service = bgp: back (0.0)
+|   |   |   |   |   |   service = nnsp: back (0.0)
+|   |   |   |   |   |   service = rje: back (0.0)
+|   |   |   |   |   |   service = printer: back (0.0)
+|   |   |   |   |   |   service = efs: back (0.0)
+|   |   |   |   |   |   service = X11: back (0.0)
+|   |   |   |   |   |   service = ntp_u: back (0.0)
+|   |   |   |   |   |   service = klogin: back (0.0)
+|   |   |   |   |   |   service = red_i: back (0.0)
+|   |   |   |   |   |   service = urh_i: back (0.0)
+|   |   |   |   |   |   service = http_8001: back (0.0)
+|   |   |   |   |   |   service = aol: back (0.0)
+|   |   |   |   |   |   service = http_2784: back (0.0)
+|   |   |   |   |   |   service = tftp_u: back (0.0)
+|   |   |   |   |   |   service = harvest: back (0.0)
+|   |   |   |   |   hot > 2
+|   |   |   |   |   |   service = private: normal (0.0)
+|   |   |   |   |   |   service = ftp_data: warezclient (21.0)
+|   |   |   |   |   |   service = eco_i: normal (0.0)
+|   |   |   |   |   |   service = telnet
+|   |   |   |   |   |   |   hot <= 12
+|   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.53
+|   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.23: buffer_overflow (12.0/2.0)
+|   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.23: normal (6.0/2.0)
+|   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.53
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.02: buffer_overflow (5.0)
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.02: ps (2.0/1.0)
+|   |   |   |   |   |   |   hot > 12: normal (5.0/1.0)
+|   |   |   |   |   |   service = http: normal (15.0/1.0)
+|   |   |   |   |   |   service = smtp: normal (2.0)
+|   |   |   |   |   |   service = ftp
+|   |   |   |   |   |   |   hot <= 25
+|   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.1
+|   |   |   |   |   |   |   |   |   dst_host_count <= 217: normal (61.0)
+|   |   |   |   |   |   |   |   |   dst_host_count > 217
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.01: normal (2.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.01: warezclient (27.0/1.0)
+|   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.1: normal (546.0/7.0)
+|   |   |   |   |   |   |   hot > 25
+|   |   |   |   |   |   |   |   hot <= 28: warezclient (277.0/4.0)
+|   |   |   |   |   |   |   |   hot > 28: normal (246.0)
+|   |   |   |   |   |   service = ldap: normal (0.0)
+|   |   |   |   |   |   service = pop_3: normal (0.0)
+|   |   |   |   |   |   service = courier: normal (0.0)
+|   |   |   |   |   |   service = discard: normal (0.0)
+|   |   |   |   |   |   service = ecr_i: normal (0.0)
+|   |   |   |   |   |   service = imap4: normal (0.0)
+|   |   |   |   |   |   service = domain_u: normal (0.0)
+|   |   |   |   |   |   service = mtp: normal (0.0)
+|   |   |   |   |   |   service = systat: normal (0.0)
+|   |   |   |   |   |   service = iso_tsap: normal (0.0)
+|   |   |   |   |   |   service = other: warezclient (1.0)
+|   |   |   |   |   |   service = csnet_ns: normal (0.0)
+|   |   |   |   |   |   service = finger: normal (0.0)
+|   |   |   |   |   |   service = uucp: normal (0.0)
+|   |   |   |   |   |   service = whois: normal (0.0)
+|   |   |   |   |   |   service = netbios_ns: normal (0.0)
+|   |   |   |   |   |   service = link: normal (0.0)
+|   |   |   |   |   |   service = Z39_50: normal (0.0)
+|   |   |   |   |   |   service = sunrpc: normal (0.0)
+|   |   |   |   |   |   service = auth: normal (0.0)
+|   |   |   |   |   |   service = netbios_dgm: normal (0.0)
+|   |   |   |   |   |   service = uucp_path: normal (0.0)
+|   |   |   |   |   |   service = vmnet: normal (0.0)
+|   |   |   |   |   |   service = domain: normal (0.0)
+|   |   |   |   |   |   service = name: normal (0.0)
+|   |   |   |   |   |   service = pop_2: normal (0.0)
+|   |   |   |   |   |   service = http_443: normal (0.0)
+|   |   |   |   |   |   service = urp_i: normal (0.0)
+|   |   |   |   |   |   service = login: normal (0.0)
+|   |   |   |   |   |   service = gopher: normal (0.0)
+|   |   |   |   |   |   service = exec: normal (0.0)
+|   |   |   |   |   |   service = time: normal (0.0)
+|   |   |   |   |   |   service = remote_job: normal (0.0)
+|   |   |   |   |   |   service = ssh: normal (0.0)
+|   |   |   |   |   |   service = kshell: normal (0.0)
+|   |   |   |   |   |   service = sql_net: normal (0.0)
+|   |   |   |   |   |   service = shell: normal (0.0)
+|   |   |   |   |   |   service = hostnames: normal (0.0)
+|   |   |   |   |   |   service = echo: normal (0.0)
+|   |   |   |   |   |   service = daytime: normal (0.0)
+|   |   |   |   |   |   service = pm_dump: normal (0.0)
+|   |   |   |   |   |   service = IRC: normal (0.0)
+|   |   |   |   |   |   service = netstat: normal (0.0)
+|   |   |   |   |   |   service = ctf: normal (0.0)
+|   |   |   |   |   |   service = nntp: normal (0.0)
+|   |   |   |   |   |   service = netbios_ssn: normal (0.0)
+|   |   |   |   |   |   service = tim_i: normal (0.0)
+|   |   |   |   |   |   service = supdup: normal (0.0)
+|   |   |   |   |   |   service = bgp: normal (0.0)
+|   |   |   |   |   |   service = nnsp: normal (0.0)
+|   |   |   |   |   |   service = rje: normal (0.0)
+|   |   |   |   |   |   service = printer: normal (0.0)
+|   |   |   |   |   |   service = efs: normal (0.0)
+|   |   |   |   |   |   service = X11: normal (0.0)
+|   |   |   |   |   |   service = ntp_u: normal (0.0)
+|   |   |   |   |   |   service = klogin: normal (0.0)
+|   |   |   |   |   |   service = red_i: normal (0.0)
+|   |   |   |   |   |   service = urh_i: normal (0.0)
+|   |   |   |   |   |   service = http_8001: normal (0.0)
+|   |   |   |   |   |   service = aol: normal (0.0)
+|   |   |   |   |   |   service = http_2784: normal (0.0)
+|   |   |   |   |   |   service = tftp_u: normal (0.0)
+|   |   |   |   |   |   service = harvest: normal (0.0)
+|   |   |   protocol_type = icmp
+|   |   |   |   srv_count <= 9
+|   |   |   |   |   dst_host_diff_srv_rate <= 0.01
+|   |   |   |   |   |   dst_host_srv_count <= 254
+|   |   |   |   |   |   |   dst_host_count <= 18
+|   |   |   |   |   |   |   |   service = private: normal (0.0)
+|   |   |   |   |   |   |   |   service = ftp_data: normal (0.0)
+|   |   |   |   |   |   |   |   service = eco_i: normal (28.0)
+|   |   |   |   |   |   |   |   service = telnet: normal (0.0)
+|   |   |   |   |   |   |   |   service = http: normal (0.0)
+|   |   |   |   |   |   |   |   service = smtp: normal (0.0)
+|   |   |   |   |   |   |   |   service = ftp: normal (0.0)
+|   |   |   |   |   |   |   |   service = ldap: normal (0.0)
+|   |   |   |   |   |   |   |   service = pop_3: normal (0.0)
+|   |   |   |   |   |   |   |   service = courier: normal (0.0)
+|   |   |   |   |   |   |   |   service = discard: normal (0.0)
+|   |   |   |   |   |   |   |   service = ecr_i: ipsweep (26.0/12.0)
+|   |   |   |   |   |   |   |   service = imap4: normal (0.0)
+|   |   |   |   |   |   |   |   service = domain_u: normal (0.0)
+|   |   |   |   |   |   |   |   service = mtp: normal (0.0)
+|   |   |   |   |   |   |   |   service = systat: normal (0.0)
+|   |   |   |   |   |   |   |   service = iso_tsap: normal (0.0)
+|   |   |   |   |   |   |   |   service = other: normal (0.0)
+|   |   |   |   |   |   |   |   service = csnet_ns: normal (0.0)
+|   |   |   |   |   |   |   |   service = finger: normal (0.0)
+|   |   |   |   |   |   |   |   service = uucp: normal (0.0)
+|   |   |   |   |   |   |   |   service = whois: normal (0.0)
+|   |   |   |   |   |   |   |   service = netbios_ns: normal (0.0)
+|   |   |   |   |   |   |   |   service = link: normal (0.0)
+|   |   |   |   |   |   |   |   service = Z39_50: normal (0.0)
+|   |   |   |   |   |   |   |   service = sunrpc: normal (0.0)
+|   |   |   |   |   |   |   |   service = auth: normal (0.0)
+|   |   |   |   |   |   |   |   service = netbios_dgm: normal (0.0)
+|   |   |   |   |   |   |   |   service = uucp_path: normal (0.0)
+|   |   |   |   |   |   |   |   service = vmnet: normal (0.0)
+|   |   |   |   |   |   |   |   service = domain: normal (0.0)
+|   |   |   |   |   |   |   |   service = name: normal (0.0)
+|   |   |   |   |   |   |   |   service = pop_2: normal (0.0)
+|   |   |   |   |   |   |   |   service = http_443: normal (0.0)
+|   |   |   |   |   |   |   |   service = urp_i: snmpguess (3.0)
+|   |   |   |   |   |   |   |   service = login: normal (0.0)
+|   |   |   |   |   |   |   |   service = gopher: normal (0.0)
+|   |   |   |   |   |   |   |   service = exec: normal (0.0)
+|   |   |   |   |   |   |   |   service = time: normal (0.0)
+|   |   |   |   |   |   |   |   service = remote_job: normal (0.0)
+|   |   |   |   |   |   |   |   service = ssh: normal (0.0)
+|   |   |   |   |   |   |   |   service = kshell: normal (0.0)
+|   |   |   |   |   |   |   |   service = sql_net: normal (0.0)
+|   |   |   |   |   |   |   |   service = shell: normal (0.0)
+|   |   |   |   |   |   |   |   service = hostnames: normal (0.0)
+|   |   |   |   |   |   |   |   service = echo: normal (0.0)
+|   |   |   |   |   |   |   |   service = daytime: normal (0.0)
+|   |   |   |   |   |   |   |   service = pm_dump: normal (0.0)
+|   |   |   |   |   |   |   |   service = IRC: normal (0.0)
+|   |   |   |   |   |   |   |   service = netstat: normal (0.0)
+|   |   |   |   |   |   |   |   service = ctf: normal (0.0)
+|   |   |   |   |   |   |   |   service = nntp: normal (0.0)
+|   |   |   |   |   |   |   |   service = netbios_ssn: normal (0.0)
+|   |   |   |   |   |   |   |   service = tim_i: normal (0.0)
+|   |   |   |   |   |   |   |   service = supdup: normal (0.0)
+|   |   |   |   |   |   |   |   service = bgp: normal (0.0)
+|   |   |   |   |   |   |   |   service = nnsp: normal (0.0)
+|   |   |   |   |   |   |   |   service = rje: normal (0.0)
+|   |   |   |   |   |   |   |   service = printer: normal (0.0)
+|   |   |   |   |   |   |   |   service = efs: normal (0.0)
+|   |   |   |   |   |   |   |   service = X11: normal (0.0)
+|   |   |   |   |   |   |   |   service = ntp_u: normal (0.0)
+|   |   |   |   |   |   |   |   service = klogin: normal (0.0)
+|   |   |   |   |   |   |   |   service = red_i: normal (0.0)
+|   |   |   |   |   |   |   |   service = urh_i: normal (0.0)
+|   |   |   |   |   |   |   |   service = http_8001: normal (0.0)
+|   |   |   |   |   |   |   |   service = aol: normal (0.0)
+|   |   |   |   |   |   |   |   service = http_2784: normal (0.0)
+|   |   |   |   |   |   |   |   service = tftp_u: normal (0.0)
+|   |   |   |   |   |   |   |   service = harvest: normal (0.0)
+|   |   |   |   |   |   |   dst_host_count > 18: normal (722.0/4.0)
+|   |   |   |   |   |   dst_host_srv_count > 254
+|   |   |   |   |   |   |   service = private: smurf (0.0)
+|   |   |   |   |   |   |   service = ftp_data: smurf (0.0)
+|   |   |   |   |   |   |   service = eco_i: normal (2.0)
+|   |   |   |   |   |   |   service = telnet: smurf (0.0)
+|   |   |   |   |   |   |   service = http: smurf (0.0)
+|   |   |   |   |   |   |   service = smtp: smurf (0.0)
+|   |   |   |   |   |   |   service = ftp: smurf (0.0)
+|   |   |   |   |   |   |   service = ldap: smurf (0.0)
+|   |   |   |   |   |   |   service = pop_3: smurf (0.0)
+|   |   |   |   |   |   |   service = courier: smurf (0.0)
+|   |   |   |   |   |   |   service = discard: smurf (0.0)
+|   |   |   |   |   |   |   service = ecr_i: smurf (26.0/2.0)
+|   |   |   |   |   |   |   service = imap4: smurf (0.0)
+|   |   |   |   |   |   |   service = domain_u: smurf (0.0)
+|   |   |   |   |   |   |   service = mtp: smurf (0.0)
+|   |   |   |   |   |   |   service = systat: smurf (0.0)
+|   |   |   |   |   |   |   service = iso_tsap: smurf (0.0)
+|   |   |   |   |   |   |   service = other: smurf (0.0)
+|   |   |   |   |   |   |   service = csnet_ns: smurf (0.0)
+|   |   |   |   |   |   |   service = finger: smurf (0.0)
+|   |   |   |   |   |   |   service = uucp: smurf (0.0)
+|   |   |   |   |   |   |   service = whois: smurf (0.0)
+|   |   |   |   |   |   |   service = netbios_ns: smurf (0.0)
+|   |   |   |   |   |   |   service = link: smurf (0.0)
+|   |   |   |   |   |   |   service = Z39_50: smurf (0.0)
+|   |   |   |   |   |   |   service = sunrpc: smurf (0.0)
+|   |   |   |   |   |   |   service = auth: smurf (0.0)
+|   |   |   |   |   |   |   service = netbios_dgm: smurf (0.0)
+|   |   |   |   |   |   |   service = uucp_path: smurf (0.0)
+|   |   |   |   |   |   |   service = vmnet: smurf (0.0)
+|   |   |   |   |   |   |   service = domain: smurf (0.0)
+|   |   |   |   |   |   |   service = name: smurf (0.0)
+|   |   |   |   |   |   |   service = pop_2: smurf (0.0)
+|   |   |   |   |   |   |   service = http_443: smurf (0.0)
+|   |   |   |   |   |   |   service = urp_i: smurf (0.0)
+|   |   |   |   |   |   |   service = login: smurf (0.0)
+|   |   |   |   |   |   |   service = gopher: smurf (0.0)
+|   |   |   |   |   |   |   service = exec: smurf (0.0)
+|   |   |   |   |   |   |   service = time: smurf (0.0)
+|   |   |   |   |   |   |   service = remote_job: smurf (0.0)
+|   |   |   |   |   |   |   service = ssh: smurf (0.0)
+|   |   |   |   |   |   |   service = kshell: smurf (0.0)
+|   |   |   |   |   |   |   service = sql_net: smurf (0.0)
+|   |   |   |   |   |   |   service = shell: smurf (0.0)
+|   |   |   |   |   |   |   service = hostnames: smurf (0.0)
+|   |   |   |   |   |   |   service = echo: smurf (0.0)
+|   |   |   |   |   |   |   service = daytime: smurf (0.0)
+|   |   |   |   |   |   |   service = pm_dump: smurf (0.0)
+|   |   |   |   |   |   |   service = IRC: smurf (0.0)
+|   |   |   |   |   |   |   service = netstat: smurf (0.0)
+|   |   |   |   |   |   |   service = ctf: smurf (0.0)
+|   |   |   |   |   |   |   service = nntp: smurf (0.0)
+|   |   |   |   |   |   |   service = netbios_ssn: smurf (0.0)
+|   |   |   |   |   |   |   service = tim_i: smurf (0.0)
+|   |   |   |   |   |   |   service = supdup: smurf (0.0)
+|   |   |   |   |   |   |   service = bgp: smurf (0.0)
+|   |   |   |   |   |   |   service = nnsp: smurf (0.0)
+|   |   |   |   |   |   |   service = rje: smurf (0.0)
+|   |   |   |   |   |   |   service = printer: smurf (0.0)
+|   |   |   |   |   |   |   service = efs: smurf (0.0)
+|   |   |   |   |   |   |   service = X11: smurf (0.0)
+|   |   |   |   |   |   |   service = ntp_u: smurf (0.0)
+|   |   |   |   |   |   |   service = klogin: smurf (0.0)
+|   |   |   |   |   |   |   service = red_i: smurf (0.0)
+|   |   |   |   |   |   |   service = urh_i: smurf (0.0)
+|   |   |   |   |   |   |   service = http_8001: smurf (0.0)
+|   |   |   |   |   |   |   service = aol: smurf (0.0)
+|   |   |   |   |   |   |   service = http_2784: smurf (0.0)
+|   |   |   |   |   |   |   service = tftp_u: smurf (0.0)
+|   |   |   |   |   |   |   service = harvest: smurf (0.0)
+|   |   |   |   |   dst_host_diff_srv_rate > 0.01
+|   |   |   |   |   |   srv_count <= 3
+|   |   |   |   |   |   |   service = private: normal (0.0)
+|   |   |   |   |   |   |   service = ftp_data: normal (0.0)
+|   |   |   |   |   |   |   service = eco_i
+|   |   |   |   |   |   |   |   dst_host_count <= 25
+|   |   |   |   |   |   |   |   |   dst_host_srv_count <= 125
+|   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 2: normal (2.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 2: nmap (4.0)
+|   |   |   |   |   |   |   |   |   dst_host_srv_count > 125: ipsweep (3.0)
+|   |   |   |   |   |   |   |   dst_host_count > 25
+|   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.05
+|   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.08
+|   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   count <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   count <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count <= 209
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.09
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count <= 101: satan (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count > 101: normal (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.09: normal (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count > 209: satan (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   count > 1: normal (11.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 2: satan (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   count > 2: normal (3.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 4
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_count <= 190: normal (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_count > 190: portsweep (2.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.08: portsweep (2.0)
+|   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.05: normal (52.0)
+|   |   |   |   |   |   |   service = telnet: normal (0.0)
+|   |   |   |   |   |   |   service = http: normal (0.0)
+|   |   |   |   |   |   |   service = smtp: normal (0.0)
+|   |   |   |   |   |   |   service = ftp: normal (0.0)
+|   |   |   |   |   |   |   service = ldap: normal (0.0)
+|   |   |   |   |   |   |   service = pop_3: normal (0.0)
+|   |   |   |   |   |   |   service = courier: normal (0.0)
+|   |   |   |   |   |   |   service = discard: normal (0.0)
+|   |   |   |   |   |   |   service = ecr_i
+|   |   |   |   |   |   |   |   dst_host_count <= 173
+|   |   |   |   |   |   |   |   |   srv_diff_host_rate <= 0.33: normal (35.0/6.0)
+|   |   |   |   |   |   |   |   |   srv_diff_host_rate > 0.33: pod (2.0)
+|   |   |   |   |   |   |   |   dst_host_count > 173
+|   |   |   |   |   |   |   |   |   dst_host_count <= 234
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.05: ipsweep (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.05: satan (3.0)
+|   |   |   |   |   |   |   |   |   dst_host_count > 234
+|   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.16
+|   |   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.01
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.12: normal (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.12: smurf (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 2: normal (6.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   count <= 2: pod (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   count > 2: normal (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.01
+|   |   |   |   |   |   |   |   |   |   |   |   count <= 1: normal (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   count > 1: pod (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.16: smurf (2.0)
+|   |   |   |   |   |   |   service = imap4: normal (0.0)
+|   |   |   |   |   |   |   service = domain_u: normal (0.0)
+|   |   |   |   |   |   |   service = mtp: normal (0.0)
+|   |   |   |   |   |   |   service = systat: normal (0.0)
+|   |   |   |   |   |   |   service = iso_tsap: normal (0.0)
+|   |   |   |   |   |   |   service = other: normal (0.0)
+|   |   |   |   |   |   |   service = csnet_ns: normal (0.0)
+|   |   |   |   |   |   |   service = finger: normal (0.0)
+|   |   |   |   |   |   |   service = uucp: normal (0.0)
+|   |   |   |   |   |   |   service = whois: normal (0.0)
+|   |   |   |   |   |   |   service = netbios_ns: normal (0.0)
+|   |   |   |   |   |   |   service = link: normal (0.0)
+|   |   |   |   |   |   |   service = Z39_50: normal (0.0)
+|   |   |   |   |   |   |   service = sunrpc: normal (0.0)
+|   |   |   |   |   |   |   service = auth: normal (0.0)
+|   |   |   |   |   |   |   service = netbios_dgm: normal (0.0)
+|   |   |   |   |   |   |   service = uucp_path: normal (0.0)
+|   |   |   |   |   |   |   service = vmnet: normal (0.0)
+|   |   |   |   |   |   |   service = domain: normal (0.0)
+|   |   |   |   |   |   |   service = name: normal (0.0)
+|   |   |   |   |   |   |   service = pop_2: normal (0.0)
+|   |   |   |   |   |   |   service = http_443: normal (0.0)
+|   |   |   |   |   |   |   service = urp_i
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.35: normal (33.0/1.0)
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.35: satan (2.0)
+|   |   |   |   |   |   |   service = login: normal (0.0)
+|   |   |   |   |   |   |   service = gopher: normal (0.0)
+|   |   |   |   |   |   |   service = exec: normal (0.0)
+|   |   |   |   |   |   |   service = time: normal (0.0)
+|   |   |   |   |   |   |   service = remote_job: normal (0.0)
+|   |   |   |   |   |   |   service = ssh: normal (0.0)
+|   |   |   |   |   |   |   service = kshell: normal (0.0)
+|   |   |   |   |   |   |   service = sql_net: normal (0.0)
+|   |   |   |   |   |   |   service = shell: normal (0.0)
+|   |   |   |   |   |   |   service = hostnames: normal (0.0)
+|   |   |   |   |   |   |   service = echo: normal (0.0)
+|   |   |   |   |   |   |   service = daytime: normal (0.0)
+|   |   |   |   |   |   |   service = pm_dump: normal (0.0)
+|   |   |   |   |   |   |   service = IRC: normal (0.0)
+|   |   |   |   |   |   |   service = netstat: normal (0.0)
+|   |   |   |   |   |   |   service = ctf: normal (0.0)
+|   |   |   |   |   |   |   service = nntp: normal (0.0)
+|   |   |   |   |   |   |   service = netbios_ssn: normal (0.0)
+|   |   |   |   |   |   |   service = tim_i
+|   |   |   |   |   |   |   |   dst_host_count <= 222: normal (4.0)
+|   |   |   |   |   |   |   |   dst_host_count > 222: pod (2.0)
+|   |   |   |   |   |   |   service = supdup: normal (0.0)
+|   |   |   |   |   |   |   service = bgp: normal (0.0)
+|   |   |   |   |   |   |   service = nnsp: normal (0.0)
+|   |   |   |   |   |   |   service = rje: normal (0.0)
+|   |   |   |   |   |   |   service = printer: normal (0.0)
+|   |   |   |   |   |   |   service = efs: normal (0.0)
+|   |   |   |   |   |   |   service = X11: normal (0.0)
+|   |   |   |   |   |   |   service = ntp_u: normal (0.0)
+|   |   |   |   |   |   |   service = klogin: normal (0.0)
+|   |   |   |   |   |   |   service = red_i: normal (2.0)
+|   |   |   |   |   |   |   service = urh_i: normal (9.0)
+|   |   |   |   |   |   |   service = http_8001: normal (0.0)
+|   |   |   |   |   |   |   service = aol: normal (0.0)
+|   |   |   |   |   |   |   service = http_2784: normal (0.0)
+|   |   |   |   |   |   |   service = tftp_u: normal (0.0)
+|   |   |   |   |   |   |   service = harvest: normal (0.0)
+|   |   |   |   |   |   srv_count > 3
+|   |   |   |   |   |   |   service = private: pod (0.0)
+|   |   |   |   |   |   |   service = ftp_data: pod (0.0)
+|   |   |   |   |   |   |   service = eco_i: normal (6.0)
+|   |   |   |   |   |   |   service = telnet: pod (0.0)
+|   |   |   |   |   |   |   service = http: pod (0.0)
+|   |   |   |   |   |   |   service = smtp: pod (0.0)
+|   |   |   |   |   |   |   service = ftp: pod (0.0)
+|   |   |   |   |   |   |   service = ldap: pod (0.0)
+|   |   |   |   |   |   |   service = pop_3: pod (0.0)
+|   |   |   |   |   |   |   service = courier: pod (0.0)
+|   |   |   |   |   |   |   service = discard: pod (0.0)
+|   |   |   |   |   |   |   service = ecr_i: pod (34.0/8.0)
+|   |   |   |   |   |   |   service = imap4: pod (0.0)
+|   |   |   |   |   |   |   service = domain_u: pod (0.0)
+|   |   |   |   |   |   |   service = mtp: pod (0.0)
+|   |   |   |   |   |   |   service = systat: pod (0.0)
+|   |   |   |   |   |   |   service = iso_tsap: pod (0.0)
+|   |   |   |   |   |   |   service = other: pod (0.0)
+|   |   |   |   |   |   |   service = csnet_ns: pod (0.0)
+|   |   |   |   |   |   |   service = finger: pod (0.0)
+|   |   |   |   |   |   |   service = uucp: pod (0.0)
+|   |   |   |   |   |   |   service = whois: pod (0.0)
+|   |   |   |   |   |   |   service = netbios_ns: pod (0.0)
+|   |   |   |   |   |   |   service = link: pod (0.0)
+|   |   |   |   |   |   |   service = Z39_50: pod (0.0)
+|   |   |   |   |   |   |   service = sunrpc: pod (0.0)
+|   |   |   |   |   |   |   service = auth: pod (0.0)
+|   |   |   |   |   |   |   service = netbios_dgm: pod (0.0)
+|   |   |   |   |   |   |   service = uucp_path: pod (0.0)
+|   |   |   |   |   |   |   service = vmnet: pod (0.0)
+|   |   |   |   |   |   |   service = domain: pod (0.0)
+|   |   |   |   |   |   |   service = name: pod (0.0)
+|   |   |   |   |   |   |   service = pop_2: pod (0.0)
+|   |   |   |   |   |   |   service = http_443: pod (0.0)
+|   |   |   |   |   |   |   service = urp_i: normal (2.0)
+|   |   |   |   |   |   |   service = login: pod (0.0)
+|   |   |   |   |   |   |   service = gopher: pod (0.0)
+|   |   |   |   |   |   |   service = exec: pod (0.0)
+|   |   |   |   |   |   |   service = time: pod (0.0)
+|   |   |   |   |   |   |   service = remote_job: pod (0.0)
+|   |   |   |   |   |   |   service = ssh: pod (0.0)
+|   |   |   |   |   |   |   service = kshell: pod (0.0)
+|   |   |   |   |   |   |   service = sql_net: pod (0.0)
+|   |   |   |   |   |   |   service = shell: pod (0.0)
+|   |   |   |   |   |   |   service = hostnames: pod (0.0)
+|   |   |   |   |   |   |   service = echo: pod (0.0)
+|   |   |   |   |   |   |   service = daytime: pod (0.0)
+|   |   |   |   |   |   |   service = pm_dump: pod (0.0)
+|   |   |   |   |   |   |   service = IRC: pod (0.0)
+|   |   |   |   |   |   |   service = netstat: pod (0.0)
+|   |   |   |   |   |   |   service = ctf: pod (0.0)
+|   |   |   |   |   |   |   service = nntp: pod (0.0)
+|   |   |   |   |   |   |   service = netbios_ssn: pod (0.0)
+|   |   |   |   |   |   |   service = tim_i: pod (0.0)
+|   |   |   |   |   |   |   service = supdup: pod (0.0)
+|   |   |   |   |   |   |   service = bgp: pod (0.0)
+|   |   |   |   |   |   |   service = nnsp: pod (0.0)
+|   |   |   |   |   |   |   service = rje: pod (0.0)
+|   |   |   |   |   |   |   service = printer: pod (0.0)
+|   |   |   |   |   |   |   service = efs: pod (0.0)
+|   |   |   |   |   |   |   service = X11: pod (0.0)
+|   |   |   |   |   |   |   service = ntp_u: pod (0.0)
+|   |   |   |   |   |   |   service = klogin: pod (0.0)
+|   |   |   |   |   |   |   service = red_i: normal (6.0)
+|   |   |   |   |   |   |   service = urh_i: pod (0.0)
+|   |   |   |   |   |   |   service = http_8001: pod (0.0)
+|   |   |   |   |   |   |   service = aol: pod (0.0)
+|   |   |   |   |   |   |   service = http_2784: pod (0.0)
+|   |   |   |   |   |   |   service = tftp_u: pod (0.0)
+|   |   |   |   |   |   |   service = harvest: pod (0.0)
+|   |   |   |   srv_count > 9
+|   |   |   |   |   count <= 20
+|   |   |   |   |   |   dst_host_srv_count <= 241
+|   |   |   |   |   |   |   service = private: pod (0.0)
+|   |   |   |   |   |   |   service = ftp_data: pod (0.0)
+|   |   |   |   |   |   |   service = eco_i: ipsweep (3.0/1.0)
+|   |   |   |   |   |   |   service = telnet: pod (0.0)
+|   |   |   |   |   |   |   service = http: pod (0.0)
+|   |   |   |   |   |   |   service = smtp: pod (0.0)
+|   |   |   |   |   |   |   service = ftp: pod (0.0)
+|   |   |   |   |   |   |   service = ldap: pod (0.0)
+|   |   |   |   |   |   |   service = pop_3: pod (0.0)
+|   |   |   |   |   |   |   service = courier: pod (0.0)
+|   |   |   |   |   |   |   service = discard: pod (0.0)
+|   |   |   |   |   |   |   service = ecr_i
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.01: normal (4.0)
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.01: pod (58.0/15.0)
+|   |   |   |   |   |   |   service = imap4: pod (0.0)
+|   |   |   |   |   |   |   service = domain_u: pod (0.0)
+|   |   |   |   |   |   |   service = mtp: pod (0.0)
+|   |   |   |   |   |   |   service = systat: pod (0.0)
+|   |   |   |   |   |   |   service = iso_tsap: pod (0.0)
+|   |   |   |   |   |   |   service = other: pod (0.0)
+|   |   |   |   |   |   |   service = csnet_ns: pod (0.0)
+|   |   |   |   |   |   |   service = finger: pod (0.0)
+|   |   |   |   |   |   |   service = uucp: pod (0.0)
+|   |   |   |   |   |   |   service = whois: pod (0.0)
+|   |   |   |   |   |   |   service = netbios_ns: pod (0.0)
+|   |   |   |   |   |   |   service = link: pod (0.0)
+|   |   |   |   |   |   |   service = Z39_50: pod (0.0)
+|   |   |   |   |   |   |   service = sunrpc: pod (0.0)
+|   |   |   |   |   |   |   service = auth: pod (0.0)
+|   |   |   |   |   |   |   service = netbios_dgm: pod (0.0)
+|   |   |   |   |   |   |   service = uucp_path: pod (0.0)
+|   |   |   |   |   |   |   service = vmnet: pod (0.0)
+|   |   |   |   |   |   |   service = domain: pod (0.0)
+|   |   |   |   |   |   |   service = name: pod (0.0)
+|   |   |   |   |   |   |   service = pop_2: pod (0.0)
+|   |   |   |   |   |   |   service = http_443: pod (0.0)
+|   |   |   |   |   |   |   service = urp_i: normal (2.0)
+|   |   |   |   |   |   |   service = login: pod (0.0)
+|   |   |   |   |   |   |   service = gopher: pod (0.0)
+|   |   |   |   |   |   |   service = exec: pod (0.0)
+|   |   |   |   |   |   |   service = time: pod (0.0)
+|   |   |   |   |   |   |   service = remote_job: pod (0.0)
+|   |   |   |   |   |   |   service = ssh: pod (0.0)
+|   |   |   |   |   |   |   service = kshell: pod (0.0)
+|   |   |   |   |   |   |   service = sql_net: pod (0.0)
+|   |   |   |   |   |   |   service = shell: pod (0.0)
+|   |   |   |   |   |   |   service = hostnames: pod (0.0)
+|   |   |   |   |   |   |   service = echo: pod (0.0)
+|   |   |   |   |   |   |   service = daytime: pod (0.0)
+|   |   |   |   |   |   |   service = pm_dump: pod (0.0)
+|   |   |   |   |   |   |   service = IRC: pod (0.0)
+|   |   |   |   |   |   |   service = netstat: pod (0.0)
+|   |   |   |   |   |   |   service = ctf: pod (0.0)
+|   |   |   |   |   |   |   service = nntp: pod (0.0)
+|   |   |   |   |   |   |   service = netbios_ssn: pod (0.0)
+|   |   |   |   |   |   |   service = tim_i: pod (0.0)
+|   |   |   |   |   |   |   service = supdup: pod (0.0)
+|   |   |   |   |   |   |   service = bgp: pod (0.0)
+|   |   |   |   |   |   |   service = nnsp: pod (0.0)
+|   |   |   |   |   |   |   service = rje: pod (0.0)
+|   |   |   |   |   |   |   service = printer: pod (0.0)
+|   |   |   |   |   |   |   service = efs: pod (0.0)
+|   |   |   |   |   |   |   service = X11: pod (0.0)
+|   |   |   |   |   |   |   service = ntp_u: pod (0.0)
+|   |   |   |   |   |   |   service = klogin: pod (0.0)
+|   |   |   |   |   |   |   service = red_i: pod (0.0)
+|   |   |   |   |   |   |   service = urh_i: pod (0.0)
+|   |   |   |   |   |   |   service = http_8001: pod (0.0)
+|   |   |   |   |   |   |   service = aol: pod (0.0)
+|   |   |   |   |   |   |   service = http_2784: pod (0.0)
+|   |   |   |   |   |   |   service = tftp_u: pod (0.0)
+|   |   |   |   |   |   |   service = harvest: pod (0.0)
+|   |   |   |   |   |   dst_host_srv_count > 241: smurf (36.0/1.0)
+|   |   |   |   |   count > 20: smurf (3216.0)
+|   |   |   protocol_type = udp
+|   |   |   |   service = private
+|   |   |   |   |   dst_host_same_srv_rate <= 0.82
+|   |   |   |   |   |   same_srv_rate <= 0.94
+|   |   |   |   |   |   |   count <= 18
+|   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.06: satan (96.0/6.0)
+|   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.06
+|   |   |   |   |   |   |   |   |   same_srv_rate <= 0.88
+|   |   |   |   |   |   |   |   |   |   dst_host_count <= 146: normal (2.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_count > 146
+|   |   |   |   |   |   |   |   |   |   |   count <= 14
+|   |   |   |   |   |   |   |   |   |   |   |   same_srv_rate <= 0.67: satan (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   same_srv_rate > 0.67: normal (2.0)
+|   |   |   |   |   |   |   |   |   |   |   count > 14: satan (4.0)
+|   |   |   |   |   |   |   |   |   same_srv_rate > 0.88: normal (7.0)
+|   |   |   |   |   |   |   count > 18
+|   |   |   |   |   |   |   |   count <= 168: satan (271.0/3.0)
+|   |   |   |   |   |   |   |   count > 168: normal (2.0/1.0)
+|   |   |   |   |   |   same_srv_rate > 0.94
+|   |   |   |   |   |   |   dst_host_count <= 63
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.72
+|   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.31
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.06
+|   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.05
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.13: normal (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.13: nmap (2.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.05: nmap (6.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.06
+|   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.07: teardrop (2.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.07: normal (7.0/1.0)
+|   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.31: normal (61.0)
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.72: nmap (7.0)
+|   |   |   |   |   |   |   dst_host_count > 63
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.75
+|   |   |   |   |   |   |   |   |   count <= 3
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.06
+|   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.28
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.07: teardrop (18.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.07
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count <= 240: nmap (32.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count > 240
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.25: normal (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.25: teardrop (3.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.28: normal (66.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.06
+|   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.26
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_count <= 235
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.41: satan (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.41: teardrop (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_count > 235: satan (36.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.26: teardrop (2.0)
+|   |   |   |   |   |   |   |   |   count > 3
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.04: teardrop (574.0/21.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.04
+|   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count <= 35
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.18
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count <= 251
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count <= 79
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.05: teardrop (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.05: satan (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count > 79: teardrop (74.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_count > 251: satan (20.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.18: satan (41.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_srv_count > 35: teardrop (154.0/2.0)
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.75
+|   |   |   |   |   |   |   |   |   dst_host_count <= 196
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.02: nmap (8.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.02: normal (7.0/1.0)
+|   |   |   |   |   |   |   |   |   dst_host_count > 196: satan (73.0)
+|   |   |   |   |   dst_host_same_srv_rate > 0.82
+|   |   |   |   |   |   dst_host_same_srv_rate <= 0.9
+|   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.52: normal (108.0)
+|   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.52
+|   |   |   |   |   |   |   |   count <= 8
+|   |   |   |   |   |   |   |   |   dst_host_count <= 251: nmap (163.0)
+|   |   |   |   |   |   |   |   |   dst_host_count > 251: normal (6.0)
+|   |   |   |   |   |   |   |   count > 8: satan (5.0)
+|   |   |   |   |   |   dst_host_same_srv_rate > 0.9
+|   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.03
+|   |   |   |   |   |   |   |   dst_host_srv_count <= 252
+|   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.99: normal (452.0/73.0)
+|   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.99
+|   |   |   |   |   |   |   |   |   |   srv_count <= 1: snmpgetattack (31.0/10.0)
+|   |   |   |   |   |   |   |   |   |   srv_count > 1
+|   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0: snmpgetattack (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0: normal (9.0/3.0)
+|   |   |   |   |   |   |   |   dst_host_srv_count > 252
+|   |   |   |   |   |   |   |   |   srv_count <= 2
+|   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.99: normal (60.0/27.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.99
+|   |   |   |   |   |   |   |   |   |   |   srv_count <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   count <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0: normal (21.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.01: snmpguess (28.0/15.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.01: normal (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   count > 1: snmpgetattack (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   srv_count > 1: snmpguess (100.0/41.0)
+|   |   |   |   |   |   |   |   |   srv_count > 2: snmpguess (312.0/69.0)
+|   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.03
+|   |   |   |   |   |   |   |   dst_host_count <= 31
+|   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.61: normal (50.0/6.0)
+|   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.61: nmap (26.0)
+|   |   |   |   |   |   |   |   dst_host_count > 31: normal (494.0/1.0)
+|   |   |   |   service = ftp_data: normal (0.0)
+|   |   |   |   service = eco_i: normal (0.0)
+|   |   |   |   service = telnet: normal (0.0)
+|   |   |   |   service = http: normal (0.0)
+|   |   |   |   service = smtp: normal (0.0)
+|   |   |   |   service = ftp: normal (0.0)
+|   |   |   |   service = ldap: normal (0.0)
+|   |   |   |   service = pop_3: normal (0.0)
+|   |   |   |   service = courier: normal (0.0)
+|   |   |   |   service = discard: normal (0.0)
+|   |   |   |   service = ecr_i: normal (0.0)
+|   |   |   |   service = imap4: normal (0.0)
+|   |   |   |   service = domain_u: normal (9798.0)
+|   |   |   |   service = mtp: normal (0.0)
+|   |   |   |   service = systat: normal (0.0)
+|   |   |   |   service = iso_tsap: normal (0.0)
+|   |   |   |   service = other
+|   |   |   |   |   dst_host_same_src_port_rate <= 0.72
+|   |   |   |   |   |   dst_host_diff_srv_rate <= 0.27
+|   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.39
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.08
+|   |   |   |   |   |   |   |   |   same_srv_rate <= 0.75: satan (3.0)
+|   |   |   |   |   |   |   |   |   same_srv_rate > 0.75
+|   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0: normal (6.0/3.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0
+|   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.02
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.05: satan (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.05: saint (2.0)
+|   |   |   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.02: multihop (4.0/2.0)
+|   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.08: normal (27.0/1.0)
+|   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.39
+|   |   |   |   |   |   |   |   dst_host_count <= 147: normal (7.0)
+|   |   |   |   |   |   |   |   dst_host_count > 147
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.21: satan (19.0)
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.21
+|   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.59: normal (2.0)
+|   |   |   |   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.59: satan (4.0)
+|   |   |   |   |   |   dst_host_diff_srv_rate > 0.27: normal (58.0)
+|   |   |   |   |   dst_host_same_src_port_rate > 0.72
+|   |   |   |   |   |   dst_host_count <= 74
+|   |   |   |   |   |   |   dst_host_same_src_port_rate <= 0.97
+|   |   |   |   |   |   |   |   srv_count <= 6: normal (32.0)
+|   |   |   |   |   |   |   |   srv_count > 6
+|   |   |   |   |   |   |   |   |   count <= 27: multihop (2.0)
+|   |   |   |   |   |   |   |   |   count > 27: normal (3.0)
+|   |   |   |   |   |   |   dst_host_same_src_port_rate > 0.97
+|   |   |   |   |   |   |   |   srv_count <= 1
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.67: snmpgetattack (8.0)
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.67: normal (2.0)
+|   |   |   |   |   |   |   |   srv_count > 1: normal (6.0)
+|   |   |   |   |   |   dst_host_count > 74
+|   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.29
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.09: normal (363.0)
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.09: satan (9.0)
+|   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.29: normal (1315.0/1.0)
+|   |   |   |   service = csnet_ns: normal (0.0)
+|   |   |   |   service = finger: normal (0.0)
+|   |   |   |   service = uucp: normal (0.0)
+|   |   |   |   service = whois: normal (0.0)
+|   |   |   |   service = netbios_ns: normal (0.0)
+|   |   |   |   service = link: normal (0.0)
+|   |   |   |   service = Z39_50: normal (0.0)
+|   |   |   |   service = sunrpc: normal (0.0)
+|   |   |   |   service = auth: normal (0.0)
+|   |   |   |   service = netbios_dgm: normal (0.0)
+|   |   |   |   service = uucp_path: normal (0.0)
+|   |   |   |   service = vmnet: normal (0.0)
+|   |   |   |   service = domain: normal (0.0)
+|   |   |   |   service = name: normal (0.0)
+|   |   |   |   service = pop_2: normal (0.0)
+|   |   |   |   service = http_443: normal (0.0)
+|   |   |   |   service = urp_i: normal (0.0)
+|   |   |   |   service = login: normal (0.0)
+|   |   |   |   service = gopher: normal (0.0)
+|   |   |   |   service = exec: normal (0.0)
+|   |   |   |   service = time: normal (0.0)
+|   |   |   |   service = remote_job: normal (0.0)
+|   |   |   |   service = ssh: normal (0.0)
+|   |   |   |   service = kshell: normal (0.0)
+|   |   |   |   service = sql_net: normal (0.0)
+|   |   |   |   service = shell: normal (0.0)
+|   |   |   |   service = hostnames: normal (0.0)
+|   |   |   |   service = echo: normal (0.0)
+|   |   |   |   service = daytime: normal (0.0)
+|   |   |   |   service = pm_dump: normal (0.0)
+|   |   |   |   service = IRC: normal (0.0)
+|   |   |   |   service = netstat: normal (0.0)
+|   |   |   |   service = ctf: normal (0.0)
+|   |   |   |   service = nntp: normal (0.0)
+|   |   |   |   service = netbios_ssn: normal (0.0)
+|   |   |   |   service = tim_i: normal (0.0)
+|   |   |   |   service = supdup: normal (0.0)
+|   |   |   |   service = bgp: normal (0.0)
+|   |   |   |   service = nnsp: normal (0.0)
+|   |   |   |   service = rje: normal (0.0)
+|   |   |   |   service = printer: normal (0.0)
+|   |   |   |   service = efs: normal (0.0)
+|   |   |   |   service = X11: normal (0.0)
+|   |   |   |   service = ntp_u: normal (143.0)
+|   |   |   |   service = klogin: normal (0.0)
+|   |   |   |   service = red_i: normal (0.0)
+|   |   |   |   service = urh_i: normal (0.0)
+|   |   |   |   service = http_8001: normal (0.0)
+|   |   |   |   service = aol: normal (0.0)
+|   |   |   |   service = http_2784: normal (0.0)
+|   |   |   |   service = tftp_u: normal (0.0)
+|   |   |   |   service = harvest: normal (0.0)
+|   flag = RSTO
+|   |   srv_diff_host_rate <= 0.44
+|   |   |   dst_host_diff_srv_rate <= 0.43
+|   |   |   |   hot <= 0
+|   |   |   |   |   service = private: portsweep (1.0)
+|   |   |   |   |   service = ftp_data: normal (0.0)
+|   |   |   |   |   service = eco_i: normal (0.0)
+|   |   |   |   |   service = telnet
+|   |   |   |   |   |   dst_host_srv_count <= 45
+|   |   |   |   |   |   |   dst_host_count <= 250
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.11: normal (35.0)
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.11
+|   |   |   |   |   |   |   |   |   dst_host_count <= 26: guess_passwd (4.0/1.0)
+|   |   |   |   |   |   |   |   |   dst_host_count > 26: normal (2.0)
+|   |   |   |   |   |   |   dst_host_count > 250
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.03: guess_passwd (10.0/1.0)
+|   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.03
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate <= 0.16: normal (8.0)
+|   |   |   |   |   |   |   |   |   dst_host_diff_srv_rate > 0.16: guess_passwd (2.0)
+|   |   |   |   |   |   dst_host_srv_count > 45
+|   |   |   |   |   |   |   dst_host_srv_count <= 114: mscan (7.0/1.0)
+|   |   |   |   |   |   |   dst_host_srv_count > 114: guess_passwd (10.0)
+|   |   |   |   |   service = http: normal (64.0)
+|   |   |   |   |   service = smtp: normal (27.0)
+|   |   |   |   |   service = ftp: normal (15.0/1.0)
+|   |   |   |   |   service = ldap: normal (0.0)
+|   |   |   |   |   service = pop_3: mscan (7.0/1.0)
+|   |   |   |   |   service = courier: normal (0.0)
+|   |   |   |   |   service = discard: normal (0.0)
+|   |   |   |   |   service = ecr_i: normal (0.0)
+|   |   |   |   |   service = imap4: mscan (12.0/1.0)
+|   |   |   |   |   service = domain_u: normal (0.0)
+|   |   |   |   |   service = mtp: normal (0.0)
+|   |   |   |   |   service = systat: normal (0.0)
+|   |   |   |   |   service = iso_tsap: normal (0.0)
+|   |   |   |   |   service = other: normal (0.0)
+|   |   |   |   |   service = csnet_ns: normal (0.0)
+|   |   |   |   |   service = finger: normal (7.0)
+|   |   |   |   |   service = uucp: normal (0.0)
+|   |   |   |   |   service = whois: normal (0.0)
+|   |   |   |   |   service = netbios_ns: normal (0.0)
+|   |   |   |   |   service = link: normal (0.0)
+|   |   |   |   |   service = Z39_50: normal (0.0)
+|   |   |   |   |   service = sunrpc: normal (0.0)
+|   |   |   |   |   service = auth: normal (3.0)
+|   |   |   |   |   service = netbios_dgm: normal (0.0)
+|   |   |   |   |   service = uucp_path: normal (0.0)
+|   |   |   |   |   service = vmnet: normal (0.0)
+|   |   |   |   |   service = domain: named (2.0)
+|   |   |   |   |   service = name: normal (0.0)
+|   |   |   |   |   service = pop_2: normal (0.0)
+|   |   |   |   |   service = http_443: normal (0.0)
+|   |   |   |   |   service = urp_i: normal (0.0)
+|   |   |   |   |   service = login: normal (0.0)
+|   |   |   |   |   service = gopher: normal (0.0)
+|   |   |   |   |   service = exec: portsweep (1.0)
+|   |   |   |   |   service = time: normal (1.0)
+|   |   |   |   |   service = remote_job: normal (0.0)
+|   |   |   |   |   service = ssh: normal (0.0)
+|   |   |   |   |   service = kshell: normal (0.0)
+|   |   |   |   |   service = sql_net: normal (0.0)
+|   |   |   |   |   service = shell: normal (0.0)
+|   |   |   |   |   service = hostnames: normal (0.0)
+|   |   |   |   |   service = echo: normal (0.0)
+|   |   |   |   |   service = daytime: normal (0.0)
+|   |   |   |   |   service = pm_dump: normal (0.0)
+|   |   |   |   |   service = IRC: normal (19.0)
+|   |   |   |   |   service = netstat: normal (0.0)
+|   |   |   |   |   service = ctf: normal (0.0)
+|   |   |   |   |   service = nntp: normal (0.0)
+|   |   |   |   |   service = netbios_ssn: normal (0.0)
+|   |   |   |   |   service = tim_i: normal (0.0)
+|   |   |   |   |   service = supdup: normal (0.0)
+|   |   |   |   |   service = bgp: normal (0.0)
+|   |   |   |   |   service = nnsp: normal (0.0)
+|   |   |   |   |   service = rje: normal (0.0)
+|   |   |   |   |   service = printer: normal (0.0)
+|   |   |   |   |   service = efs: normal (0.0)
+|   |   |   |   |   service = X11: normal (0.0)
+|   |   |   |   |   service = ntp_u: normal (0.0)
+|   |   |   |   |   service = klogin: normal (0.0)
+|   |   |   |   |   service = red_i: normal (0.0)
+|   |   |   |   |   service = urh_i: normal (0.0)
+|   |   |   |   |   service = http_8001: normal (0.0)
+|   |   |   |   |   service = aol: normal (0.0)
+|   |   |   |   |   service = http_2784: normal (0.0)
+|   |   |   |   |   service = tftp_u: normal (0.0)
+|   |   |   |   |   service = harvest: normal (0.0)
+|   |   |   |   hot > 0
+|   |   |   |   |   dst_host_count <= 54: guess_passwd (46.0/1.0)
+|   |   |   |   |   dst_host_count > 54: normal (11.0/1.0)
+|   |   |   dst_host_diff_srv_rate > 0.43
+|   |   |   |   dst_host_count <= 63: ipsweep (30.0)
+|   |   |   |   dst_host_count > 63
+|   |   |   |   |   dst_host_same_src_port_rate <= 0.07
+|   |   |   |   |   |   same_srv_rate <= 0.81: neptune (2.0)
+|   |   |   |   |   |   same_srv_rate > 0.81: normal (6.0)
+|   |   |   |   |   dst_host_same_src_port_rate > 0.07: portsweep (23.0)
+|   |   srv_diff_host_rate > 0.44
+|   |   |   service = private: mscan (0.0)
+|   |   |   service = ftp_data: mscan (0.0)
+|   |   |   service = eco_i: mscan (0.0)
+|   |   |   service = telnet: mscan (94.0)
+|   |   |   service = http: normal (12.0)
+|   |   |   service = smtp: normal (3.0)
+|   |   |   service = ftp: mscan (0.0)
+|   |   |   service = ldap: mscan (0.0)
+|   |   |   service = pop_3: mscan (28.0)
+|   |   |   service = courier: mscan (0.0)
+|   |   |   service = discard: mscan (0.0)
+|   |   |   service = ecr_i: mscan (0.0)
+|   |   |   service = imap4: mscan (90.0)
+|   |   |   service = domain_u: mscan (0.0)
+|   |   |   service = mtp: mscan (0.0)
+|   |   |   service = systat: mscan (0.0)
+|   |   |   service = iso_tsap: mscan (0.0)
+|   |   |   service = other: mscan (0.0)
+|   |   |   service = csnet_ns: mscan (0.0)
+|   |   |   service = finger: mscan (0.0)
+|   |   |   service = uucp: mscan (0.0)
+|   |   |   service = whois: mscan (0.0)
+|   |   |   service = netbios_ns: mscan (0.0)
+|   |   |   service = link: mscan (0.0)
+|   |   |   service = Z39_50: mscan (0.0)
+|   |   |   service = sunrpc: mscan (0.0)
+|   |   |   service = auth: mscan (0.0)
+|   |   |   service = netbios_dgm: mscan (0.0)
+|   |   |   service = uucp_path: mscan (0.0)
+|   |   |   service = vmnet: mscan (0.0)
+|   |   |   service = domain: mscan (0.0)
+|   |   |   service = name: mscan (0.0)
+|   |   |   service = pop_2: mscan (0.0)
+|   |   |   service = http_443: mscan (0.0)
+|   |   |   service = urp_i: mscan (0.0)
+|   |   |   service = login: mscan (0.0)
+|   |   |   service = gopher: mscan (0.0)
+|   |   |   service = exec: mscan (0.0)
+|   |   |   service = time: mscan (0.0)
+|   |   |   service = remote_job: mscan (0.0)
+|   |   |   service = ssh: mscan (0.0)
+|   |   |   service = kshell: mscan (0.0)
+|   |   |   service = sql_net: mscan (0.0)
+|   |   |   service = shell: normal (1.0)
+|   |   |   service = hostnames: mscan (0.0)
+|   |   |   service = echo: mscan (0.0)
+|   |   |   service = daytime: mscan (0.0)
+|   |   |   service = pm_dump: mscan (0.0)
+|   |   |   service = IRC: mscan (0.0)
+|   |   |   service = netstat: mscan (0.0)
+|   |   |   service = ctf: mscan (0.0)
+|   |   |   service = nntp: mscan (0.0)
+|   |   |   service = netbios_ssn: mscan (0.0)
+|   |   |   service = tim_i: mscan (0.0)
+|   |   |   service = supdup: mscan (0.0)
+|   |   |   service = bgp: mscan (0.0)
+|   |   |   service = nnsp: mscan (0.0)
+|   |   |   service = rje: mscan (0.0)
+|   |   |   service = printer: mscan (0.0)
+|   |   |   service = efs: mscan (0.0)
+|   |   |   service = X11: mscan (0.0)
+|   |   |   service = ntp_u: mscan (0.0)
+|   |   |   service = klogin: mscan (0.0)
+|   |   |   service = red_i: mscan (0.0)
+|   |   |   service = urh_i: mscan (0.0)
+|   |   |   service = http_8001: mscan (0.0)
+|   |   |   service = aol: mscan (0.0)
+|   |   |   service = http_2784: mscan (0.0)
+|   |   |   service = tftp_u: mscan (0.0)
+|   |   |   service = harvest: mscan (0.0)
+|   flag = S0
+|   |   serror_rate <= 0.51
+|   |   |   rerror_rate <= 0.23: normal (300.0/1.0)
+|   |   |   rerror_rate > 0.23
+|   |   |   |   same_srv_rate <= 0.75
+|   |   |   |   |   dst_host_same_src_port_rate <= 0.5: neptune (5.0)
+|   |   |   |   |   dst_host_same_src_port_rate > 0.5: portsweep (7.0)
+|   |   |   |   same_srv_rate > 0.75: apache2 (35.0)
+|   |   serror_rate > 0.51
+|   |   |   dst_host_srv_count <= 243
+|   |   |   |   count <= 1
+|   |   |   |   |   dst_host_same_srv_rate <= 0.26
+|   |   |   |   |   |   dst_host_diff_srv_rate <= 0.1
+|   |   |   |   |   |   |   srv_count <= 1: neptune (60.0/2.0)
+|   |   |   |   |   |   |   srv_count > 1
+|   |   |   |   |   |   |   |   dst_host_count <= 208: neptune (2.0)
+|   |   |   |   |   |   |   |   dst_host_count > 208: land (2.0)
+|   |   |   |   |   |   dst_host_diff_srv_rate > 0.1
+|   |   |   |   |   |   |   service = private: portsweep (5.0)
+|   |   |   |   |   |   |   service = ftp_data: portsweep (0.0)
+|   |   |   |   |   |   |   service = eco_i: portsweep (0.0)
+|   |   |   |   |   |   |   service = telnet: normal (4.0)
+|   |   |   |   |   |   |   service = http: portsweep (0.0)
+|   |   |   |   |   |   |   service = smtp: portsweep (0.0)
+|   |   |   |   |   |   |   service = ftp: portsweep (0.0)
+|   |   |   |   |   |   |   service = ldap: portsweep (0.0)
+|   |   |   |   |   |   |   service = pop_3: mscan (2.0/1.0)
+|   |   |   |   |   |   |   service = courier: portsweep (0.0)
+|   |   |   |   |   |   |   service = discard: portsweep (0.0)
+|   |   |   |   |   |   |   service = ecr_i: portsweep (0.0)
+|   |   |   |   |   |   |   service = imap4: portsweep (0.0)
+|   |   |   |   |   |   |   service = domain_u: portsweep (0.0)
+|   |   |   |   |   |   |   service = mtp: portsweep (0.0)
+|   |   |   |   |   |   |   service = systat: portsweep (0.0)
+|   |   |   |   |   |   |   service = iso_tsap: portsweep (0.0)
+|   |   |   |   |   |   |   service = other: portsweep (0.0)
+|   |   |   |   |   |   |   service = csnet_ns: portsweep (0.0)
+|   |   |   |   |   |   |   service = finger: land (3.0)
+|   |   |   |   |   |   |   service = uucp: portsweep (0.0)
+|   |   |   |   |   |   |   service = whois: portsweep (0.0)
+|   |   |   |   |   |   |   service = netbios_ns: portsweep (0.0)
+|   |   |   |   |   |   |   service = link: portsweep (0.0)
+|   |   |   |   |   |   |   service = Z39_50: portsweep (0.0)
+|   |   |   |   |   |   |   service = sunrpc: portsweep (0.0)
+|   |   |   |   |   |   |   service = auth: portsweep (0.0)
+|   |   |   |   |   |   |   service = netbios_dgm: portsweep (0.0)
+|   |   |   |   |   |   |   service = uucp_path: portsweep (0.0)
+|   |   |   |   |   |   |   service = vmnet: portsweep (0.0)
+|   |   |   |   |   |   |   service = domain: portsweep (0.0)
+|   |   |   |   |   |   |   service = name: portsweep (0.0)
+|   |   |   |   |   |   |   service = pop_2: portsweep (0.0)
+|   |   |   |   |   |   |   service = http_443: portsweep (0.0)
+|   |   |   |   |   |   |   service = urp_i: portsweep (0.0)
+|   |   |   |   |   |   |   service = login: portsweep (0.0)
+|   |   |   |   |   |   |   service = gopher: portsweep (0.0)
+|   |   |   |   |   |   |   service = exec: portsweep (0.0)
+|   |   |   |   |   |   |   service = time: portsweep (0.0)
+|   |   |   |   |   |   |   service = remote_job: portsweep (0.0)
+|   |   |   |   |   |   |   service = ssh: portsweep (0.0)
+|   |   |   |   |   |   |   service = kshell: portsweep (0.0)
+|   |   |   |   |   |   |   service = sql_net: portsweep (0.0)
+|   |   |   |   |   |   |   service = shell: portsweep (0.0)
+|   |   |   |   |   |   |   service = hostnames: portsweep (0.0)
+|   |   |   |   |   |   |   service = echo: portsweep (0.0)
+|   |   |   |   |   |   |   service = daytime: portsweep (0.0)
+|   |   |   |   |   |   |   service = pm_dump: portsweep (0.0)
+|   |   |   |   |   |   |   service = IRC: portsweep (0.0)
+|   |   |   |   |   |   |   service = netstat: portsweep (0.0)
+|   |   |   |   |   |   |   service = ctf: portsweep (0.0)
+|   |   |   |   |   |   |   service = nntp: portsweep (0.0)
+|   |   |   |   |   |   |   service = netbios_ssn: portsweep (0.0)
+|   |   |   |   |   |   |   service = tim_i: portsweep (0.0)
+|   |   |   |   |   |   |   service = supdup: portsweep (0.0)
+|   |   |   |   |   |   |   service = bgp: portsweep (0.0)
+|   |   |   |   |   |   |   service = nnsp: portsweep (0.0)
+|   |   |   |   |   |   |   service = rje: portsweep (0.0)
+|   |   |   |   |   |   |   service = printer: portsweep (0.0)
+|   |   |   |   |   |   |   service = efs: portsweep (0.0)
+|   |   |   |   |   |   |   service = X11: portsweep (0.0)
+|   |   |   |   |   |   |   service = ntp_u: portsweep (0.0)
+|   |   |   |   |   |   |   service = klogin: portsweep (0.0)
+|   |   |   |   |   |   |   service = red_i: portsweep (0.0)
+|   |   |   |   |   |   |   service = urh_i: portsweep (0.0)
+|   |   |   |   |   |   |   service = http_8001: portsweep (0.0)
+|   |   |   |   |   |   |   service = aol: portsweep (0.0)
+|   |   |   |   |   |   |   service = http_2784: portsweep (0.0)
+|   |   |   |   |   |   |   service = tftp_u: portsweep (0.0)
+|   |   |   |   |   |   |   service = harvest: portsweep (0.0)
+|   |   |   |   |   dst_host_same_srv_rate > 0.26
+|   |   |   |   |   |   dst_host_same_srv_rate <= 0.8
+|   |   |   |   |   |   |   dst_host_srv_count <= 105
+|   |   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.5: mscan (165.0/2.0)
+|   |   |   |   |   |   |   |   dst_host_same_srv_rate > 0.5: neptune (4.0/1.0)
+|   |   |   |   |   |   |   dst_host_srv_count > 105: neptune (4.0)
+|   |   |   |   |   |   dst_host_same_srv_rate > 0.8
+|   |   |   |   |   |   |   service = private: normal (0.0)
+|   |   |   |   |   |   |   service = ftp_data: normal (0.0)
+|   |   |   |   |   |   |   service = eco_i: normal (0.0)
+|   |   |   |   |   |   |   service = telnet: neptune (3.0/2.0)
+|   |   |   |   |   |   |   service = http: normal (16.0/1.0)
+|   |   |   |   |   |   |   service = smtp: normal (0.0)
+|   |   |   |   |   |   |   service = ftp: normal (0.0)
+|   |   |   |   |   |   |   service = ldap: normal (0.0)
+|   |   |   |   |   |   |   service = pop_3: normal (0.0)
+|   |   |   |   |   |   |   service = courier: normal (0.0)
+|   |   |   |   |   |   |   service = discard: normal (0.0)
+|   |   |   |   |   |   |   service = ecr_i: normal (0.0)
+|   |   |   |   |   |   |   service = imap4: normal (0.0)
+|   |   |   |   |   |   |   service = domain_u: normal (0.0)
+|   |   |   |   |   |   |   service = mtp: normal (0.0)
+|   |   |   |   |   |   |   service = systat: normal (0.0)
+|   |   |   |   |   |   |   service = iso_tsap: normal (0.0)
+|   |   |   |   |   |   |   service = other: normal (0.0)
+|   |   |   |   |   |   |   service = csnet_ns: normal (0.0)
+|   |   |   |   |   |   |   service = finger: land (24.0/7.0)
+|   |   |   |   |   |   |   service = uucp: normal (0.0)
+|   |   |   |   |   |   |   service = whois: normal (0.0)
+|   |   |   |   |   |   |   service = netbios_ns: normal (0.0)
+|   |   |   |   |   |   |   service = link: normal (0.0)
+|   |   |   |   |   |   |   service = Z39_50: normal (0.0)
+|   |   |   |   |   |   |   service = sunrpc: normal (0.0)
+|   |   |   |   |   |   |   service = auth: normal (0.0)
+|   |   |   |   |   |   |   service = netbios_dgm: normal (0.0)
+|   |   |   |   |   |   |   service = uucp_path: normal (0.0)
+|   |   |   |   |   |   |   service = vmnet: normal (0.0)
+|   |   |   |   |   |   |   service = domain: normal (0.0)
+|   |   |   |   |   |   |   service = name: normal (0.0)
+|   |   |   |   |   |   |   service = pop_2: normal (0.0)
+|   |   |   |   |   |   |   service = http_443: normal (0.0)
+|   |   |   |   |   |   |   service = urp_i: normal (0.0)
+|   |   |   |   |   |   |   service = login: normal (0.0)
+|   |   |   |   |   |   |   service = gopher: normal (0.0)
+|   |   |   |   |   |   |   service = exec: normal (0.0)
+|   |   |   |   |   |   |   service = time: normal (0.0)
+|   |   |   |   |   |   |   service = remote_job: normal (0.0)
+|   |   |   |   |   |   |   service = ssh: normal (0.0)
+|   |   |   |   |   |   |   service = kshell: normal (0.0)
+|   |   |   |   |   |   |   service = sql_net: normal (0.0)
+|   |   |   |   |   |   |   service = shell: normal (0.0)
+|   |   |   |   |   |   |   service = hostnames: normal (0.0)
+|   |   |   |   |   |   |   service = echo: normal (0.0)
+|   |   |   |   |   |   |   service = daytime: normal (0.0)
+|   |   |   |   |   |   |   service = pm_dump: normal (0.0)
+|   |   |   |   |   |   |   service = IRC: normal (0.0)
+|   |   |   |   |   |   |   service = netstat: normal (0.0)
+|   |   |   |   |   |   |   service = ctf: normal (0.0)
+|   |   |   |   |   |   |   service = nntp: normal (0.0)
+|   |   |   |   |   |   |   service = netbios_ssn: normal (0.0)
+|   |   |   |   |   |   |   service = tim_i: normal (0.0)
+|   |   |   |   |   |   |   service = supdup: normal (0.0)
+|   |   |   |   |   |   |   service = bgp: normal (0.0)
+|   |   |   |   |   |   |   service = nnsp: normal (0.0)
+|   |   |   |   |   |   |   service = rje: normal (0.0)
+|   |   |   |   |   |   |   service = printer: normal (0.0)
+|   |   |   |   |   |   |   service = efs: normal (0.0)
+|   |   |   |   |   |   |   service = X11: normal (0.0)
+|   |   |   |   |   |   |   service = ntp_u: normal (0.0)
+|   |   |   |   |   |   |   service = klogin: normal (0.0)
+|   |   |   |   |   |   |   service = red_i: normal (0.0)
+|   |   |   |   |   |   |   service = urh_i: normal (0.0)
+|   |   |   |   |   |   |   service = http_8001: normal (0.0)
+|   |   |   |   |   |   |   service = aol: normal (0.0)
+|   |   |   |   |   |   |   service = http_2784: normal (0.0)
+|   |   |   |   |   |   |   service = tftp_u: normal (0.0)
+|   |   |   |   |   |   |   service = harvest: normal (0.0)
+|   |   |   |   count > 1
+|   |   |   |   |   dst_host_same_src_port_rate <= 0.75: neptune (964.0)
+|   |   |   |   |   dst_host_same_src_port_rate > 0.75: portsweep (3.0)
+|   |   |   dst_host_srv_count > 243
+|   |   |   |   service = private: apache2 (0.0)
+|   |   |   |   service = ftp_data: apache2 (0.0)
+|   |   |   |   service = eco_i: apache2 (0.0)
+|   |   |   |   service = telnet: neptune (27.0)
+|   |   |   |   service = http
+|   |   |   |   |   dst_host_same_src_port_rate <= 0: apache2 (211.0)
+|   |   |   |   |   dst_host_same_src_port_rate > 0: normal (24.0)
+|   |   |   |   service = smtp: apache2 (0.0)
+|   |   |   |   service = ftp: apache2 (0.0)
+|   |   |   |   service = ldap: apache2 (0.0)
+|   |   |   |   service = pop_3: apache2 (0.0)
+|   |   |   |   service = courier: apache2 (0.0)
+|   |   |   |   service = discard: apache2 (0.0)
+|   |   |   |   service = ecr_i: apache2 (0.0)
+|   |   |   |   service = imap4: apache2 (0.0)
+|   |   |   |   service = domain_u: apache2 (0.0)
+|   |   |   |   service = mtp: apache2 (0.0)
+|   |   |   |   service = systat: apache2 (0.0)
+|   |   |   |   service = iso_tsap: apache2 (0.0)
+|   |   |   |   service = other: apache2 (0.0)
+|   |   |   |   service = csnet_ns: apache2 (0.0)
+|   |   |   |   service = finger: apache2 (0.0)
+|   |   |   |   service = uucp: apache2 (0.0)
+|   |   |   |   service = whois: apache2 (0.0)
+|   |   |   |   service = netbios_ns: apache2 (0.0)
+|   |   |   |   service = link: apache2 (0.0)
+|   |   |   |   service = Z39_50: apache2 (0.0)
+|   |   |   |   service = sunrpc: apache2 (0.0)
+|   |   |   |   service = auth: apache2 (0.0)
+|   |   |   |   service = netbios_dgm: apache2 (0.0)
+|   |   |   |   service = uucp_path: apache2 (0.0)
+|   |   |   |   service = vmnet: apache2 (0.0)
+|   |   |   |   service = domain: apache2 (0.0)
+|   |   |   |   service = name: apache2 (0.0)
+|   |   |   |   service = pop_2: apache2 (0.0)
+|   |   |   |   service = http_443: apache2 (0.0)
+|   |   |   |   service = urp_i: apache2 (0.0)
+|   |   |   |   service = login: apache2 (0.0)
+|   |   |   |   service = gopher: apache2 (0.0)
+|   |   |   |   service = exec: apache2 (0.0)
+|   |   |   |   service = time: apache2 (0.0)
+|   |   |   |   service = remote_job: apache2 (0.0)
+|   |   |   |   service = ssh: apache2 (0.0)
+|   |   |   |   service = kshell: apache2 (0.0)
+|   |   |   |   service = sql_net: apache2 (0.0)
+|   |   |   |   service = shell: apache2 (0.0)
+|   |   |   |   service = hostnames: apache2 (0.0)
+|   |   |   |   service = echo: apache2 (0.0)
+|   |   |   |   service = daytime: apache2 (0.0)
+|   |   |   |   service = pm_dump: apache2 (0.0)
+|   |   |   |   service = IRC: apache2 (0.0)
+|   |   |   |   service = netstat: apache2 (0.0)
+|   |   |   |   service = ctf: apache2 (0.0)
+|   |   |   |   service = nntp: apache2 (0.0)
+|   |   |   |   service = netbios_ssn: apache2 (0.0)
+|   |   |   |   service = tim_i: apache2 (0.0)
+|   |   |   |   service = supdup: apache2 (0.0)
+|   |   |   |   service = bgp: apache2 (0.0)
+|   |   |   |   service = nnsp: apache2 (0.0)
+|   |   |   |   service = rje: apache2 (0.0)
+|   |   |   |   service = printer: apache2 (0.0)
+|   |   |   |   service = efs: apache2 (0.0)
+|   |   |   |   service = X11: apache2 (0.0)
+|   |   |   |   service = ntp_u: apache2 (0.0)
+|   |   |   |   service = klogin: apache2 (0.0)
+|   |   |   |   service = red_i: apache2 (0.0)
+|   |   |   |   service = urh_i: apache2 (0.0)
+|   |   |   |   service = http_8001: apache2 (0.0)
+|   |   |   |   service = aol: apache2 (0.0)
+|   |   |   |   service = http_2784: apache2 (0.0)
+|   |   |   |   service = tftp_u: apache2 (0.0)
+|   |   |   |   service = harvest: apache2 (0.0)
+|   flag = RSTR
+|   |   dst_host_diff_srv_rate <= 0.02
+|   |   |   hot <= 0
+|   |   |   |   dst_host_srv_count <= 223
+|   |   |   |   |   service = private: portsweep (2.0)
+|   |   |   |   |   service = ftp_data: portsweep (2.0/1.0)
+|   |   |   |   |   service = eco_i: normal (0.0)
+|   |   |   |   |   service = telnet: normal (4.0/1.0)
+|   |   |   |   |   service = http: back (2.0)
+|   |   |   |   |   service = smtp: normal (0.0)
+|   |   |   |   |   service = ftp: normal (0.0)
+|   |   |   |   |   service = ldap: normal (0.0)
+|   |   |   |   |   service = pop_3: guess_passwd (2.0)
+|   |   |   |   |   service = courier: normal (0.0)
+|   |   |   |   |   service = discard: normal (0.0)
+|   |   |   |   |   service = ecr_i: normal (0.0)
+|   |   |   |   |   service = imap4: normal (0.0)
+|   |   |   |   |   service = domain_u: normal (0.0)
+|   |   |   |   |   service = mtp: normal (0.0)
+|   |   |   |   |   service = systat: normal (0.0)
+|   |   |   |   |   service = iso_tsap: normal (0.0)
+|   |   |   |   |   service = other: httptunnel (2.0)
+|   |   |   |   |   service = csnet_ns: normal (0.0)
+|   |   |   |   |   service = finger: normal (1.0)
+|   |   |   |   |   service = uucp: normal (0.0)
+|   |   |   |   |   service = whois: normal (0.0)
+|   |   |   |   |   service = netbios_ns: normal (0.0)
+|   |   |   |   |   service = link: normal (0.0)
+|   |   |   |   |   service = Z39_50: normal (0.0)
+|   |   |   |   |   service = sunrpc: normal (0.0)
+|   |   |   |   |   service = auth: normal (0.0)
+|   |   |   |   |   service = netbios_dgm: normal (0.0)
+|   |   |   |   |   service = uucp_path: normal (0.0)
+|   |   |   |   |   service = vmnet: normal (0.0)
+|   |   |   |   |   service = domain: normal (0.0)
+|   |   |   |   |   service = name: normal (0.0)
+|   |   |   |   |   service = pop_2: normal (0.0)
+|   |   |   |   |   service = http_443: normal (0.0)
+|   |   |   |   |   service = urp_i: normal (0.0)
+|   |   |   |   |   service = login: normal (0.0)
+|   |   |   |   |   service = gopher: normal (0.0)
+|   |   |   |   |   service = exec: normal (0.0)
+|   |   |   |   |   service = time: normal (0.0)
+|   |   |   |   |   service = remote_job: normal (0.0)
+|   |   |   |   |   service = ssh: normal (0.0)
+|   |   |   |   |   service = kshell: normal (0.0)
+|   |   |   |   |   service = sql_net: normal (0.0)
+|   |   |   |   |   service = shell: normal (0.0)
+|   |   |   |   |   service = hostnames: normal (0.0)
+|   |   |   |   |   service = echo: normal (0.0)
+|   |   |   |   |   service = daytime: normal (0.0)
+|   |   |   |   |   service = pm_dump: normal (0.0)
+|   |   |   |   |   service = IRC: normal (23.0)
+|   |   |   |   |   service = netstat: portsweep (1.0)
+|   |   |   |   |   service = ctf: normal (0.0)
+|   |   |   |   |   service = nntp: normal (0.0)
+|   |   |   |   |   service = netbios_ssn: normal (0.0)
+|   |   |   |   |   service = tim_i: normal (0.0)
+|   |   |   |   |   service = supdup: normal (0.0)
+|   |   |   |   |   service = bgp: normal (0.0)
+|   |   |   |   |   service = nnsp: normal (0.0)
+|   |   |   |   |   service = rje: normal (0.0)
+|   |   |   |   |   service = printer: normal (0.0)
+|   |   |   |   |   service = efs: normal (0.0)
+|   |   |   |   |   service = X11: normal (1.0)
+|   |   |   |   |   service = ntp_u: normal (0.0)
+|   |   |   |   |   service = klogin: normal (0.0)
+|   |   |   |   |   service = red_i: normal (0.0)
+|   |   |   |   |   service = urh_i: normal (0.0)
+|   |   |   |   |   service = http_8001: normal (0.0)
+|   |   |   |   |   service = aol: normal (0.0)
+|   |   |   |   |   service = http_2784: normal (0.0)
+|   |   |   |   |   service = tftp_u: normal (0.0)
+|   |   |   |   |   service = harvest: normal (0.0)
+|   |   |   |   dst_host_srv_count > 223
+|   |   |   |   |   dst_host_same_src_port_rate <= 0.01
+|   |   |   |   |   |   count <= 4
+|   |   |   |   |   |   |   dst_host_same_srv_rate <= 0.99: apache2 (10.0)
+|   |   |   |   |   |   |   dst_host_same_srv_rate > 0.99: back (2.0)
+|   |   |   |   |   |   count > 4: apache2 (472.0)
+|   |   |   |   |   dst_host_same_src_port_rate > 0.01: normal (2.0)
+|   |   |   hot > 0
+|   |   |   |   service = private: back (0.0)
+|   |   |   |   service = ftp_data: back (0.0)
+|   |   |   |   service = eco_i: back (0.0)
+|   |   |   |   service = telnet: guess_passwd (5.0/1.0)
+|   |   |   |   service = http: back (137.0/1.0)
+|   |   |   |   service = smtp: back (0.0)
+|   |   |   |   service = ftp: back (0.0)
+|   |   |   |   service = ldap: back (0.0)
+|   |   |   |   service = pop_3: back (0.0)
+|   |   |   |   service = courier: back (0.0)
+|   |   |   |   service = discard: back (0.0)
+|   |   |   |   service = ecr_i: back (0.0)
+|   |   |   |   service = imap4: back (0.0)
+|   |   |   |   service = domain_u: back (0.0)
+|   |   |   |   service = mtp: back (0.0)
+|   |   |   |   service = systat: back (0.0)
+|   |   |   |   service = iso_tsap: back (0.0)
+|   |   |   |   service = other: back (0.0)
+|   |   |   |   service = csnet_ns: back (0.0)
+|   |   |   |   service = finger: back (0.0)
+|   |   |   |   service = uucp: back (0.0)
+|   |   |   |   service = whois: back (0.0)
+|   |   |   |   service = netbios_ns: back (0.0)
+|   |   |   |   service = link: back (0.0)
+|   |   |   |   service = Z39_50: back (0.0)
+|   |   |   |   service = sunrpc: back (0.0)
+|   |   |   |   service = auth: back (0.0)
+|   |   |   |   service = netbios_dgm: back (0.0)
+|   |   |   |   service = uucp_path: back (0.0)
+|   |   |   |   service = vmnet: back (0.0)
+|   |   |   |   service = domain: back (0.0)
+|   |   |   |   service = name: back (0.0)
+|   |   |   |   service = pop_2: back (0.0)
+|   |   |   |   service = http_443: back (0.0)
+|   |   |   |   service = urp_i: back (0.0)
+|   |   |   |   service = login: back (0.0)
+|   |   |   |   service = gopher: back (0.0)
+|   |   |   |   service = exec: back (0.0)
+|   |   |   |   service = time: back (0.0)
+|   |   |   |   service = remote_job: back (0.0)
+|   |   |   |   service = ssh: back (0.0)
+|   |   |   |   service = kshell: back (0.0)
+|   |   |   |   service = sql_net: back (0.0)
+|   |   |   |   service = shell: back (0.0)
+|   |   |   |   service = hostnames: back (0.0)
+|   |   |   |   service = echo: back (0.0)
+|   |   |   |   service = daytime: back (0.0)
+|   |   |   |   service = pm_dump: back (0.0)
+|   |   |   |   service = IRC: back (0.0)
+|   |   |   |   service = netstat: back (0.0)
+|   |   |   |   service = ctf: back (0.0)
+|   |   |   |   service = nntp: back (0.0)
+|   |   |   |   service = netbios_ssn: back (0.0)
+|   |   |   |   service = tim_i: back (0.0)
+|   |   |   |   service = supdup: back (0.0)
+|   |   |   |   service = bgp: back (0.0)
+|   |   |   |   service = nnsp: back (0.0)
+|   |   |   |   service = rje: back (0.0)
+|   |   |   |   service = printer: back (0.0)
+|   |   |   |   service = efs: back (0.0)
+|   |   |   |   service = X11: back (0.0)
+|   |   |   |   service = ntp_u: back (0.0)
+|   |   |   |   service = klogin: back (0.0)
+|   |   |   |   service = red_i: back (0.0)
+|   |   |   |   service = urh_i: back (0.0)
+|   |   |   |   service = http_8001: back (0.0)
+|   |   |   |   service = aol: back (0.0)
+|   |   |   |   service = http_2784: back (0.0)
+|   |   |   |   service = tftp_u: back (0.0)
+|   |   |   |   service = harvest: back (0.0)
+|   |   dst_host_diff_srv_rate > 0.02
+|   |   |   dst_host_same_srv_rate <= 0.04: portsweep (2123.0/29.0)
+|   |   |   dst_host_same_srv_rate > 0.04
+|   |   |   |   dst_host_srv_count <= 44
+|   |   |   |   |   dst_host_same_src_port_rate <= 0.38: normal (107.0)
+|   |   |   |   |   dst_host_same_src_port_rate > 0.38
+|   |   |   |   |   |   dst_host_same_srv_rate <= 0.29: portsweep (2.0)
+|   |   |   |   |   |   dst_host_same_srv_rate > 0.29: normal (3.0)
+|   |   |   |   dst_host_srv_count > 44
+|   |   |   |   |   dst_host_same_src_port_rate <= 0.09: normal (2.0/1.0)
+|   |   |   |   |   dst_host_same_src_port_rate > 0.09: portsweep (10.0)
+|   flag = SH
+|   |   srv_diff_host_rate <= 0.14
+|   |   |   hot <= 0: nmap (331.0)
+|   |   |   hot > 0: normal (2.0)
+|   |   srv_diff_host_rate > 0.14: imap (4.0)
+|   flag = S3
+|   |   dst_host_count <= 248
+|   |   |   hot <= 0: normal (39.0)
+|   |   |   hot > 0
+|   |   |   |   hot <= 1: guess_passwd (2.0)
+|   |   |   |   hot > 1: normal (2.0/1.0)
+|   |   dst_host_count > 248
+|   |   |   service = private: processtable (0.0)
+|   |   |   service = ftp_data: normal (2.0)
+|   |   |   service = eco_i: processtable (0.0)
+|   |   |   service = telnet
+|   |   |   |   dst_host_diff_srv_rate <= 0.01: guess_passwd (3.0)
+|   |   |   |   dst_host_diff_srv_rate > 0.01: processtable (237.0/1.0)
+|   |   |   service = http
+|   |   |   |   rerror_rate <= 0.28: normal (7.0)
+|   |   |   |   rerror_rate > 0.28: apache2 (5.0)
+|   |   |   service = smtp: processtable (0.0)
+|   |   |   service = ftp: processtable (0.0)
+|   |   |   service = ldap: processtable (0.0)
+|   |   |   service = pop_3: processtable (0.0)
+|   |   |   service = courier: processtable (0.0)
+|   |   |   service = discard: processtable (0.0)
+|   |   |   service = ecr_i: processtable (0.0)
+|   |   |   service = imap4: processtable (0.0)
+|   |   |   service = domain_u: processtable (0.0)
+|   |   |   service = mtp: processtable (0.0)
+|   |   |   service = systat: processtable (0.0)
+|   |   |   service = iso_tsap: processtable (0.0)
+|   |   |   service = other: processtable (0.0)
+|   |   |   service = csnet_ns: processtable (0.0)
+|   |   |   service = finger: processtable (0.0)
+|   |   |   service = uucp: processtable (0.0)
+|   |   |   service = whois: processtable (0.0)
+|   |   |   service = netbios_ns: processtable (0.0)
+|   |   |   service = link: processtable (0.0)
+|   |   |   service = Z39_50: processtable (0.0)
+|   |   |   service = sunrpc: processtable (0.0)
+|   |   |   service = auth: processtable (0.0)
+|   |   |   service = netbios_dgm: processtable (0.0)
+|   |   |   service = uucp_path: processtable (0.0)
+|   |   |   service = vmnet: processtable (0.0)
+|   |   |   service = domain: processtable (0.0)
+|   |   |   service = name: processtable (0.0)
+|   |   |   service = pop_2: processtable (0.0)
+|   |   |   service = http_443: processtable (0.0)
+|   |   |   service = urp_i: processtable (0.0)
+|   |   |   service = login: processtable (0.0)
+|   |   |   service = gopher: processtable (0.0)
+|   |   |   service = exec: processtable (0.0)
+|   |   |   service = time: processtable (0.0)
+|   |   |   service = remote_job: processtable (0.0)
+|   |   |   service = ssh: processtable (0.0)
+|   |   |   service = kshell: processtable (0.0)
+|   |   |   service = sql_net: processtable (0.0)
+|   |   |   service = shell: processtable (0.0)
+|   |   |   service = hostnames: processtable (0.0)
+|   |   |   service = echo: processtable (0.0)
+|   |   |   service = daytime: processtable (0.0)
+|   |   |   service = pm_dump: processtable (0.0)
+|   |   |   service = IRC: processtable (0.0)
+|   |   |   service = netstat: processtable (0.0)
+|   |   |   service = ctf: processtable (0.0)
+|   |   |   service = nntp: processtable (0.0)
+|   |   |   service = netbios_ssn: processtable (0.0)
+|   |   |   service = tim_i: processtable (0.0)
+|   |   |   service = supdup: processtable (0.0)
+|   |   |   service = bgp: processtable (0.0)
+|   |   |   service = nnsp: processtable (0.0)
+|   |   |   service = rje: processtable (0.0)
+|   |   |   service = printer: processtable (0.0)
+|   |   |   service = efs: processtable (0.0)
+|   |   |   service = X11: processtable (0.0)
+|   |   |   service = ntp_u: processtable (0.0)
+|   |   |   service = klogin: processtable (0.0)
+|   |   |   service = red_i: processtable (0.0)
+|   |   |   service = urh_i: processtable (0.0)
+|   |   |   service = http_8001: processtable (0.0)
+|   |   |   service = aol: processtable (0.0)
+|   |   |   service = http_2784: processtable (0.0)
+|   |   |   service = tftp_u: processtable (0.0)
+|   |   |   service = harvest: processtable (0.0)
+|   flag = S2: normal (138.0/12.0)
+|   flag = S1
+|   |   rerror_rate <= 0.58: normal (371.0/9.0)
+|   |   rerror_rate > 0.58: mscan (4.0)
+|   flag = RSTOS0: portsweep (11.0)
+|   flag = OTH
+|   |   dst_host_srv_count <= 4: portsweep (38.0)
+|   |   dst_host_srv_count > 4: normal (12.0/1.0)
+
+Number of Leaves  : 	2509
+
+Size of the tree : 	3009
+
+
+Time taken to build model: 14.71 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.51 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       72820               98.0635 %
+Incorrectly Classified Instances      1438                1.9365 %
+Kappa statistic                          0.9694
+Mean absolute error                      0.0014
+Root mean squared error                  0.0283
+Relative absolute error                  4.3288 %
+Root relative squared error             22.5055 %
+Total Number of Instances            74258     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.999    0.000    0.999      0.999    0.999      0.999    1.000     0.999     neptune
+                 0.991    0.011    0.990      0.991    0.990      0.980    0.997     0.996     normal
+                 0.557    0.000    0.759      0.557    0.642      0.649    0.947     0.582     saint
+                 0.932    0.000    0.951      0.932    0.941      0.941    0.985     0.939     mscan
+                 0.850    0.000    0.953      0.850    0.899      0.899    0.989     0.908     guess_passwd
+                 0.990    0.000    0.996      0.990    0.993      0.993    0.999     0.994     smurf
+                 0.994    0.000    0.994      0.994    0.994      0.994    0.999     0.993     apache2
+                 0.954    0.002    0.943      0.954    0.949      0.947    0.990     0.949     satan
+                 0.417    0.000    0.588      0.417    0.488      0.495    0.848     0.299     buffer_overflow
+                 0.983    0.000    0.947      0.983    0.964      0.964    0.996     0.970     back
+                 0.694    0.001    0.798      0.694    0.742      0.742    0.989     0.810     warezmaster
+                 0.130    0.000    0.429      0.130    0.200      0.236    0.960     0.260     snmpgetattack
+                 0.960    0.001    0.793      0.960    0.869      0.872    0.994     0.910     processtable
+                 0.936    0.000    0.780      0.936    0.851      0.855    0.982     0.839     pod
+                 0.953    0.000    0.984      0.953    0.968      0.968    0.977     0.938     httptunnel
+                 0.668    0.000    0.987      0.668    0.797      0.811    0.994     0.767     nmap
+                 0.000    0.000    ?          0.000    ?          ?        0.746     0.006     ps
+                 0.888    0.001    0.751      0.888    0.814      0.816    0.985     0.727     snmpguess
+                 0.990    0.004    0.871      0.990    0.927      0.927    0.994     0.878     ipsweep
+                 0.973    0.000    0.986      0.973    0.979      0.979    1.000     0.986     mailbomb
+                 0.983    0.000    0.983      0.983    0.983      0.982    0.996     0.978     portsweep
+                 0.083    0.000    0.143      0.083    0.105      0.109    0.666     0.045     multihop
+                 0.091    0.000    1.000      0.091    0.167      0.301    0.591     0.121     named
+                 0.000    0.000    ?          0.000    ?          ?        0.763     0.012     sendmail
+                 0.250    0.000    0.500      0.250    0.333      0.354    0.750     0.333     loadmodule
+                 0.000    0.000    ?          0.000    ?          ?        0.665     0.014     xterm
+                 0.000    0.000    ?          0.000    ?          ?        0.998     0.004     worm
+                 0.972    0.000    0.972      0.972    0.972      0.972    0.996     0.964     teardrop
+                 0.000    0.000    0.000      0.000    0.000      -0.000   0.809     0.009     rootkit
+                 0.000    0.000    ?          0.000    ?          ?        1.000     0.080     xlock
+                 0.000    0.000    ?          0.000    ?          ?        0.665     0.001     perl
+                 0.000    0.000    ?          0.000    ?          ?        0.937     0.428     land
+                 0.000    0.000    ?          0.000    ?          ?        0.499     0.000     xsnoop
+                 0.000    0.000    ?          0.000    ?          ?        0.498     0.000     sqlattack
+                 0.000    0.000    ?          0.000    ?          ?        0.491     0.000     ftp_write
+                 0.250    0.000    1.000      0.250    0.400      0.500    0.749     0.393     imap
+                 ?        0.000    ?          ?        ?          ?        ?         ?         udpstorm
+                 0.000    0.000    ?          0.000    ?          ?        0.875     0.064     phf
+                 0.879    0.002    0.705      0.879    0.783      0.786    0.988     0.813     warezclient
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.000     spy
+Weighted Avg.    0.981    0.006    ?          0.981    ?          ?        0.997     0.982     
+
+=== Confusion Matrix ===
+
+     a     b     c     d     e     f     g     h     i     j     k     l     m     n     o     p     q     r     s     t     u     v     w     x     y     z    aa    ab    ac    ad    ae    af    ag    ah    ai    aj    ak    al    am    an   <-- classified as
+ 23069     9     0     3     0     0     0     2     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |     a = neptune
+     2 37967     1     7    12     3     0    48     5    28    39    16    15    12     0     3     0    40    18     2    21     4     0     0     1     0     0    12     1     0     0     0     0     0     0     0     0     0    45     0 |     b = normal
+     3     7    88     2     0     0     0    45     0     0     0     0     0     1     0     4     0     0     8     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |     c = saint
+     1    12     0   482     6     0     0     7     0     0     0     0     7     0     0     0     0     0     2     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |     d = mscan
+     0    31     0     1   545     0     0     0     0     3     0     0    59     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     2     0     0     0     0     0     0     0     0     0     0     0 |     e = guess_passwd
+     0     4     0     0     0  1646     0     0     0     0     0     0     0    12     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |     f = smurf
+     0     2     0     0     0     0   355     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |     g = apache2
+     6    58    27     4     0     0     0  2117     0     0     0     0     0     1     1     0     0     0     0     0     4     0     0     0     0     0     0     1     0     0     0     0     0     0     0     0     0     0     0     0 |     h = satan
+     2     9     0     0     0     0     0     0    10     0     1     0     0     0     0     0     0     0     0     0     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     1     0 |     i = buffer_overflow
+     0    10     0     0     0     0     1     0     0   638     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |     j = back
+     0    42     0     0     1     0     0     0     0     0   347     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     1     0     0     0     0     0     0     0     0     0   109     0 |     k = warezmaster
+     0    70     0     0     0     0     0     0     0     0     0    12     0     0     0     0     0    10     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |     l = snmpgetattack
+     0     5     0     3     5     0     0     0     0     0     0     0   315     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |     m = processtable
+     0     2     0     0     0     4     0     1     0     0     0     0     0   103     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |     n = pod
+     0     2     0     0     0     0     0     1     0     0     0     0     0     0    61     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |     o = httptunnel
+     2     3     0     0     0     0     0     0     0     0     0     0     0     0     0   522     0     0   252     0     2     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |     p = nmap
+     0     2     0     0     1     0     0     0     1     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     1     0 |     q = ps
+     0    19     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0   151     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |     r = snmpguess
+     0    10     0     0     0     0     0     6     0     0     0     0     0     3     0     0     0     0  1890     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |     s = ipsweep
+     0     4     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0   143     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |     t = mailbomb
+     4    13     0     3     0     0     1     6     0     0     0     0     0     0     0     0     0     0     0     0  1528     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |     u = portsweep
+     0     6     0     0     0     0     0     1     0     0     4     0     0     0     0     0     0     0     0     0     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |     v = multihop
+     0     7     0     0     0     0     0     0     0     0     3     0     0     0     0     0     0     0     0     0     0     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |     w = named
+     0     6     0     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |     x = sendmail
+     0     3     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |     y = loadmodule
+     0     3     0     0     0     0     0     0     0     0     2     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |     z = xterm
+     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |    aa = worm
+     0     3     0     0     0     0     0    10     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0   450     0     0     0     0     0     0     0     0     0     0     0     0 |    ab = teardrop
+     0     5     0     0     0     0     0     0     1     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     1     0 |    ac = rootkit
+     0     4     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |    ad = xlock
+     0     3     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |    ae = perl
+     2    13     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |    af = land
+     0     2     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |    ag = xsnoop
+     0     0     0     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |    ah = sqlattack
+     0     1     0     0     0     0     0     0     0     0     2     0     0     0     0     0     0     0     0     0     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |    ai = ftp_write
+     0     4     0     1     0     0     0     0     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     2     0     0     0     0 |    aj = imap
+     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |    ak = udpstorm
+     0     1     0     0     0     0     0     0     0     3     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |    al = phf
+     0    16     0     0     0     0     0     0     0     1    35     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0   376     0 |    am = warezclient
+     0     2     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 |    an = spy
+
